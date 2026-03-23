@@ -59,7 +59,7 @@ export default function CookieBanner() {
           margin: 0,
         }}
       >
-        We use cookies to understand how visitors use our site (Google Analytics). No data is collected until you accept.{" "}
+        We use cookies to understand how visitors use our site. No data is collected until you accept.{" "}
         <Link
           href="/cookie-policy"
           style={{ color: "#4d6451", textDecoration: "underline", textUnderlineOffset: "2px", whiteSpace: "nowrap" }}
