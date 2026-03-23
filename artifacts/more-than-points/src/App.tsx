@@ -11,6 +11,9 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import CookiePolicy from "@/pages/CookiePolicy";
 import NotFound from "@/pages/not-found";
+import CookieBanner from "@/components/CookieBanner";
+
+declare function gtag(...args: unknown[]): void;
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -90,9 +93,17 @@ function Router() {
 }
 
 function App() {
+  useEffect(() => {
+    const stored = localStorage.getItem("cookieConsent");
+    if (stored === "accepted" && typeof gtag !== "undefined") {
+      gtag("consent", "update", { analytics_storage: "granted" });
+    }
+  }, []);
+
   return (
     <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
       <Router />
+      <CookieBanner />
     </WouterRouter>
   );
 }

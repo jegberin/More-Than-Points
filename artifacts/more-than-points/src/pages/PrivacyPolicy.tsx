@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
               <li>When you complete and submit a contact or booking form on this website</li>
               <li>When you contact us by email</li>
-              <li>When you book a coaching session (via email confirmation or scheduling tool)</li>
+              <li>When you book a coaching session via email confirmation or through Calendly (calendly.com), our online session-scheduling tool</li>
               <li>Automatically through cookies and similar technologies</li>
             </ul>
           </Section>
@@ -153,7 +153,8 @@ export default function PrivacyPolicy() {
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
               <li>Website hosting providers</li>
               <li>Analytics providers</li>
-              <li>Email and scheduling tools</li>
+              <li>Email service providers</li>
+              <li>Calendly (calendly.com) — used for session scheduling. Calendly processes booking data in accordance with their own privacy policy at <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>calendly.com/privacy</a></li>
             </ul>
             <p style={{ marginTop: "0.75rem" }}>We do not sell your personal data.</p>
           </Section>
