@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3c475a",
+              "surface-dim": "#dcdad3",
+              "on-error": "#ffffff",
+              "surface-bright": "#fcf9f2",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#f1eee7",
+              "inverse-primary": "#b3cdb6",
+              "inverse-surface": "#31312c",
+              "inverse-on-surface": "#f3f0e9",
+              "secondary": "#545f72",
+              "on-primary-container": "#273d2c",
+              "outline-variant": "#c3c8c0",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#4a3400",
+              "on-surface": "#1c1c18",
+              "surface-container-high": "#ebe8e1",
+              "on-background": "#1c1c18",
+              "on-primary-fixed": "#0a2011",
+              "primary-container": "#8fa892",
+              "surface": "#fcf9f2",
+              "primary-fixed-dim": "#b3cdb6",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "surface-container-highest": "#e5e2db",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#261900",
+              "on-secondary-fixed": "#111c2c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#775a19",
+              "on-secondary-container": "#586376",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#c19c56",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdea5",
+              "primary": "#4d6451",
+              "primary-fixed": "#cfe9d1",
+              "outline": "#737972",
+              "secondary-fixed-dim": "#bcc7dd",
+              "tertiary-fixed-dim": "#e9c176",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#d8e3fa",
+              "surface-tint": "#4d6451",
+              "surface-variant": "#e5e2db",
+              "surface-container-low": "#f6f3ec",
+              "on-surface-variant": "#434842",
+              "on-primary-fixed-variant": "#354c3a",
+              "background": "#fcf9f2",
+              "secondary-container": "#d5e0f7"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-editorial {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2]/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<span class="text-xl font-bold text-[#4d6451] dark:text-[#8fa892] tracking-tighter font-headline">More Than Points</span>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight" href="#">Home</a>
+<a class="text-[#4d6451] dark:text-[#8fa892] font-semibold border-b-2 border-[#4d6451] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight" href="#">How It Works</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight" href="#">Coaching Options</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight" href="#">About</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3.5 rounded-full font-headline font-semibold text-sm transition-all hover:opacity-90 active:scale-95 duration-200">
+                Book a Session
+            </button>
+</div>
+</nav>
+<main class="pt-24 lg:pt-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 py-12 lg:py-20 text-center">
+<div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold tracking-widest uppercase">
+                The Journey
+            </div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter mb-8 max-w-4xl mx-auto">
+                A structured path to <span class="text-primary italic">inner clarity.</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto text-editorial">
+                We move beyond the metrics of exams to discover the character and calling of the student. Our framework is designed to ground the journey in reality and empathy.
+            </p>
+</section>
+<!-- 5-Step Framework: Bento Grid Inspired -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Step 1: Assessment -->
+<div class="md:col-span-7 bg-surface-container-low p-8 md:p-12 rounded-xl flex flex-col justify-between group overflow-hidden relative">
+<div class="relative z-10">
+<span class="text-4xl font-headline font-bold text-primary-container opacity-40 mb-4 block">01</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Assessment</h3>
+<p class="text-on-surface-variant text-editorial max-w-md">
+                            We begin with a deep dive into interests, values, and personality styles. It's not about what they can do, but who they are becoming.
+                        </p>
+</div>
+<div class="mt-8 flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-3 rounded-full" data-icon="assignment">assignment</span>
+<span class="text-sm font-semibold text-primary">Self-discovery audit</span>
+</div>
+</div>
+<!-- Step 2: Listening -->
+<div class="md:col-span-5 bg-secondary text-on-secondary p-8 md:p-12 rounded-xl flex flex-col justify-between">
+<div>
+<span class="text-4xl font-headline font-bold text-secondary-fixed-dim opacity-40 mb-4 block">02</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Listening</h3>
+<p class="text-secondary-fixed text-editorial">
+                            Creating a safe space for the unspoken. We listen to the anxieties and the aspirations that don't fit into a CV.
+                        </p>
+</div>
+<div class="mt-8">
+<span class="material-symbols-outlined text-on-secondary text-4xl" data-icon="hearing">hearing</span>
+</div>
+</div>
+<!-- Step 3: Exploration -->
+<div class="md:col-span-4 bg-tertiary-container text-on-tertiary-container p-8 md:p-12 rounded-xl">
+<span class="text-4xl font-headline font-bold text-tertiary opacity-40 mb-4 block">03</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Exploration</h3>
+<p class="text-editorial mb-8">
+                        Mapping potential futures without the pressure of finality. Identifying pathways that resonate with the soul.
+                    </p>
+<div class="h-32 rounded-lg bg-tertiary/10 flex items-center justify-center border-2 border-dashed border-tertiary/20">
+<span class="material-symbols-outlined text-4xl" data-icon="explore">explore</span>
+</div>
+</div>
+<!-- Step 4: Confidence Rebuilding -->
+<div class="md:col-span-8 bg-surface-container-highest p-8 md:p-12 rounded-xl flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="text-4xl font-headline font-bold text-primary opacity-40 mb-4 block">04</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Confidence Rebuilding</h3>
+<p class="text-on-surface-variant text-editorial">
+                            Dismantling the "points-only" mindset. We reinforce the student's inherent value regardless of academic outcome, building resilience for the road ahead.
+                        </p>
+</div>
+<div class="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-sm">
+<div class="space-y-4">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2"></div>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 5: Follow-up -->
+<div class="md:col-span-12 bg-primary p-8 md:p-16 rounded-xl text-on-primary flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<div class="max-w-xl">
+<span class="text-4xl font-headline font-bold text-primary-fixed opacity-40 mb-4 block">05</span>
+<h3 class="text-4xl font-headline font-bold mb-4">Sustained Follow-up</h3>
+<p class="text-primary-fixed text-lg text-editorial">
+                            Coaching doesn't end when the session does. We provide ongoing touchpoints to ensure the student feels supported as they take their first steps into their new horizon.
+                        </p>
+</div>
+<div class="mt-8 md:mt-0 flex flex-col items-center">
+<div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="sync_saved_locally">sync_saved_locally</span>
+</div>
+<span class="font-headline font-bold">Lifetime Support</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Section -->
+<section class="bg-surface-container-low py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold mb-4">The More Than Points Difference</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">While traditional guidance focuses on the destination, we focus on the traveler.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-stretch">
+<!-- Traditional Approach -->
+<div class="bg-surface p-10 rounded-2xl border-l-4 border-outline-variant/30">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-outline" data-icon="school">school</span>
+<h4 class="font-headline text-xl font-bold text-outline">Guidance Counsellor</h4>
+</div>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
+<div>
+<p class="font-bold">CAO-Centric</p>
+<p class="text-sm text-on-surface-variant">Primary focus is on ticking boxes for course applications.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
+<div>
+<p class="font-bold">Metric Driven</p>
+<p class="text-sm text-on-surface-variant">Recommendations based strictly on predicted points.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
+<div>
+<p class="font-bold">Transactional</p>
+<p class="text-sm text-on-surface-variant">Short sessions focused on immediate administrative needs.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Angela's Process -->
+<div class="bg-white p-10 rounded-2xl shadow-xl shadow-primary/5 border-l-4 border-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Our Way</span>
+</div>
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+<h4 class="font-headline text-xl font-bold text-primary">Angela’s Personal Process</h4>
+</div>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<p class="font-bold">Holistic Development</p>
+<p class="text-sm text-on-surface-variant">Focus on long-term fulfillment and emotional well-being.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<p class="font-bold">Character Discovery</p>
+<p class="text-sm text-on-surface-variant">Identifying unique strengths that points can't measure.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<p class="font-bold">Relational &amp; Practical</p>
+<p class="text-sm text-on-surface-variant">Deep coaching relationship paired with actionable steps.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-5xl mx-auto px-6 py-24 text-center">
+<div class="bg-secondary-container/30 rounded-3xl p-12 md:p-20 relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-tertiary/10 rounded-full blur-3xl"></div>
+<h2 class="font-headline text-3xl md:text-5xl font-bold mb-6 text-on-secondary-container">Ready to start the conversation?</h2>
+<p class="text-on-secondary-container/80 text-lg mb-10 max-w-2xl mx-auto">
+                    Every journey begins with a single, grounded step. Let’s explore what’s possible for your student’s future.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:opacity-95 transition-all">
+                        Schedule a Consultation
+                    </button>
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-high transition-all">
+                        View Options
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f1eee7] dark:bg-slate-950 w-full py-12 px-6 mt-20 tonal-shift-top">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center text-center md:text-left">
+<div>
+<span class="text-lg font-bold text-[#4d6451] dark:text-[#8fa892] font-headline">More Than Points</span>
+<p class="text-sm text-[#545f72] dark:text-slate-400 font-['Inter'] mt-2">Grounded Coaching for the Modern Journey.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-sm text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 hover:underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-sm text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 hover:underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Terms of Service</a>
+<a class="text-sm text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 hover:underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Cookie Policy</a>
+</div>
+<div class="flex justify-center md:justify-end gap-6">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451]" href="#">Instagram</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451]" href="#">LinkedIn</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451]" href="#">Twitter</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-on-surface/5 text-center">
+<p class="text-xs text-[#545f72] dark:text-slate-400">© 2024 More Than Points. Grounded Coaching for the Modern Journey.</p>
+</div>
+</footer>
+</body></html>

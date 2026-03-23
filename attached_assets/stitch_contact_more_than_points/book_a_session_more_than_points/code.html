@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book a Session | More Than Points</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3c475a",
+              "surface-dim": "#dcdad3",
+              "on-error": "#ffffff",
+              "surface-bright": "#fcf9f2",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#f1eee7",
+              "inverse-primary": "#b3cdb6",
+              "inverse-surface": "#31312c",
+              "inverse-on-surface": "#f3f0e9",
+              "secondary": "#545f72",
+              "on-primary-container": "#273d2c",
+              "outline-variant": "#c3c8c0",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#4a3400",
+              "on-surface": "#1c1c18",
+              "surface-container-high": "#ebe8e1",
+              "on-background": "#1c1c18",
+              "on-primary-fixed": "#0a2011",
+              "primary-container": "#8fa892",
+              "surface": "#fcf9f2",
+              "primary-fixed-dim": "#b3cdb6",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "surface-container-highest": "#e5e2db",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#261900",
+              "on-secondary-fixed": "#111c2c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#775a19",
+              "on-secondary-container": "#586376",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#c19c56",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdea5",
+              "primary": "#4d6451",
+              "primary-fixed": "#cfe9d1",
+              "outline": "#737972",
+              "secondary-fixed-dim": "#bcc7dd",
+              "tertiary-fixed-dim": "#e9c176",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#d8e3fa",
+              "surface-tint": "#4d6451",
+              "surface-variant": "#e5e2db",
+              "surface-container-low": "#f6f3ec",
+              "on-surface-variant": "#434842",
+              "on-primary-fixed-variant": "#354c3a",
+              "background": "#fcf9f2",
+              "secondary-container": "#d5e0f7"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2]/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<div class="text-xl font-bold text-[#4d6451] dark:text-[#8fa892] tracking-tighter font-headline">
+                More Than Points
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">Home</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">How It Works</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">Coaching Options</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">About</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">Contact</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-full font-headline font-semibold text-sm hover:opacity-90 transition-all active:scale-95 duration-200" href="#">
+                Book a Session
+            </a>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 mb-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase font-label">
+                        Scheduling
+                    </span>
+<h1 class="text-5xl md:text-6xl font-headline font-extrabold text-primary tracking-tighter leading-tight">
+                        Take the first step towards a clearer path.
+                    </h1>
+<p class="text-lg text-secondary leading-relaxed max-w-lg">
+                        Our coaching sessions are designed to be a sanctuary for growth. Secure your time below and begin the journey to grounded success.
+                    </p>
+<div class="flex items-center gap-4 pt-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container" data-alt="Profile photo of a professional coach"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high" data-alt="Profile photo of another professional coach"></div>
+</div>
+<p class="text-sm font-medium text-on-surface-variant">Trusted by 500+ families</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-[2rem] blur-2xl group-hover:bg-primary-container/30 transition-all duration-700"></div>
+<div class="relative aspect-video rounded-[2rem] overflow-hidden bg-surface-container shadow-2xl">
+<img alt="Coaching session environment" class="w-full h-full object-cover" data-alt="Modern minimalist office with warm lighting and plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWBtjDM_HXk-9P5XFwTMUU4cbbGpu5i37uAuyajMdFw_2XErfAIbZtRjwXVGwYOjVoCjX2yzZE7rx3LQXsC50hIJTEIiSkvFOLHhcWK1zrrUxNB8a3P_ILTY03CduEJuZh30QiditCDRy9UNN9LyapMBaQNHTbsABbsPHTnDhru5MU4-C2ICrdLsqiveukkkm1zAwzG2FTIPt7SjUjbborVgvPYlYz_pmJQVc3BCvRsu5qX0Q_WaoCv2RQVBQldhrOtu50hCNap-Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Section -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="bg-surface-container-low rounded-[2.5rem] p-1 md:p-8 shadow-sm">
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden min-h-[700px] shadow-sm relative">
+<!-- Calendly Placeholder Interface -->
+<div class="absolute inset-0 flex flex-col">
+<div class="p-8 border-b border-surface-container flex justify-between items-center">
+<div>
+<h3 class="font-headline font-bold text-xl text-primary">60-Minute Strategy Call</h3>
+<p class="text-secondary text-sm">Select a date and time that works for you.</p>
+</div>
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined">schedule</span>
+                                1 hour
+                            </div>
+</div>
+<div class="flex-grow flex items-center justify-center bg-surface-container-low/30">
+<div class="text-center p-12 max-w-md">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">calendar_today</span>
+</div>
+<p class="text-secondary font-medium mb-4">Calendly Integration Placeholder</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                    Your actual Calendly widget will be injected here, providing a seamless booking experience with automated reminders and calendar syncing.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Features -->
+<section class="max-w-7xl mx-auto px-6 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary">payments</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Secure Payments</h4>
+<p class="text-secondary text-sm leading-relaxed">Fully integrated with Stripe for secure, industry-standard payment processing.</p>
+</div>
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Flexible Policies</h4>
+<p class="text-secondary text-sm leading-relaxed">Life happens. Easily reschedule up to 24 hours before your session starts.</p>
+</div>
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-tertiary/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary">psychology</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Expert Guidance</h4>
+<p class="text-secondary text-sm leading-relaxed">Every session is led by certified coaches specializing in teen development.</p>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto px-6 mb-32">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Frequently Asked Questions</h2>
+<p class="text-secondary">Everything you need to know before we begin.</p>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container rounded-2xl p-6">
+<button class="flex justify-between items-center w-full text-left">
+<span class="font-headline font-semibold text-on-surface">How do payments work?</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<div class="mt-4 text-on-surface-variant text-sm leading-relaxed">
+                        We use Stripe to process all transactions securely. You will be prompted to enter your payment details after selecting your preferred session time. We accept all major credit cards and digital wallets.
+                    </div>
+</div>
+<div class="bg-surface-container rounded-2xl p-6">
+<button class="flex justify-between items-center w-full text-left">
+<span class="font-headline font-semibold text-on-surface">What is your cancellation policy?</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<div class="mt-4 text-on-surface-variant text-sm hidden">
+                        Sessions can be cancelled or rescheduled free of charge up to 24 hours in advance. Late cancellations may incur a small processing fee.
+                    </div>
+</div>
+<div class="bg-surface-container rounded-2xl p-6">
+<button class="flex justify-between items-center w-full text-left">
+<span class="font-headline font-semibold text-on-surface">What should I expect from the first session?</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<div class="mt-4 text-on-surface-variant text-sm hidden">
+                        Our initial call is about discovery. We focus on understanding your current challenges, setting clear objectives, and outlining a tailored roadmap for your journey.
+                    </div>
+</div>
+<div class="bg-surface-container rounded-2xl p-6">
+<button class="flex justify-between items-center w-full text-left">
+<span class="font-headline font-semibold text-on-surface">Is my information private?</span>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<div class="mt-4 text-on-surface-variant text-sm hidden">
+                        Absolutely. Confidentiality is the cornerstone of our coaching relationship. All sessions are private and conducted in a secure virtual environment.
+                    </div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-7xl mx-auto px-6">
+<div class="bg-primary rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-3xl md:text-5xl font-headline font-bold text-on-primary mb-6 leading-tight">Ready to begin your modern journey?</h2>
+<p class="text-primary-fixed text-lg mb-10 opacity-90">Join hundreds of others who have found clarity through our grounded approach.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-full font-headline font-bold hover:scale-105 transition-transform">
+                            View Available Times
+                        </button>
+<button class="bg-white/10 text-on-primary px-8 py-4 rounded-full font-headline font-bold backdrop-blur-md hover:bg-white/20 transition-all">
+                            Contact Support
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f1eee7] dark:bg-slate-950 w-full py-12 px-6 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center text-center md:text-left">
+<div class="space-y-4">
+<div class="text-lg font-bold text-[#4d6451] dark:text-[#8fa892] font-headline">More Than Points</div>
+<p class="text-[#545f72] dark:text-slate-400 font-['Inter'] text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                    © 2024 More Than Points. Grounded Coaching for the Modern Journey.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] font-['Inter'] text-sm underline decoration-[#775a19] decoration-2 underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] font-['Inter'] text-sm hover:underline decoration-[#775a19] decoration-2 underline-offset-4 transition-all" href="#">Terms of Service</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] font-['Inter'] text-sm hover:underline decoration-[#775a19] decoration-2 underline-offset-4 transition-all" href="#">Cookie Policy</a>
+</div>
+<div class="flex justify-center md:justify-end gap-6 font-['Inter'] text-sm">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 hover:opacity-80" href="#">Instagram</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 hover:opacity-80" href="#">LinkedIn</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 hover:opacity-80" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

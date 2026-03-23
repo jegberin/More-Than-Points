@@ -48,6 +48,24 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 - `pnpm run build` — runs `typecheck` first, then recursively runs `build` in all packages that define it
 - `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
 
+## Artifacts
+
+### `artifacts/more-than-points` (`@workspace/more-than-points`)
+
+React + Vite website for **MoreThanPoints.ie** — Angela's educational coaching business in Ireland.
+
+- **Purpose**: Marketing/branding site for parents of teens aged 16–19, positioned as alternative educational coaching beyond the Leaving Cert points system
+- **Pages** (6): Home, How It Works, Coaching Options, About Angela, Book a Session, Contact
+- **Design System**: "Grounded Horizon" / "Compassionate Editorial"
+  - Primary: #4d6451 (sage green), Secondary: #545f72 (muted navy), Tertiary: #775a19 (gold)
+  - Background: #fcf9f2 (warm beige)
+  - Fonts: Plus Jakarta Sans (headlines), Inter (body)
+  - Material Symbols Outlined icons
+  - Glassmorphism nav, asymmetric cards, bento-grid layouts
+- **Forms**: Book a Session and Contact pages are client-side with validation and success state (no backend)
+- **Routing**: Wouter-based SPA routing at base `/`
+- **Dev server**: Port 23923
+
 ## Packages
 
 ### `artifacts/api-server` (`@workspace/api-server`)

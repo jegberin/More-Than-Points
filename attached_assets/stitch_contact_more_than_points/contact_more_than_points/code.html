@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact — More Than Points</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3c475a",
+              "surface-dim": "#dcdad3",
+              "on-error": "#ffffff",
+              "surface-bright": "#fcf9f2",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#f1eee7",
+              "inverse-primary": "#b3cdb6",
+              "inverse-surface": "#31312c",
+              "inverse-on-surface": "#f3f0e9",
+              "secondary": "#545f72",
+              "on-primary-container": "#273d2c",
+              "outline-variant": "#c3c8c0",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#4a3400",
+              "on-surface": "#1c1c18",
+              "surface-container-high": "#ebe8e1",
+              "on-background": "#1c1c18",
+              "on-primary-fixed": "#0a2011",
+              "primary-container": "#8fa892",
+              "surface": "#fcf9f2",
+              "primary-fixed-dim": "#b3cdb6",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "surface-container-highest": "#e5e2db",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#261900",
+              "on-secondary-fixed": "#111c2c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#775a19",
+              "on-secondary-container": "#586376",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#c19c56",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdea5",
+              "primary": "#4d6451",
+              "primary-fixed": "#cfe9d1",
+              "outline": "#737972",
+              "secondary-fixed-dim": "#bcc7dd",
+              "tertiary-fixed-dim": "#e9c176",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#d8e3fa",
+              "surface-tint": "#4d6451",
+              "surface-variant": "#e5e2db",
+              "surface-container-low": "#f6f3ec",
+              "on-surface-variant": "#434842",
+              "on-primary-fixed-variant": "#354c3a",
+              "background": "#fcf9f2",
+              "secondary-container": "#d5e0f7"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fcf9f2;
+      }
+      h1, h2, h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2]/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<a class="text-xl font-bold text-[#4d6451] dark:text-[#8fa892] tracking-tighter" href="#">More Than Points</a>
+<div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">Home</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">How It Works</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">Coaching Options</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">About</a>
+<a class="text-[#4d6451] dark:text-[#8fa892] font-semibold border-b-2 border-[#4d6451] pb-1" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label font-semibold text-sm hover:opacity-90 transition-all active:scale-95 duration-200 ease-in-out">
+                Book a Session
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Content Section -->
+<div class="lg:col-span-5 space-y-8">
+<div class="space-y-4">
+<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase">Start the Conversation</span>
+<h1 class="text-5xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tighter">Let’s find the way forward, together.</h1>
+<p class="text-secondary text-lg leading-relaxed max-w-md">
+                            Whether you're looking for support for your teen or guidance as a parent, I'm here to listen.
+                        </p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 opacity-10">
+<span class="material-symbols-outlined text-9xl text-primary" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container-highest rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface mb-1">Authentic Connection</h3>
+<p class="text-sm text-on-surface-variant">Real conversations that go beyond academic scores and daily pressures.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container-highest rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface mb-1">Grounded Guidance</h3>
+<p class="text-sm text-on-surface-variant">Tailored coaching strategies rooted in empathy and modern psychological insight.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<div class="flex -space-x-3">
+<img alt="Coach" class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="Portrait of a supportive coach smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtFdN7aPhvnE1K--vxKdKxn1BBTY0cvtBDjdKsXiYFlsC9ZpofEwWIkiMqeDRcD8fmlr0bHZ3nyi5C_66_9jByKxmQhfEjDMID0q7Sg57ojheSlB5beiak_gVO3b79vDxsAogqNP2Ia5S0qgbQDAK9mF6LL7Dc7HH8aAXSMfFwReBNKEUYYvVoWDu917R1tvmvkcOfPg50Ys7KmaJFL-LlZ_mNgMrSZY_OTA0fshE_on--TrBlUsI-xC5yK4l0JU4ynZxXYd4PNhw"/>
+<img alt="Student" class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="Portrait of a young teenager looking hopeful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzRiEjjjcObFywXCLvhql5lmLi8B01WAB6yjc36G_usnAiuhTFzGryROmXIMS3NOu0zUG4K0NA8F1r6AzAnLFrSCt0DTG_57VgIC5bI8_7s3-mNfSgNCm6MBgTcl6bozUjkF-Z23T9gPIxeWpa6uuq3n0S5S-vDyJBOKdGOMOC5oQ-lyIgSKawCGOAb0kMbrzkRzI3yyFltZ1ewWK4k1twdqyPvE20wZxzQwv_XfXGuNQFl88JEbDgHMTIkbcl5cA0Cl-QHbkobSA"/>
+</div>
+<p class="text-sm font-medium text-secondary italic">"Helping families rediscover their spark."</p>
+</div>
+</div>
+<!-- Form Section -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-[2rem] shadow-[0_32px_64px_rgba(28,28,24,0.05)] relative">
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-on-surface tracking-tight mb-3">Send a Message</h2>
+<p class="text-secondary leading-relaxed">
+                                You’re not committing to anything — this is a first step to start the conversation.
+                            </p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-primary tracking-widest uppercase px-1">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface placeholder:text-outline/50" placeholder="Alex Murphy" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-primary tracking-widest uppercase px-1">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface placeholder:text-outline/50" placeholder="alex@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-primary tracking-widest uppercase px-1">How can I help?</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-on-surface placeholder:text-outline/50" placeholder="Tell me a bit about what's on your mind..." rows="5"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:bg-primary/95 transition-all flex items-center justify-center gap-3" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-8 flex justify-center gap-8">
+<div class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-tertiary" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>100% Confidential</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-secondary">
+<span class="material-symbols-outlined text-tertiary" data-icon="schedule" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span>Reply within 24h</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 mt-20 bg-[#f1eee7] dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-center text-center md:text-left">
+<div>
+<p class="text-lg font-bold text-[#4d6451] dark:text-[#8fa892]">More Than Points</p>
+<p class="font-['Inter'] text-sm leading-relaxed text-[#545f72] dark:text-slate-400 mt-2">© 2024 More Than Points. Grounded Coaching for the Modern Journey.</p>
+</div>
+<div class="flex justify-center gap-6 font-['Inter'] text-sm">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] hover:underline decoration-[#775a19] decoration-2 underline-offset-4 transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] hover:underline decoration-[#775a19] decoration-2 underline-offset-4 transition-opacity duration-300" href="#">Terms of Service</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] hover:underline decoration-[#775a19] decoration-2 underline-offset-4 transition-opacity duration-300" href="#">Cookie Policy</a>
+</div>
+<div class="flex justify-center md:justify-end gap-6 font-['Inter'] text-sm">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300" href="#">Instagram</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300" href="#">LinkedIn</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

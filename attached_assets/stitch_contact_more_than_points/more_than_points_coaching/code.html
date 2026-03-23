@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>More Than Points | Grounded Coaching for the Modern Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "surface-dim": "#dcdad3",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#f1eee7",
+                        "inverse-primary": "#b3cdb6",
+                        "inverse-surface": "#31312c",
+                        "inverse-on-surface": "#f3f0e9",
+                        "secondary": "#545f72",
+                        "on-primary-container": "#273d2c",
+                        "outline-variant": "#c3c8c0",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#4a3400",
+                        "on-surface": "#1c1c18",
+                        "surface-container-high": "#ebe8e1",
+                        "on-background": "#1c1c18",
+                        "on-primary-fixed": "#0a2011",
+                        "primary-container": "#8fa892",
+                        "surface": "#fcf9f2",
+                        "primary-fixed-dim": "#b3cdb6",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "surface-container-highest": "#e5e2db",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#261900",
+                        "on-secondary-fixed": "#111c2c",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#775a19",
+                        "on-secondary-container": "#586376",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#c19c56",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdea5",
+                        "primary": "#4d6451",
+                        "primary-fixed": "#cfe9d1",
+                        "outline": "#737972",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d8e3fa",
+                        "surface-tint": "#4d6451",
+                        "surface-variant": "#e5e2db",
+                        "surface-container-low": "#f6f3ec",
+                        "on-surface-variant": "#434842",
+                        "on-primary-fixed-variant": "#354c3a",
+                        "background": "#fcf9f2",
+                        "secondary-container": "#d5e0f7"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .shadow-ambient {
+            box-shadow: 0 32px 64px rgba(28, 28, 24, 0.05);
+        }
+        .asymmetric-card {
+            border-top-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            border-top-right-radius: 0.75rem;
+            border-bottom-left-radius: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container/30">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2]/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<a class="text-xl font-bold text-[#4d6451] dark:text-[#8fa892] tracking-tighter font-headline" href="#">More Than Points</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Plus_Jakarta_Sans'] font-semibold text-sm tracking-tight text-[#4d6451] dark:text-[#8fa892] border-b-2 border-[#4d6451] pb-1" href="#">Home</a>
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">How It Works</a>
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">Coaching Options</a>
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">About</a>
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3.5 rounded-full font-headline font-bold text-sm hover:opacity-90 transition-all active:scale-95 shadow-ambient">
+                Book a Session
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold tracking-wider mb-6">REDEFINING SUCCESS</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
+                        Your child <span class="text-primary italic">isn’t failing</span>. The system just isn’t the right fit.
+                    </h1>
+<p class="text-lg md:text-xl text-secondary leading-relaxed max-w-2xl mb-10">
+                        Helping teens navigate the gap between who they are and who the curriculum expects them to be. We provide practical alternatives for the 16-19 journey.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-bold text-lg shadow-ambient hover:bg-on-primary-fixed-variant transition-colors">
+                            Book an initial coaching session
+                        </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-highest transition-colors">
+                            Learn our method
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-ambient">
+<img alt="Calm morning pathway through a misty forest" class="w-full h-full object-cover" data-alt="Misty morning pathway through lush green forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi3Z-c5kCbuqxIcRx0I7vDE8GCyaCaIsuwz6eJYaeQqM3bd6CClQXXMdPnxcZMvVjhcElXfNGntl6b2gJDE2tLwRZndgrP8bVa6g_GZ7BQ0cdTl6hrq3XSTgvxhGGpWYGeeWcyNA1o_rbx2w-Lr0BJf2n4G19LoYTJef-3uFLUCcMj_OXeZZI_5sckTazqKmWarzHS-PRP4yKvYTptWq6Dtraa9qaagAsVIfWHugNBLAXwB9FpGOLFvfLST-MUlJ2f8JaHkzrtILs"/>
+</div>
+<!-- Overlapping Glass Card -->
+<div class="absolute -bottom-6 -left-6 md:-left-12 bg-white/60 glass-nav p-8 rounded-xl shadow-ambient border border-white/20 max-w-[280px]">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline font-bold text-sm uppercase tracking-tighter">Compassionate Support</span>
+</div>
+<p class="text-sm text-secondary font-medium italic leading-relaxed">
+                            "A space where potential isn't measured in points, but in purpose."
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Who I Help Section (Bento Inspired) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-headline font-bold tracking-tight mb-4 text-on-surface">Who I Help</h2>
+<p class="text-secondary max-w-xl mx-auto text-lg">Focusing on the pivotal years where traditional education often feels most restrictive.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-2xl shadow-ambient flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="family_history">family_history</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Parents of Teens (16-19)</h3>
+<p class="text-secondary leading-relaxed text-lg max-w-md">
+                            You see their talent, their curiosity, and their drive—but it's not showing up on the report card. We help you bridge that gap.
+                        </p>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="text-sm font-label font-bold text-primary uppercase">The Transitional Phase</span>
+<span class="material-symbols-outlined text-primary" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+<!-- Secondary Card -->
+<div class="bg-primary text-on-primary p-10 rounded-2xl shadow-ambient relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="psychology">psychology</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Non-Linear Thinkers</h3>
+<p class="opacity-90 leading-relaxed">
+                            For the creative, the practical, and the entrepreneurial minds who feel stifled by rote memorization.
+                        </p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="lightbulb">lightbulb</span>
+</div>
+</div>
+<!-- Another Secondary Card -->
+<div class="bg-surface-container p-10 rounded-2xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-5xl text-tertiary mb-6" data-icon="route">route</span>
+<h3 class="text-xl font-headline font-bold mb-3">Gap Year Explorers</h3>
+<p class="text-secondary text-sm">
+                        Structuring intentional time away from academia to build real-world confidence.
+                    </p>
+</div>
+<!-- Asymmetric Quote Card -->
+<div class="md:col-span-2 asymmetric-card bg-[#f1eee7] p-10 flex items-center gap-8 border-l-8 border-primary">
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-bold mb-4 italic">"My teen was drowning in points; now they're swimming in possibilities."</h3>
+<p class="text-on-surface-variant font-medium">— A relieved parent</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What Makes This Different -->
+<section class="py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="h-48 rounded-xl bg-surface-container overflow-hidden">
+<img alt="Stones stacked balanced" class="w-full h-full object-cover grayscale opacity-60" data-alt="Zen stones stacked in balance by water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyus8TFGxiN5oGyCyFvopsom-BnlnKohutxtBVkAFEBgFiG6SW7KRw07E0ANknnbUJip6CBcK5UanlvP-d4MruaY_lSJ40YmKw4fVcMeMsVuYj3qvSArAJjUxPkHNwcO2nnOmah5DPXYatSBrb4VARR6_9ltSWHB8QK9SfpZ4hZfzbMVSHnXapqXW9em9hojLVfcWQan_k_wB2Kx0wTCyIZQtCeZpbtlGKKAjjzCNzAlZkxh9A7RN4viOCshwkaRJvrD_vdK5lfVo"/>
+</div>
+<div class="h-64 rounded-xl bg-primary-container p-6 flex items-end">
+<span class="text-white font-headline font-bold text-4xl">25+</span>
+</div>
+</div>
+<div class="pt-12 space-y-4">
+<div class="h-64 rounded-xl bg-secondary-container p-6">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="verified">verified</span>
+<p class="mt-4 font-headline font-bold text-on-secondary-container">Years of Educational Experience</p>
+</div>
+<div class="h-48 rounded-xl bg-surface-container overflow-hidden">
+<img alt="Book on table" class="w-full h-full object-cover" data-alt="Open book on a wooden table with soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZLa8Fz7ASR4saqkq10piA9yAFPsD1R0p5SC_xnWUwQyvGOtmrQYLB1MZpftHBu3G5r7R930Nws8bh3ihHxMSozR49emXBUsbsMSyzX_fZB5EpBp8viltEFHfNahCavrVZnK-0W6bjqSctn2KBiEX7zeVDVqaEovfkNAi_fviHTHb2xlqJvca27nSvJnsmWc1NFTyp7wtu8mu0NlmQli7IMVAtUsLxT-ESAErJg_Sf11woZwV6BGUjrh-BJjbWEbGTR2aHKH0Rrz4"/>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-4xl md:text-5xl font-headline font-bold tracking-tight mb-8">What makes this different</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold mb-2">Deep Rooted Experience</h4>
+<p class="text-secondary leading-relaxed">
+                                    With over 25 years in the educational trenches, I understand exactly where the system breaks down for the modern learner.
+                                </p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="alt_route">alt_route</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold mb-2">Practical Alternatives</h4>
+<p class="text-secondary leading-relaxed">
+                                    College isn't the only path to a flourishing life. We explore apprenticeships, portfolio building, and non-traditional careers.
+                                </p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold mb-2">Grounded Empathy</h4>
+<p class="text-secondary leading-relaxed">
+                                    No judgment, no pressure. Just a calm, steady hand helping your family navigate the fog of these high-stakes years.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section (Glass) -->
+<section class="py-20">
+<div class="max-w-5xl mx-auto px-6">
+<div class="relative bg-primary text-on-primary p-12 md:p-20 rounded-[3rem] overflow-hidden text-center shadow-ambient">
+<!-- Abstract Background Elements -->
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute top-[-20%] left-[-10%] w-[50%] h-[100%] bg-white rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[100%] bg-tertiary-container rounded-full blur-[100px]"></div>
+</div>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-headline font-extrabold mb-8 tracking-tight">Ready to find a different way forward?</h2>
+<p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto font-body">
+                        Start with a conversation. Let’s look at the options that traditional systems don't mention.
+                    </p>
+<button class="bg-surface text-primary px-10 py-5 rounded-full font-headline font-extrabold text-xl shadow-ambient hover:bg-white transition-all active:scale-95">
+                        Book an initial coaching session
+                    </button>
+<p class="mt-8 text-sm font-label opacity-80 uppercase tracking-widest">Limited availability for Summer 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#f1eee7] dark:bg-slate-950 w-full py-12 px-6 mt-20 tonal-shift-top">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+<div>
+<p class="text-lg font-bold text-[#4d6451] dark:text-[#8fa892] font-headline mb-2">More Than Points</p>
+<p class="font-['Inter'] text-sm leading-relaxed text-[#545f72] dark:text-slate-400">
+                    © 2024 More Than Points. Grounded Coaching for the Modern Journey.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 font-['Inter'] text-sm underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 font-['Inter'] text-sm underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Terms of Service</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 font-['Inter'] text-sm underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Cookie Policy</a>
+</div>
+<div class="flex justify-center md:justify-end gap-6">
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 font-['Inter'] text-sm underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Instagram</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 font-['Inter'] text-sm underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">LinkedIn</a>
+<a class="text-[#545f72] dark:text-slate-400 hover:text-[#4d6451] transition-opacity duration-300 font-['Inter'] text-sm underline decoration-[#775a19] decoration-2 underline-offset-4" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
