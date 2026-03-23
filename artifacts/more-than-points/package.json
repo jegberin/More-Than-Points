@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
     "build": "vite build --config vite.config.ts",
-    "build:github": "BASE_PATH=/ NODE_ENV=production vite build --config vite.config.ts --outDir ../../docs && cp ../../docs/index.html ../../docs/404.html && echo morethanpoints.ie > ../../docs/CNAME",
+    "build:github": "rm -rf ../../docs && BASE_PATH=/ NODE_ENV=production vite build --config vite.config.ts --outDir ../../docs && cp ../../docs/index.html ../../docs/404.html && echo morethanpoints.ie > ../../docs/CNAME",
     "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
