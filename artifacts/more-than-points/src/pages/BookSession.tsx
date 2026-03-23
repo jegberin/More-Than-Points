@@ -176,7 +176,7 @@ export default function BookSession() {
         </section>
 
         {/* Booking Form */}
-        <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 6rem" }}>
+        <section id="booking-form" style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 6rem" }}>
           <div
             style={{
               backgroundColor: colors.surfaceContainerLow,
