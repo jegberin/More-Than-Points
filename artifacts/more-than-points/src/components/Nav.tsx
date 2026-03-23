@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
+import logo from "@assets/logo-morethanpoints_1774278848205.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -18,20 +19,13 @@ export default function Nav() {
       className="fixed top-0 w-full z-50 shadow-sm"
       style={{ backgroundColor: "rgba(252, 249, 242, 0.85)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }}
     >
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-6 py-3">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 700,
-              color: "#4d6451",
-              letterSpacing: "-0.025em",
-              fontFamily: "Plus Jakarta Sans, sans-serif",
-              cursor: "pointer",
-            }}
-          >
-            More Than Points
-          </span>
+          <img
+            src={logo}
+            alt="More Than Points"
+            style={{ height: "40px", width: "auto", display: "block" }}
+          />
         </Link>
 
         <div className="hidden md:flex items-center" style={{ gap: "2rem" }}>
@@ -59,7 +53,7 @@ export default function Nav() {
           })}
         </div>
 
-        <Link to="/book-session" style={{ textDecoration: "none" }}>
+        <Link to="/book-session" style={{ textDecoration: "none" }} className="hidden md:block">
           <button
             style={{
               backgroundColor: "#4d6451",

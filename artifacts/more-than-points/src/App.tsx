@@ -7,6 +7,9 @@ import CoachingOptions from "@/pages/CoachingOptions";
 import About from "@/pages/About";
 import BookSession from "@/pages/BookSession";
 import Contact from "@/pages/Contact";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
+import CookiePolicy from "@/pages/CookiePolicy";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -67,6 +70,15 @@ function Router() {
           </Route>
           <Route path="/contact">
             <AnimatedPage><Contact /></AnimatedPage>
+          </Route>
+          <Route path="/privacy-policy">
+            <AnimatedPage><PrivacyPolicy /></AnimatedPage>
+          </Route>
+          <Route path="/terms-of-service">
+            <AnimatedPage><TermsOfService /></AnimatedPage>
+          </Route>
+          <Route path="/cookie-policy">
+            <AnimatedPage><CookiePolicy /></AnimatedPage>
           </Route>
           <Route>
             <AnimatedPage><NotFound /></AnimatedPage>

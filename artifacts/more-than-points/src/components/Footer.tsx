@@ -1,10 +1,19 @@
+import { Link } from "wouter";
+import logo from "@assets/logo-morethanpoints_1774278848205.png";
+
+const legalLinks = [
+  { label: "Privacy Policy", to: "/privacy-policy" },
+  { label: "Terms of Service", to: "/terms-of-service" },
+  { label: "Cookie Policy", to: "/cookie-policy" },
+];
+
 export default function Footer() {
   return (
     <footer
       style={{
         backgroundColor: "#f1eee7",
         width: "100%",
-        padding: "3rem 1.5rem",
+        padding: "3rem 1.5rem 2rem",
         marginTop: "5rem",
       }}
     >
@@ -20,28 +29,24 @@ export default function Footer() {
         }}
         className="md:grid-cols-3 md:text-left"
       >
-        <div>
-          <p
-            style={{
-              fontSize: "1.125rem",
-              fontWeight: 700,
-              color: "#4d6451",
-              fontFamily: "Plus Jakarta Sans, sans-serif",
-              marginBottom: "0.5rem",
-            }}
-          >
-            More Than Points
-          </p>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.875rem", lineHeight: "1.6", color: "#545f72" }}>
-            © 2024 More Than Points. Grounded Coaching for the Modern Journey.
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }} className="md:items-start">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img
+              src={logo}
+              alt="More Than Points"
+              style={{ height: "44px", width: "auto" }}
+            />
+          </Link>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.8125rem", lineHeight: "1.6", color: "#545f72" }}>
+            © 2026 More Than Points. Grounded Coaching for the Modern Journey.
           </p>
         </div>
 
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1.5rem" }}>
-          {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((link) => (
-            <a
-              key={link}
-              href="#"
+          {legalLinks.map(({ label, to }) => (
+            <Link
+              key={label}
+              to={to}
               style={{
                 color: "#545f72",
                 fontFamily: "Inter, sans-serif",
@@ -52,32 +57,33 @@ export default function Footer() {
                 textUnderlineOffset: "4px",
                 transition: "color 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#545f72")}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#4d6451")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#545f72")}
             >
-              {link}
-            </a>
+              {label}
+            </Link>
           ))}
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem" }} className="md:justify-end">
-          {["Instagram", "LinkedIn", "Twitter"].map((link) => (
-            <a
-              key={link}
-              href="#"
-              style={{
-                color: "#545f72",
-                fontFamily: "Inter, sans-serif",
-                fontSize: "0.875rem",
-                textDecoration: "none",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#545f72")}
-            >
-              {link}
-            </a>
-          ))}
+        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", gap: "0.25rem" }} className="md:items-end">
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.75rem", color: "#8a8a8a" }}>Website design by</p>
+          <a
+            href="https://digital.crettyard.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "0.75rem",
+              color: "#545f72",
+              textDecoration: "underline",
+              textUnderlineOffset: "3px",
+              transition: "color 0.2s",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#545f72")}
+          >
+            digital.crettyard.com
+          </a>
         </div>
       </div>
     </footer>
