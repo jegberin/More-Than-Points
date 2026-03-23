@@ -36,7 +36,7 @@ const sessionTypes = [
 const faqs = [
   {
     q: "How do payments work?",
-    a: "We use Stripe to process all transactions securely. You will be prompted to enter your payment details after selecting your preferred session time. We accept all major credit cards and digital wallets.",
+    a: "After Angela confirms your booking by email, she will send you a secure payment link. We accept all major credit and debit cards.",
   },
   {
     q: "What is your cancellation policy?",
