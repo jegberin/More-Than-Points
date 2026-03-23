@@ -66,25 +66,25 @@ export default function Footer() {
           ))}
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", gap: "0.25rem" }} className="md:items-end">
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.75rem", color: "#8a8a8a" }}>Website design by</p>
-          <a
-            href="https://digital.crettyard.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: "0.75rem",
-              color: "#545f72",
-              textDecoration: "underline",
-              textUnderlineOffset: "3px",
-              transition: "color 0.2s",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#545f72")}
-          >
-            digital.crettyard.com
-          </a>
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }} className="md:justify-end">
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.75rem", color: "#8a8a8a" }}>
+            Website design by{" "}
+            <a
+              href="https://digital.crettyard.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#545f72",
+                textDecoration: "underline",
+                textUnderlineOffset: "3px",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#545f72")}
+            >
+              digital.crettyard.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>
