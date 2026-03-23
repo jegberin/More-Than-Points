@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import logo from "@assets/logo-morethanpoints_1774278848205.png";
+
+const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.png`;
 
 const legalLinks = [
   { label: "Privacy Policy", to: "/privacy-policy" },

@@ -1,6 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
-import logo from "@assets/logo-morethanpoints_1774278848205.png";
+
+const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.png`;
 
 const navLinks = [
   { label: "Home", to: "/" },
