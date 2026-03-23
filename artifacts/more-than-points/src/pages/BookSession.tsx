@@ -59,6 +59,7 @@ export default function BookSession() {
     name: "",
     email: "",
     phone: "",
+    teenAge: "",
     sessionType: "",
     message: "",
   });
@@ -69,6 +70,7 @@ export default function BookSession() {
     if (!form.name.trim()) errs.name = "Name is required";
     if (!form.email.trim()) errs.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Invalid email";
+    if (!form.teenAge) errs.teenAge = "Please select your teen's age";
     if (!form.sessionType) errs.sessionType = "Please select a session type";
     return errs;
   };
@@ -215,7 +217,7 @@ export default function BookSession() {
                     session and provide payment details.
                   </p>
                   <button
-                    onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", sessionType: "", message: "" }); }}
+                    onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", teenAge: "", sessionType: "", message: "" }); }}
                     style={{
                       backgroundColor: colors.surfaceContainerLow,
                       color: colors.secondary,
@@ -279,7 +281,7 @@ export default function BookSession() {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1.5rem" }}>
+                    <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "1.5rem" }}>
                       <div>
                         <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
                           Phone (Optional)
@@ -293,6 +295,24 @@ export default function BookSession() {
                           onFocus={(e) => { e.target.style.boxShadow = `0 0 0 2px ${colors.primary}33`; e.target.style.backgroundColor = "#fff"; }}
                           onBlur={(e) => { e.target.style.boxShadow = "none"; e.target.style.backgroundColor = colors.surfaceContainerLow; }}
                         />
+                      </div>
+                      <div>
+                        <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
+                          Teen's Age *
+                        </label>
+                        <select
+                          value={form.teenAge}
+                          onChange={(e) => setForm({ ...form, teenAge: e.target.value })}
+                          style={{ ...inputStyle(!!errors.teenAge), appearance: "none", cursor: "pointer" }}
+                          onFocus={(e) => { e.target.style.boxShadow = `0 0 0 2px ${colors.primary}33`; e.target.style.backgroundColor = "#fff"; }}
+                          onBlur={(e) => { e.target.style.boxShadow = "none"; e.target.style.backgroundColor = colors.surfaceContainerLow; }}
+                        >
+                          <option value="">Select age...</option>
+                          {[16, 17, 18, 19].map((age) => (
+                            <option key={age} value={String(age)}>{age} years old</option>
+                          ))}
+                        </select>
+                        {errors.teenAge && <p style={{ color: colors.error, fontSize: "0.75rem", marginTop: "0.25rem" }}>{errors.teenAge}</p>}
                       </div>
                       <div>
                         <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>

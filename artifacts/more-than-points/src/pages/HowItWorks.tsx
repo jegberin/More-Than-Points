@@ -112,7 +112,7 @@ export default function HowItWorks() {
               className="md:col-span-5"
               style={{
                 backgroundColor: colors.secondary,
-                color: colors.onSecondary,
+                color: "#ffffff",
                 padding: "clamp(2rem, 5vw, 3rem)",
                 borderRadius: "0.75rem",
                 display: "flex",
