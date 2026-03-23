@@ -52,8 +52,18 @@ const faqs = [
   },
 ];
 
+const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie";
+
+const SESSION_LABELS: Record<string, string> = {
+  single: "Single Clarity Session (€85)",
+  growth: "Growth Journey Package (4–6 Sessions)",
+  intro: "Free 15-Min Intro Call",
+};
+
 export default function BookSession() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [form, setForm] = useState({
     name: "",
@@ -75,14 +85,42 @@ export default function BookSession() {
     return errs;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    setSubmitted(true);
+    setLoading(true);
+    setSubmitError("");
+    try {
+      const res = await fetch(FORMSUBMIT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone || "Not provided",
+          "teen's age": `${form.teenAge} years old`,
+          "session type": SESSION_LABELS[form.sessionType] ?? form.sessionType,
+          message: form.message || "No additional message provided",
+          _subject: "New booking request — More Than Points",
+          _honey: "",
+          _captcha: "false",
+        }),
+      });
+      const data = await res.json();
+      if (data.success === "true" || data.success === true) {
+        setSubmitted(true);
+      } else {
+        setSubmitError("Something went wrong. Please try again or email hello@morethanpoints.ie directly.");
+      }
+    } catch {
+      setSubmitError("Could not send your request — please check your connection and try again, or email hello@morethanpoints.ie directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputStyle = (hasError?: boolean) => ({
@@ -349,31 +387,38 @@ export default function BookSession() {
                       />
                     </div>
 
+                    {submitError && (
+                      <p style={{ color: colors.error, fontSize: "0.875rem", textAlign: "center", lineHeight: 1.6 }}>
+                        {submitError}
+                      </p>
+                    )}
+
                     <div style={{ paddingTop: "0.5rem" }}>
                       <button
                         type="submit"
+                        disabled={loading}
                         style={{
                           width: "100%",
-                          backgroundColor: colors.primary,
+                          backgroundColor: loading ? "#737972" : colors.primary,
                           color: colors.onPrimary,
                           padding: "1.25rem",
                           borderRadius: "9999px",
                           fontWeight: 700,
                           fontSize: "1.125rem",
                           border: "none",
-                          cursor: "pointer",
+                          cursor: loading ? "not-allowed" : "pointer",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                           gap: "0.75rem",
-                          transition: "box-shadow 0.2s",
+                          transition: "box-shadow 0.2s, background-color 0.2s",
                           fontFamily: "Plus Jakarta Sans, sans-serif",
                         }}
-                        onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 10px 30px rgba(77,100,81,0.3)")}
+                        onMouseEnter={(e) => { if (!loading) e.currentTarget.style.boxShadow = "0 10px 30px rgba(77,100,81,0.3)"; }}
                         onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
                       >
-                        <span>Request Booking</span>
-                        <span className="material-symbols-outlined">calendar_today</span>
+                        <span>{loading ? "Sending…" : "Request Booking"}</span>
+                        {!loading && <span className="material-symbols-outlined">calendar_today</span>}
                       </button>
                     </div>
                   </form>

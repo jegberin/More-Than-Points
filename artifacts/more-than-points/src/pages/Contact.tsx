@@ -22,8 +22,12 @@ const colors = {
   outline: "#737972",
 };
 
+const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie";
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -36,14 +40,39 @@ export default function Contact() {
     return errs;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    setSubmitted(true);
+    setLoading(true);
+    setSubmitError("");
+    try {
+      const res = await fetch(FORMSUBMIT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: "New contact from More Than Points website",
+          _honey: "",
+          _captcha: "false",
+        }),
+      });
+      const data = await res.json();
+      if (data.success === "true" || data.success === true) {
+        setSubmitted(true);
+      } else {
+        setSubmitError("Something went wrong. Please try again or email hello@morethanpoints.ie directly.");
+      }
+    } catch {
+      setSubmitError("Could not send your message — please check your connection and try again, or email hello@morethanpoints.ie directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputStyle = (hasError?: boolean) => ({
@@ -278,31 +307,38 @@ export default function Contact() {
                         {errors.message && <p style={{ color: colors.error, fontSize: "0.75rem", marginTop: "0.25rem" }}>{errors.message}</p>}
                       </div>
 
+                      {submitError && (
+                        <p style={{ color: colors.error, fontSize: "0.875rem", textAlign: "center", lineHeight: 1.6 }}>
+                          {submitError}
+                        </p>
+                      )}
+
                       <div style={{ paddingTop: "1rem" }}>
                         <button
                           type="submit"
+                          disabled={loading}
                           style={{
                             width: "100%",
-                            backgroundColor: colors.primary,
+                            backgroundColor: loading ? colors.outline : colors.primary,
                             color: colors.onPrimary,
                             padding: "1.25rem",
                             borderRadius: "9999px",
                             fontWeight: 700,
                             fontSize: "1.125rem",
                             border: "none",
-                            cursor: "pointer",
+                            cursor: loading ? "not-allowed" : "pointer",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                             gap: "0.75rem",
-                            transition: "box-shadow 0.2s",
+                            transition: "box-shadow 0.2s, background-color 0.2s",
                             fontFamily: "Plus Jakarta Sans, sans-serif",
                           }}
-                          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 10px 30px rgba(77,100,81,0.3)")}
+                          onMouseEnter={(e) => { if (!loading) e.currentTarget.style.boxShadow = "0 10px 30px rgba(77,100,81,0.3)"; }}
                           onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
                         >
-                          <span>Send Message</span>
-                          <span className="material-symbols-outlined" style={{ fontSize: "1.25rem" }}>arrow_forward</span>
+                          <span>{loading ? "Sending…" : "Send Message"}</span>
+                          {!loading && <span className="material-symbols-outlined" style={{ fontSize: "1.25rem" }}>arrow_forward</span>}
                         </button>
                       </div>
                     </form>
