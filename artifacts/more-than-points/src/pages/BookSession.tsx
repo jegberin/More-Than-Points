@@ -199,7 +199,7 @@ export default function BookSession() {
                   ))}
                 </div>
                 <p style={{ fontSize: "0.875rem", fontWeight: 500, color: colors.onSurfaceVariant }}>
-                  Trusted by 500+ families
+                  Trusted by many families
                 </p>
               </div>
             </div>
