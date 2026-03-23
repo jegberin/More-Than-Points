@@ -64,6 +64,7 @@ export default function BookSession() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [honey, setHoney] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [form, setForm] = useState({
     name: "",
@@ -106,10 +107,14 @@ export default function BookSession() {
           "session type": SESSION_LABELS[form.sessionType] ?? form.sessionType,
           message: form.message || "No additional message provided",
           _subject: "New booking request — More Than Points",
-          _honey: "",
+          _honey: honey,
           _captcha: "false",
         }),
       });
+      if (!res.ok) {
+        setSubmitError("Something went wrong. Please try again or email hello@morethanpoints.ie directly.");
+        return;
+      }
       const data = await res.json();
       if (data.success === "true" || data.success === true) {
         setSubmitted(true);
@@ -286,6 +291,7 @@ export default function BookSession() {
                   </div>
 
                   <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                    <input type="text" name="_honey" value={honey} onChange={(e) => setHoney(e.target.value)} style={{ display: "none" }} aria-hidden="true" tabIndex={-1} autoComplete="off" />
                     <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1.5rem" }}>
                       <div>
                         <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
