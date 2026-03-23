@@ -87,9 +87,9 @@ export default function About() {
                 }}
               >
                 <img
-                  alt="Angela, a professional coach, smiling warmly in a serene outdoor setting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkmoskNO6LAPl-Vici5ddEt22TakJaFhAi0ojDTpwy6e8n8B6s8jE0Qn-uQjiaNNwL5LMlIuUlg_YJnZMX51xMwsY9dCt637btAIXhg_EYTlReXRG0qxq14kZJVJjHQpKo657vchdRRQ1P4gN5HdHGDgqXiScOnZYDwVBPaKKa3LnxOqFedSUGLiSxgrrjYwlgJlKPSH_woYHCDFaqbW_XEWMOdsKg9gVXOAgGg2R-zyGmXZ2iwmFNGxa476HcomrJiTOQeyCzOO8"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  alt="Angela, educational coach at More Than Points"
+                  src={`${import.meta.env.BASE_URL}angela.png`}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(77,100,81,0.2), transparent)" }} />
               </div>
