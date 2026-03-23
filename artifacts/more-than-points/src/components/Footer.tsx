@@ -35,7 +35,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="More Than Points"
-              style={{ height: "44px", width: "auto" }}
+              style={{ height: "88px", width: "auto" }}
             />
           </Link>
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.8125rem", lineHeight: "1.6", color: "#545f72" }}>
