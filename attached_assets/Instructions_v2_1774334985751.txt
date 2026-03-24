@@ -1,0 +1,632 @@
+Act as an expert website strategist, conversion-focused copywriter, UX designer, SEO-aware content editor, and front-end implementation assistant.
+Your task is to improve and refine my existing website for More Than Points at morethanpoints.ie.
+IMPORTANT:
+This is a refinement and enhancement project, not a full redesign or rebrand.
+The current website already has a look and feel that I like, and that overall visual style must be retained.
+DO NOT redesign the website from scratch.
+DO NOT replace the current aesthetic direction with a new concept.
+DO NOT turn it into a flashy startup-style site.
+DO NOT dramatically change the visual identity, mood, colour direction, or tone.
+Instead, preserve the current calm, soft, grounded, emotionally intelligent design and improve:
+• page clarity
+• content structure
+• messaging
+• trust signals
+• calls to action
+• mobile usability
+• SEO foundations
+• conversion flow
+PROJECT CONTEXT
+Business name:
+More Than Points
+Website:
+morethanpoints.ie
+Business purpose:
+More Than Points is an Irish coaching service supporting parents and young people, especially teenagers and school-leavers, who are struggling with school pressure, Leaving Cert stress, low confidence, lack of motivation, uncertainty about college, uncertainty about alternative pathways, or uncertainty about what comes next.
+Primary audience:
+Parents of young people.
+Secondary audience:
+Teenagers and young adults who need calm, supportive guidance.
+Brand tone:
+• Calm
+• Grounded
+• Reassuring
+• Professional
+• Human
+• Warm but clear
+• Non-judgmental
+• Thoughtful
+• Practical
+The site should feel emotionally safe and supportive, while also being commercially clear and easy to act on.
+PRIMARY OBJECTIVE
+Improve the existing website so that visitors quickly understand:
+• who the service is for
+• what problems it helps with
+• how coaching works
+• why they should trust it
+• what to do next
+The website should convert more effectively into:
+• booked sessions
+• warm enquiries
+• parent contact
+• trust in the service
+DESIGN PRESERVATION INSTRUCTIONS
+Retain the current design look and feel as much as possible.
+Keep:
+• the existing overall visual style
+• the calm, soft, grounded presentation
+• the current tone and emotional feel
+• the existing design language where possible
+• the overall page atmosphere
+• the sense of space and softness already present
+Only make light UI refinements where needed for clarity and usability, such as:
+• better spacing between sections
+• stronger heading hierarchy
+• more consistent button styling
+• cleaner cards for coaching options or FAQs
+• improved mobile text flow
+• clearer CTA placement
+• slightly better visual grouping of related content
+Avoid:
+• dramatic colour changes
+• major layout overhauls
+• trendy startup visuals
+• corporate or clinical styling
+• cluttered illustrations
+• aggressive design changes
+• replacing the current design system unless necessary for consistency
+The goal is:
+make the current design work better, not look different.
+WEBSITE STRUCTURE
+Keep and improve these pages:
+• Home
+• How It Works
+• Coaching Options
+• About
+• Book Session
+• Contact
+• Privacy Policy
+• Terms of Service
+• Cookie Policy
+Add these pages if they do not already exist:
+• For Parents
+• For Teens
+• FAQ
+• Testimonials or Success Stories
+MAIN NAVIGATION
+Use this main navigation:
+• Home
+• How It Works
+• Coaching Options
+• For Parents
+• For Teens
+• About
+• FAQ
+• Contact
+• Book Session
+Make “Book Session” the main navigation button.
+FOOTER REQUIREMENTS
+Footer should include:
+• a short More Than Points brand summary
+• quick links to main pages
+• contact details
+• Privacy Policy
+• Terms of Service
+• Cookie Policy
+CONTENT STRATEGY
+The website must move from abstract wording to clearer, more practical language.
+Do:
+• use plain English
+• write short paragraphs
+• write with emotional intelligence
+• explain services clearly
+• use headings that real parents can understand quickly
+• focus on situations families actually recognise
+• make every page skimmable
+• use clear section breaks
+• repeat calls to action naturally
+Do not:
+• overuse vague coaching phrases
+• rely too heavily on abstract emotional language
+• use too much generic “journey” language
+• sound clinical or overly formal
+• sound like a therapy website unless explicitly relevant
+Each key page should answer:
+• Who is this for?
+• What does it help with?
+• How does it work?
+• Why should I trust this?
+• What should I do next?
+TARGET THEMES TO ADDRESS IN COPY
+Use natural, parent-relevant language around:
+• school pressure
+• Leaving Cert stress
+• uncertainty about college
+• low confidence
+• low motivation
+• feeling stuck
+• pressure about the future
+• tension between parent and teen
+• alternative pathways
+• needing calm, practical support
+• not knowing the next step
+CTA STRATEGY
+Primary CTA:
+• Book a Session
+Secondary CTAs:
+• See How It Works
+• Get in Touch
+• Ask a Question
+Add strong CTA opportunities:
+• above the fold
+• mid-page
+• near the bottom of each major page
+SEO REQUIREMENTS
+Improve on-page SEO without keyword stuffing.
+Use natural Irish-English phrasing relevant to search intent.
+Possible topic areas to support naturally in copy:
+• coaching for teens in Ireland
+• support for parents of teenagers
+• Leaving Cert stress support
+• confidence coaching for young people
+• guidance for uncertain school leavers
+• alternatives to the traditional college route
+• support for teenagers unsure about what comes next
+For each page:
+• create a unique meta title
+• create a unique meta description
+• use one clear H1
+• use structured H2 sections
+• add internal links where appropriate
+Implement:
+• FAQ schema on the FAQ page
+• good semantic HTML structure
+• descriptive alt text
+• accessible forms
+• strong mobile responsiveness
+ACCESSIBILITY REQUIREMENTS
+Ensure:
+• readable text contrast
+• semantic headings
+• visible focus states
+• accessible forms with proper labels
+• sensible spacing on mobile
+• buttons that are easy to tap
+• no walls of text
+COPY TO IMPLEMENT
+==================================================
+PAGE: HOME
+META TITLE:
+More Than Points | Coaching for Teens and Parents in Ireland
+META DESCRIPTION:
+Calm, practical coaching for Irish teens and parents dealing with school pressure, confidence, Leaving Cert stress, and uncertainty about what comes next.
+H1:
+Coaching for young people and parents navigating pressure, confidence, and next steps
+HERO INTRO:
+Some young people are doing their best and still feel stuck. Some are overwhelmed by school pressure, unsure about college, low in confidence, or simply not connecting with the path in front of them.
+More Than Points offers calm, practical coaching for young people and families in Ireland who need support, clarity, and a way forward that feels realistic.
+PRIMARY CTA:
+Book a Session
+SECONDARY CTA:
+See How It Works
+SECTION:
+Support for families who know something needs to change
+BODY:
+This service is for parents who can see their young person is struggling, drifting, shut down, or under pressure, but are not sure what will actually help.
+It is also for young people who feel overwhelmed, unmotivated, disconnected from school, uncertain about college, or unsure what they want next.
+SECTION:
+What coaching can help with
+BULLETS:
+• Leaving Cert pressure and exam stress
+• Feeling stuck, flat, or low in motivation
+• Uncertainty about college or alternative pathways
+• Low confidence and fear of making the wrong choice
+• Tension between parent and teen around school or the future
+• Finding a calmer, more practical way to move forward
+SECTION:
+A simple, supportive process
+STEP 1:
+Book a first session
+Choose a time that suits and share a little about what is going on.
+STEP 2:
+Talk things through clearly
+We explore the current situation, the pressure points, and what support is actually needed.
+STEP 3:
+Leave with direction
+You will come away with clearer thinking, practical next steps, and a better sense of what to do next.
+SECTION:
+Because young people are more than results
+BODY:
+Not every young person fits neatly into the expected path. A points-based system may be part of the picture, but it should never be the whole story.
+This work is about seeing the person behind the pressure and helping them move forward in a way that is steadier, healthier, and more realistic.
+SECTION:
+A calm, grounded approach
+BODY:
+More Than Points offers support that is thoughtful, non-judgmental, and practical. The aim is not to force decisions or push a fixed route, but to help young people and parents make sense of what is happening and take the next step with more confidence.
+FINAL CTA HEADING:
+Start with one conversation
+FINAL CTA TEXT:
+You do not need to solve everything at once. A first session can be enough to bring more clarity, reduce stress, and begin a more constructive plan.
+CTA:
+Book a First Session
+==================================================
+PAGE: HOW IT WORKS
+META TITLE:
+How It Works | More Than Points
+META DESCRIPTION:
+Learn what happens before, during, and after a coaching session with More Than Points.
+H1:
+How coaching works
+INTRO:
+Starting support can feel like a big step, especially when things have already been stressful. This process is designed to feel calm, clear, and manageable from the beginning.
+SECTION:
+What coaching is
+BODY:
+Coaching is a supportive conversation with purpose. It gives space to slow things down, understand what is really happening, and identify practical next steps.
+It is not about pressure, lectures, or pretending there is one perfect answer. It is about building clarity, confidence, and forward movement.
+SECTION:
+Who coaching is for
+BODY:
+Coaching may be helpful when a young person is:
+• feeling overwhelmed by school or future decisions
+• unsure about college or other pathways
+• losing motivation
+• stuck between options
+• struggling to talk openly about what is going on
+It may also help parents who want to support their young person in a calmer, more constructive way.
+SECTION:
+What the process looks like
+SUBSECTION:
+Before the first session
+Once you book, you will receive confirmation and simple next-step information. You may also be asked a few short questions so the session starts with useful context.
+SUBSECTION:
+During the session
+We talk through the current situation, what feels difficult, what matters most, and where things may be getting stuck. The conversation is paced, supportive, and focused on what is genuinely helpful.
+SUBSECTION:
+After the session
+You leave with clearer insight and practical next steps. Where appropriate, follow-up sessions can build on that progress.
+SECTION:
+Parents and young people
+BODY:
+Some families come looking for support as a parent first. Others book directly because the young person is ready to talk.
+Where helpful, the process can take account of both perspectives while still giving the young person space to feel heard.
+SECTION:
+When coaching is a good fit
+BODY:
+Coaching is a good fit when someone needs clarity, encouragement, direction, and practical support.
+If a young person needs specialist mental health or clinical support, another service may be more appropriate. Where needed, that will be acknowledged honestly and sensitively.
+FINAL CTA HEADING:
+Ready to begin?
+FINAL CTA TEXT:
+You do not need to have everything figured out before booking. The first session is simply a place to start.
+CTA:
+Book a Session
+==================================================
+PAGE: COACHING OPTIONS
+META TITLE:
+Coaching Options | More Than Points
+META DESCRIPTION:
+Explore coaching options for teens, parents, confidence, motivation, and next-step planning.
+H1:
+Coaching options
+INTRO:
+Every family arrives with a different situation. These sessions are designed to meet people where they are and offer support that feels relevant, practical, and manageable.
+OPTION 1:
+Teen Coaching
+For young people who feel stuck, overwhelmed, unsure of themselves, or uncertain about what comes next.
+This option creates space to talk honestly, reduce pressure, build confidence, and explore realistic next steps.
+Good for:
+stress, uncertainty, motivation, confidence, future planning
+CTA:
+Book Teen Coaching
+OPTION 2:
+Parent Support Sessions
+For parents who want to help but feel unsure how to approach the situation.
+These sessions help parents make sense of what may be going on, respond more constructively, and support progress without adding more pressure.
+Good for:
+communication strain, worry about school or college, concern about disengagement
+CTA:
+Book a Parent Session
+OPTION 3:
+Next-Step Planning
+For families or young people who need practical clarity around what comes after school, college uncertainty, or alternative pathways.
+This option focuses on decision-making, realistic routes forward, and reducing the fear that comes with not having a fixed plan.
+Good for:
+college uncertainty, alternative routes, decision paralysis
+CTA:
+Book a Planning Session
+OPTION 4:
+Confidence and Motivation Support
+For young people who seem flat, discouraged, self-doubting, or disconnected from what they are doing.
+These sessions focus on understanding what is underneath the struggle and building steadier confidence from there.
+Good for:
+low confidence, avoidance, feeling behind, loss of momentum
+CTA:
+Book Support
+OPTION 5:
+Follow-Up Sessions
+For clients who want continued support after an initial session.
+Follow-up work helps maintain momentum, reflect on progress, and adjust next steps as things become clearer.
+CTA:
+Book a Follow-Up
+CLOSING HEADING:
+Not sure which option fits?
+CLOSING TEXT:
+That is completely normal. Get in touch or book a first session, and the best starting point can be decided from there.
+CTA:
+Ask a Question
+==================================================
+PAGE: FOR PARENTS
+META TITLE:
+For Parents | More Than Points
+META DESCRIPTION:
+Support for parents of teenagers facing school pressure, uncertainty, and next-step decisions.
+H1:
+Support for parents who want to help, but are not sure what to do next
+INTRO:
+When your young person is struggling, it can be hard to know whether to step in, hold back, push, reassure, or simply wait. Many parents are carrying worry, frustration, and uncertainty while trying to keep things calm at home.
+You do not have to figure it all out on your own.
+SECTION:
+You may be noticing things like
+BULLETS:
+• growing resistance to school or study
+• stress around exams or results
+• uncertainty about college
+• low motivation
+• lack of confidence
+• avoidance of conversations about the future
+• tension at home when the subject comes up
+SECTION:
+How coaching can help
+BODY:
+Coaching offers a calmer space to understand what may be happening underneath the surface. It can help reduce pressure, improve communication, and bring more clarity to what support is actually needed.
+For some families, one session brings immediate relief. For others, a few conversations help create steadier progress over time.
+SECTION:
+Support without added pressure
+BODY:
+This is not about forcing decisions or escalating conflict. It is about helping your young person feel more understood and helping you respond in a way that is more constructive and less exhausting.
+FINAL CTA HEADING:
+Start with one conversation
+FINAL CTA TEXT:
+You do not need to wait until things get worse to ask for support.
+CTA:
+Book a Parent Session
+==================================================
+PAGE: FOR TEENS
+META TITLE:
+For Teens | More Than Points
+META DESCRIPTION:
+Supportive coaching for teens who feel stressed, stuck, unmotivated, or unsure about what comes next.
+H1:
+You do not need to have everything figured out
+INTRO:
+A lot of young people feel pressure to know what they want, stay motivated all the time, and make the right choices straight away. That can feel heavy, especially when you are already overwhelmed or unsure.
+This is a space to slow things down and talk things through properly.
+SECTION:
+What coaching is like
+BODY:
+Coaching is simply a supportive conversation focused on what is going on for you and what might help next. You do not need to have the right words or a clear plan before you start.
+You can talk about feeling stuck, stressed, pressured, uncertain, or just tired of pretending everything is fine.
+SECTION:
+Coaching can help with
+BULLETS:
+• school stress
+• Leaving Cert pressure
+• confidence
+• motivation
+• feeling behind
+• not knowing what to do after school
+• feeling unsure about college
+• wanting a different path but not knowing how to talk about it
+SECTION:
+What this is not
+BODY:
+This is not about being judged, pushed, or told what you should do with your life.
+It is about having space to think clearly, say what is true for you, and work out a next step that feels realistic.
+FINAL CTA HEADING:
+Start with one conversation
+FINAL CTA TEXT:
+You do not need to have a full plan. You just need somewhere to begin.
+CTA:
+Book a Session
+==================================================
+PAGE: ABOUT
+META TITLE:
+About | More Than Points
+META DESCRIPTION:
+Learn more about the thinking behind More Than Points and the coaching approach.
+H1:
+About More Than Points
+INTRO:
+More Than Points was created in response to a growing need: support for young people and families who feel under pressure from expectations that do not always reflect the full reality of who a person is.
+SECTION:
+Why this work matters
+BODY:
+For many families, the pressure around school, exams, college, and the future can become heavy very quickly. When a young person is struggling, it is easy for everyone to feel worried, frustrated, or unsure what to do next.
+More Than Points exists to offer a calmer kind of support. One that takes the person seriously, reduces the noise, and helps uncover practical next steps.
+SECTION:
+The approach
+BODY:
+This coaching is grounded, respectful, and person-centred. It makes room for uncertainty, recognises that progress often starts with feeling understood, and avoids one-size-fits-all advice.
+The goal is not to push young people into a path that does not suit them. The goal is to help them move forward with more clarity, confidence, and steadiness.
+SECTION:
+Who I work best with
+BULLETS:
+• young people under pressure
+• families unsure of the next step
+• teenagers disconnected from the expected path
+• parents worried about making the wrong decision
+• people looking for calm, thoughtful, practical support
+FINAL CTA HEADING:
+A more human way forward
+FINAL CTA TEXT:
+Young people need more than pressure, more than comparison, and more than points. They need support that sees the whole person and helps them move forward in a way that makes sense for them.
+CTA:
+Book a Session
+==================================================
+PAGE: FAQ
+META TITLE:
+FAQ | More Than Points
+META DESCRIPTION:
+Answers to common questions about coaching, sessions, confidentiality, and support.
+H1:
+Frequently asked questions
+FAQ:
+Who is coaching for?
+Coaching is for young people and parents who are dealing with school pressure, uncertainty, confidence issues, or difficulty figuring out what comes next.
+FAQ:
+Is this for parents or teens?
+It can be for either, depending on the situation. Some parents book first, while others come because the young person is ready to talk.
+FAQ:
+Is coaching the same as therapy?
+No. Coaching focuses on support, clarity, confidence, and practical next steps. It is not a replacement for therapy or clinical care.
+FAQ:
+Do I need to know exactly what the problem is before booking?
+No. Many people book because they know something feels off but cannot yet put it neatly into words.
+FAQ:
+How many sessions will we need?
+That depends on the situation. Some people benefit from one focused session, while others prefer ongoing support for a period of time.
+FAQ:
+What if my teenager is reluctant?
+That is very common. A parent session can often be a useful first step.
+FAQ:
+Are sessions confidential?
+Confidentiality should be explained clearly on the live site in line with the actual service policy and any safeguarding limits.
+FAQ:
+Do you offer online sessions?
+Add the real answer here based on the service setup.
+FAQ:
+What happens after booking?
+You receive confirmation, practical information, and the next steps needed before the session.
+FINAL CTA HEADING:
+Still unsure?
+FINAL CTA TEXT:
+Get in touch with a question before booking.
+CTA:
+Contact
+==================================================
+PAGE: TESTIMONIALS
+META TITLE:
+Testimonials | More Than Points
+META DESCRIPTION:
+Read what parents and young people say about working with More Than Points.
+H1:
+Kind words from families
+INTRO:
+Use real testimonials here when available. Keep them short, believable, and specific.
+TESTIMONIAL 1:
+“Angela created a calm space very quickly. What felt overwhelming before the session felt much more manageable afterwards.”
+TESTIMONIAL 2:
+“We came away with clearer next steps and a better way to talk about what was going on at home.”
+TESTIMONIAL 3:
+“Our son felt listened to rather than pushed, which made a huge difference.”
+TESTIMONIAL 4:
+“As a parent, I felt less alone and much clearer about how to support without adding more pressure.”
+FINAL CTA HEADING:
+Real support, real progress
+FINAL CTA TEXT:
+Often the biggest change at the start is not a perfect plan. It is a sense of relief, clarity, and a more hopeful next step.
+CTA:
+Book a Session
+==================================================
+PAGE: BOOK SESSION
+META TITLE:
+Book a Session | More Than Points
+META DESCRIPTION:
+Book a coaching session with More Than Points for practical, supportive guidance.
+H1:
+Book a session
+INTRO:
+Booking a first session is a simple way to create some breathing space and begin making sense of what is going on.
+BODY:
+Choose the session that feels closest to what you need. If you are unsure, start with a first session and we can take it from there.
+SECTION:
+What happens next
+BODY:
+After booking, you will receive confirmation and any details you need before the session. The aim is to make the process feel straightforward, calm, and easy to navigate.
+SECTION:
+Before your session
+BODY:
+You do not need to prepare perfectly. A brief outline of the situation is enough to begin.
+FINAL CTA HEADING:
+Start where you are
+FINAL CTA TEXT:
+You do not need a finished plan to take the first step.
+==================================================
+PAGE: CONTACT
+META TITLE:
+Contact | More Than Points
+META DESCRIPTION:
+Get in touch with More Than Points to ask a question or arrange support.
+H1:
+Get in touch
+INTRO:
+If you have a question before booking, you are very welcome to make contact.
+BODY:
+Sometimes it helps to ask a few questions first. Whether you are a parent trying to support your young person, or someone looking for guidance for yourself, you can reach out in confidence.
+Use the form below to send a message, and you will receive a reply as soon as possible.
+This is a no-pressure first contact. You do not need to explain everything perfectly.
+CLOSING:
+A clear conversation can be the first step toward a calmer way forward.
+==================================================
+PAGE: PRIVACY POLICY
+H1:
+Privacy Policy
+INTRO:
+Your privacy matters. This page explains what information is collected, how it is used, how it is stored, and your rights in relation to your personal data.
+NOTE:
+Insert final GDPR-compliant privacy policy text here.
+==================================================
+PAGE: TERMS OF SERVICE
+H1:
+Terms of Service
+INTRO:
+These terms explain how the service works, what clients can expect, payment and cancellation terms, and any important boundaries or limitations.
+NOTE:
+Insert final service terms here and ensure they match the booking process.
+==================================================
+PAGE: COOKIE POLICY
+H1:
+Cookie Policy
+INTRO:
+This page explains how cookies are used on the website, including essential, analytics, and third-party cookies where applicable.
+NOTE:
+Insert final cookie policy text here based on the actual tracking setup.
+IMPLEMENTATION RULES
+1. Preserve the current website’s visual style and feel.
+2. Do not redesign from scratch.
+3. Improve the existing structure and content within the current aesthetic.
+4. Keep the tone calm, soft, and grounded.
+5. Use the copy above as the base content.
+6. Lightly polish wording only where needed for fit and consistency.
+7. Add CTA buttons after major sections.
+8. Make the site easy to skim on desktop and mobile.
+9. Ensure mobile responsiveness is strong.
+10. Improve spacing and text hierarchy where needed.
+11. Add internal links between relevant pages.
+12. Add FAQ schema.
+13. Ensure all forms are accessible and clearly labelled.
+14. Make the booking flow simple and low-friction.
+15. Add testimonials in a restrained, believable way.
+16. Keep the design premium, calm, and uncluttered.
+17. Ensure footer includes all legal pages.
+18. Keep page load performance strong.
+19. Keep headings and layouts SEO-friendly.
+20. Treat this as a refinement of a good existing site, not a replacement.
+WORKING METHOD
+Implement the changes page by page in this order:
+1. Home
+2. How It Works
+3. Coaching Options
+4. For Parents
+5. For Teens
+6. About
+7. FAQ
+8. Testimonials
+9. Book Session
+10. Contact
+11. Legal pages
+After each page:
+• preserve the current design feel
+• improve clarity and conversion
+• maintain consistency across the whole site
