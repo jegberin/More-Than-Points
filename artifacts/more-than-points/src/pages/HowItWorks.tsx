@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -31,6 +32,10 @@ const colors = {
 };
 
 export default function HowItWorks() {
+  useEffect(() => {
+    document.title = "How It Works | More Than Points";
+  }, []);
+
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />
@@ -53,7 +58,7 @@ export default function HowItWorks() {
               textTransform: "uppercase",
             }}
           >
-            The Journey
+            The Process
           </div>
           <h1
             style={{
@@ -68,12 +73,12 @@ export default function HowItWorks() {
               lineHeight: 1.1,
             }}
           >
-            A structured path to{" "}
-            <span style={{ color: colors.primary, fontStyle: "italic" }}>inner clarity.</span>
+            A grounded path to{" "}
+            <span style={{ color: colors.primary, fontStyle: "italic" }}>clarity and confidence.</span>
           </h1>
-          <p style={{ color: colors.onSurfaceVariant, fontSize: "1.125rem", maxWidth: "40rem", margin: "0 auto", lineHeight: 1.6 }}>
-            We move beyond the metrics of exams to discover the character and calling of the student. Our framework is
-            designed to ground the journey in reality and empathy.
+          <p style={{ color: colors.onSurfaceVariant, fontSize: "1.125rem", maxWidth: "42rem", margin: "0 auto", lineHeight: 1.6 }}>
+            Every young person's journey is different. This process isn't a fixed script — it's a framework that
+            flexes around the person. Here's how a typical coaching journey unfolds.
           </p>
         </section>
 
@@ -91,19 +96,19 @@ export default function HowItWorks() {
               }}
             >
               <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primaryContainer, opacity: 0.4, marginBottom: "1rem", display: "block" }}>01</span>
-              <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Assessment</h3>
-              <p style={{ color: colors.onSurfaceVariant, lineHeight: 1.6, maxWidth: "28rem" }}>
-                We begin with a deep dive into interests, values, and personality styles. It's not about what they can do,
-                but who they are becoming.
+              <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Getting to Know You</h3>
+              <p style={{ color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "28rem" }}>
+                The first session is about listening. We explore what's going on right now — the pressures, the worries,
+                the things that aren't being said at home or in school. There's no agenda. Just space to speak honestly.
               </p>
               <div style={{ marginTop: "2rem", display: "flex", alignItems: "center", gap: "1rem" }}>
                 <span
                   className="material-symbols-outlined"
                   style={{ color: colors.primary, backgroundColor: colors.primaryFixed, padding: "0.75rem", borderRadius: "9999px" }}
                 >
-                  assignment
+                  hearing
                 </span>
-                <span style={{ fontSize: "0.875rem", fontWeight: 600, color: colors.primary }}>Self-discovery audit</span>
+                <span style={{ fontSize: "0.875rem", fontWeight: 600, color: colors.primary }}>No agenda. Just a real conversation.</span>
               </div>
             </div>
 
@@ -122,14 +127,14 @@ export default function HowItWorks() {
             >
               <div>
                 <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.secondaryFixedDim, opacity: 0.4, marginBottom: "1rem", display: "block" }}>02</span>
-                <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Listening</h3>
+                <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Uncovering Strengths</h3>
                 <p style={{ color: colors.secondaryFixed, lineHeight: 1.6 }}>
-                  Creating a safe space for the unspoken. We listen to the anxieties and the aspirations that don't fit
-                  into a CV.
+                  We move beneath the surface to identify what the young person is genuinely good at — skills and
+                  qualities that exam grades don't reflect. This is where self-awareness begins to shift.
                 </p>
               </div>
               <div style={{ marginTop: "2rem" }}>
-                <span className="material-symbols-outlined" style={{ fontSize: "2.5rem" }}>hearing</span>
+                <span className="material-symbols-outlined" style={{ fontSize: "2.5rem" }}>search</span>
               </div>
             </div>
 
@@ -144,9 +149,10 @@ export default function HowItWorks() {
               }}
             >
               <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.tertiary, opacity: 0.4, marginBottom: "1rem", display: "block" }}>03</span>
-              <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Exploration</h3>
+              <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Exploring Pathways</h3>
               <p style={{ lineHeight: 1.6, marginBottom: "2rem" }}>
-                Mapping potential futures without the pressure of finality. Identifying pathways that resonate with the soul.
+                College, apprenticeships, PLCs, gap years, creative industries, entrepreneurship — we map out real
+                options without the pressure of having to choose right now.
               </p>
               <div
                 style={{
@@ -178,10 +184,11 @@ export default function HowItWorks() {
             >
               <div style={{ flex: 1 }}>
                 <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primary, opacity: 0.4, marginBottom: "1rem", display: "block" }}>04</span>
-                <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Confidence Rebuilding</h3>
+                <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Rebuilding Confidence</h3>
                 <p style={{ color: colors.onSurfaceVariant, lineHeight: 1.6 }}>
-                  Dismantling the "points-only" mindset. We reinforce the student's inherent value regardless of academic
-                  outcome, building resilience for the road ahead.
+                  For many teens, the system has quietly eroded their belief in themselves. We work to undo that — not
+                  with empty affirmations, but by reconnecting them with evidence of who they genuinely are and what
+                  they're capable of.
                 </p>
               </div>
               <div
@@ -219,10 +226,11 @@ export default function HowItWorks() {
               <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full">
                 <div style={{ maxWidth: "36rem" }}>
                   <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primaryFixed, opacity: 0.4, marginBottom: "1rem", display: "block" }}>05</span>
-                  <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "2.25rem", fontWeight: 700, marginBottom: "1rem" }}>Sustained Follow-up</h3>
+                  <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "2.25rem", fontWeight: 700, marginBottom: "1rem" }}>Making a Plan</h3>
                   <p style={{ color: colors.primaryFixed, fontSize: "1.125rem", lineHeight: 1.6 }}>
-                    Coaching doesn't end when the session does. We provide ongoing touchpoints to ensure the student feels
-                    supported as they take their first steps into their new horizon.
+                    Coaching ends with clarity, not just conversation. Together we build a practical, realistic plan for
+                    what comes next — whether that's CAO choices, a PLC application, or a completely different direction
+                    altogether. Follow-up sessions are available to stay on track as life unfolds.
                   </p>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
@@ -238,9 +246,9 @@ export default function HowItWorks() {
                       color: "#273d2c",
                     }}
                   >
-                    <span className="material-symbols-outlined" style={{ fontSize: "2.5rem" }}>sync_saved_locally</span>
+                    <span className="material-symbols-outlined" style={{ fontSize: "2.5rem" }}>task_alt</span>
                   </div>
-                  <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700 }}>Lifetime Support</span>
+                  <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700 }}>A real plan. Real steps.</span>
                 </div>
               </div>
             </div>
@@ -252,10 +260,10 @@ export default function HowItWorks() {
           <div style={{ maxWidth: "80rem", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "4rem" }}>
               <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, marginBottom: "1rem" }}>
-                The More Than Points Difference
+                How this differs from standard guidance
               </h2>
               <p style={{ color: colors.onSurfaceVariant, maxWidth: "40rem", margin: "0 auto" }}>
-                While traditional guidance focuses on the destination, we focus on the traveler.
+                The school guidance counsellor plays an important role — but coaching goes further.
               </p>
             </div>
 
@@ -272,14 +280,14 @@ export default function HowItWorks() {
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "2rem" }}>
                   <span className="material-symbols-outlined" style={{ color: colors.outline }}>school</span>
                   <h4 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.25rem", fontWeight: 700, color: colors.outline }}>
-                    Guidance Counsellor
+                    School Guidance Counsellor
                   </h4>
                 </div>
                 <ul style={{ display: "flex", flexDirection: "column", gap: "1.5rem", listStyle: "none" }}>
                   {[
-                    { title: "CAO-Centric", desc: "Primary focus is on ticking boxes for course applications." },
-                    { title: "Metric Driven", desc: "Recommendations based strictly on predicted points." },
-                    { title: "Transactional", desc: "Short sessions focused on immediate administrative needs." },
+                    { title: "CAO-Focused", desc: "Primary function is helping students navigate college applications and course choices." },
+                    { title: "Points-Driven", desc: "Recommendations are often shaped by predicted grade outcomes." },
+                    { title: "Time-Limited", desc: "Short sessions focused on immediate tasks within a school context." },
                   ].map(({ title, desc }) => (
                     <li key={title} style={{ display: "flex", gap: "1rem" }}>
                       <span className="material-symbols-outlined" style={{ color: colors.error, marginTop: "0.25rem" }}>close</span>
@@ -317,20 +325,20 @@ export default function HowItWorks() {
                       letterSpacing: "0.2em",
                     }}
                   >
-                    Our Way
+                    More Than Points
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "2rem" }}>
                   <span className="material-symbols-outlined" style={{ color: colors.primary }}>psychology</span>
                   <h4 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.25rem", fontWeight: 700, color: colors.primary }}>
-                    Angela's Personal Process
+                    Angela's Coaching Approach
                   </h4>
                 </div>
                 <ul style={{ display: "flex", flexDirection: "column", gap: "1.5rem", listStyle: "none" }}>
                   {[
-                    { title: "Holistic Development", desc: "Focus on long-term fulfilment and emotional well-being." },
-                    { title: "Character Discovery", desc: "Identifying unique strengths that points can't measure." },
-                    { title: "Relational & Practical", desc: "Deep coaching relationship paired with actionable steps." },
+                    { title: "Whole-Person Development", desc: "Focus on long-term fulfilment, emotional wellbeing, and genuine self-knowledge." },
+                    { title: "Strengths-Led", desc: "Identifying unique qualities that points can't quantify or capture." },
+                    { title: "Relational and Sustained", desc: "A proper coaching relationship with space to go deep, at a pace that works." },
                   ].map(({ title, desc }) => (
                     <li key={title} style={{ display: "flex", gap: "1rem" }}>
                       <span className="material-symbols-outlined" style={{ color: colors.primary, marginTop: "0.25rem" }}>check_circle</span>
@@ -369,10 +377,10 @@ export default function HowItWorks() {
                 position: "relative",
               }}
             >
-              Ready to start the conversation?
+              Ready to take the first step?
             </h2>
             <p style={{ color: `${colors.onSecondaryContainer}CC`, fontSize: "1.125rem", marginBottom: "2.5rem", maxWidth: "32rem", margin: "0 auto 2.5rem", position: "relative" }}>
-              Every journey begins with a single, grounded step. Let's explore what's possible for your student's future.
+              A single session can shift a lot. Let's find out what's possible for your teenager.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", position: "relative" }}>
               <Link to="/book-session" style={{ textDecoration: "none" }}>
@@ -389,7 +397,7 @@ export default function HowItWorks() {
                     cursor: "pointer",
                   }}
                 >
-                  Schedule a Consultation
+                  Book a Session
                 </button>
               </Link>
               <Link to="/coaching-options" style={{ textDecoration: "none" }}>
@@ -406,7 +414,7 @@ export default function HowItWorks() {
                     cursor: "pointer",
                   }}
                 >
-                  View Options
+                  View Coaching Options
                 </button>
               </Link>
             </div>

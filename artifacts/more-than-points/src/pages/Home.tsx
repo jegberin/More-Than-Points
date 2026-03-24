@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -25,6 +26,10 @@ const colors = {
 };
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "More Than Points | Coaching for Teens and Parents in Ireland";
+  }, []);
+
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />
@@ -49,7 +54,7 @@ export default function Home() {
                   marginBottom: "1.5rem",
                 }}
               >
-                REDEFINING SUCCESS
+                Teen &amp; Parent Coaching · Ireland
               </span>
               <h1
                 style={{
@@ -62,9 +67,8 @@ export default function Home() {
                   marginBottom: "2rem",
                 }}
               >
-                Your child{" "}
-                <span style={{ color: colors.primary, fontStyle: "italic" }}>isn't failing</span>. The system just
-                isn't the right fit.
+                There is{" "}
+                <span style={{ color: colors.primary, fontStyle: "italic" }}>life beyond the points</span>. Let's find it together.
               </h1>
               <p
                 style={{
@@ -75,10 +79,11 @@ export default function Home() {
                   marginBottom: "2.5rem",
                 }}
               >
-                Helping teens navigate the gap between who they are and who the curriculum expects them to be. We
-                provide practical alternatives for the 16–19 journey.
+                Grounded coaching for teenagers aged 16–19 and the parents navigating this journey beside them. Whether
+                your teen is struggling, disengaged, or simply unsure what comes next — there is a way through, and it
+                doesn't have to look like everyone else's path.
               </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginBottom: "3rem" }}>
                 <Link to="/book-session" style={{ textDecoration: "none" }}>
                   <button
                     style={{
@@ -96,7 +101,7 @@ export default function Home() {
                     onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
                     onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                   >
-                    Book an initial coaching session
+                    Book a Session
                   </button>
                 </Link>
                 <Link to="/how-it-works" style={{ textDecoration: "none" }}>
@@ -115,7 +120,7 @@ export default function Home() {
                     onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHighest)}
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHigh)}
                   >
-                    Learn our method
+                    See How It Works
                   </button>
                 </Link>
               </div>
@@ -182,15 +187,15 @@ export default function Home() {
                 color: colors.onSurface,
               }}
             >
-              Who I Help
+              Who I work with
             </h2>
             <p style={{ color: colors.secondary, maxWidth: "36rem", margin: "0 auto", fontSize: "1.125rem" }}>
-              Focusing on the pivotal years where traditional education often feels most restrictive.
+              Coaching built for the pivotal 16–19 years, when traditional education often feels most restrictive.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "1.5rem" }}>
-            {/* Large Card */}
+            {/* Teens Card */}
             <div
               className="md:col-span-2"
               style={{
@@ -204,12 +209,13 @@ export default function Home() {
               }}
             >
               <div>
-                <span className="material-symbols-outlined" style={{ fontSize: "2.5rem", color: colors.primary, marginBottom: "1.5rem", display: "block" }}>family_history</span>
+                <span className="material-symbols-outlined" style={{ fontSize: "2.5rem", color: colors.primary, marginBottom: "1.5rem", display: "block" }}>psychology</span>
                 <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, marginBottom: "1rem" }}>
-                  Parents of Teens (16–19)
+                  Teenagers aged 16–19
                 </h3>
                 <p style={{ color: colors.secondary, lineHeight: 1.7, fontSize: "1.125rem", maxWidth: "28rem" }}>
-                  You see their talent, their curiosity, and their drive—but it's not showing up on the report card. We help you bridge that gap.
+                  Coaching for teens who feel lost, overwhelmed, or like the system doesn't quite fit them. A
+                  confidential space to explore who they are and what they actually want from life.
                 </p>
               </div>
               <div
@@ -222,14 +228,15 @@ export default function Home() {
                   justifyContent: "space-between",
                 }}
               >
-                <span style={{ fontSize: "0.875rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primary, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  The Transitional Phase
-                </span>
-                <span className="material-symbols-outlined" style={{ color: colors.primary }}>arrow_right_alt</span>
+                <Link to="/for-teens" style={{ textDecoration: "none" }}>
+                  <span style={{ fontSize: "0.875rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primary, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    Read more for teens →
+                  </span>
+                </Link>
               </div>
             </div>
 
-            {/* Primary Card */}
+            {/* Parents Card */}
             <div
               style={{
                 backgroundColor: colors.primary,
@@ -242,43 +249,30 @@ export default function Home() {
               }}
             >
               <div style={{ position: "relative", zIndex: 1 }}>
-                <span className="material-symbols-outlined" style={{ fontSize: "2.5rem", marginBottom: "1.5rem", display: "block" }}>psychology</span>
+                <span className="material-symbols-outlined" style={{ fontSize: "2.5rem", marginBottom: "1.5rem", display: "block" }}>family_history</span>
                 <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, marginBottom: "1rem" }}>
-                  Non-Linear Thinkers
+                  Parents &amp; Families
                 </h3>
                 <p style={{ opacity: 0.9, lineHeight: 1.7 }}>
-                  For the creative, the practical, and the entrepreneurial minds who feel stifled by rote memorisation.
+                  Support for parents who want to help without adding to the pressure. I bridge the gap between what
+                  your teen is feeling and what you need to understand.
                 </p>
+                <div style={{ marginTop: "2rem" }}>
+                  <Link to="/for-parents" style={{ textDecoration: "none" }}>
+                    <span style={{ fontSize: "0.875rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primaryFixed, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                      Read more for parents →
+                    </span>
+                  </Link>
+                </div>
               </div>
               <div style={{ position: "absolute", right: "-1rem", bottom: "-1rem", opacity: 0.1 }}>
-                <span className="material-symbols-outlined" style={{ fontSize: "6rem" }}>lightbulb</span>
+                <span className="material-symbols-outlined" style={{ fontSize: "6rem" }}>favorite</span>
               </div>
-            </div>
-
-            {/* Third Card */}
-            <div
-              style={{
-                backgroundColor: colors.surfaceContainer,
-                padding: "2.5rem",
-                borderRadius: "1rem",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-              }}
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: "3rem", color: colors.tertiary, marginBottom: "1.5rem" }}>route</span>
-              <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.25rem", fontWeight: 700, marginBottom: "0.75rem" }}>
-                Gap Year Explorers
-              </h3>
-              <p style={{ color: colors.secondary, fontSize: "0.875rem", lineHeight: 1.7 }}>
-                Structuring intentional time away from academia to build real-world confidence.
-              </p>
             </div>
 
             {/* Quote Card */}
             <div
-              className="md:col-span-2"
+              className="md:col-span-3"
               style={{
                 backgroundColor: "#f1eee7",
                 padding: "2.5rem",
@@ -303,8 +297,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <section style={{ padding: "5rem 0" }}>
+        <div style={{ maxWidth: "56rem", margin: "0 auto", padding: "0 1.5rem", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.75rem)", fontWeight: 700, letterSpacing: "-0.025em", marginBottom: "1rem", color: colors.onSurface }}>
+            Not sure which path is right for your family?
+          </h2>
+          <p style={{ color: colors.secondary, fontSize: "1.125rem", lineHeight: 1.7, maxWidth: "36rem", margin: "0 auto 2rem" }}>
+            Explore the coaching options available and find the right fit — from a single clarity session to a full
+            growth package.
+          </p>
+          <Link to="/coaching-options" style={{ textDecoration: "none" }}>
+            <button
+              style={{
+                backgroundColor: colors.surfaceContainerHigh,
+                color: colors.onSurface,
+                padding: "1rem 2rem",
+                borderRadius: "9999px",
+                fontFamily: "Plus Jakarta Sans, sans-serif",
+                fontWeight: 700,
+                fontSize: "1.125rem",
+                border: "none",
+                cursor: "pointer",
+                transition: "background-color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHighest)}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHigh)}
+            >
+              View Coaching Options
+            </button>
+          </Link>
+        </div>
+      </section>
+
       {/* What Makes This Different */}
-      <section style={{ padding: "6rem 0", overflow: "hidden" }}>
+      <section style={{ padding: "6rem 0", overflow: "hidden", backgroundColor: colors.surfaceContainerLow }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
@@ -369,9 +396,9 @@ export default function Home() {
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
                 {[
-                  { icon: "history_edu", title: "Deep Rooted Experience", desc: "With over 25 years in the educational trenches, I understand exactly where the system breaks down for the modern learner." },
-                  { icon: "alt_route", title: "Practical Alternatives", desc: "College isn't the only path to a flourishing life. We explore apprenticeships, portfolio building, and non-traditional careers." },
-                  { icon: "favorite", title: "Grounded Empathy", desc: "No judgement, no pressure. Just a calm, steady hand helping your family navigate the fog of these high-stakes years." },
+                  { icon: "history_edu", title: "Over 25 years in education", desc: "With deep roots in further education and adult learning, I understand exactly where the Irish education system falls short for so many young people." },
+                  { icon: "alt_route", title: "Alternatives, not just CAO", desc: "College is one option — not the only one. Together we explore apprenticeships, PLCs, gap years, portfolio careers, and the paths schools rarely mention." },
+                  { icon: "favorite", title: "Grounded, non-judgmental support", desc: "No pressure, no performance. Just a calm, steady presence helping your family find clarity in the midst of one of the most stressful periods of life." },
                 ].map(({ icon, title, desc }) => (
                   <div key={title} style={{ display: "flex", gap: "1.5rem" }}>
                     <div
@@ -400,7 +427,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Bottom CTA Section */}
       <section style={{ padding: "5rem 0" }}>
         <div style={{ maxWidth: "56rem", margin: "0 auto", padding: "0 1.5rem" }}>
           <div
@@ -424,14 +451,14 @@ export default function Home() {
                   fontFamily: "Plus Jakarta Sans, sans-serif",
                   fontSize: "clamp(1.75rem, 4vw, 3rem)",
                   fontWeight: 800,
-                  marginBottom: "2rem",
+                  marginBottom: "1.5rem",
                   letterSpacing: "-0.025em",
                 }}
               >
-                Ready to find a different way forward?
+                Ready to find a way through?
               </h2>
               <p style={{ fontSize: "1.25rem", opacity: 0.9, marginBottom: "3rem", maxWidth: "32rem", margin: "0 auto 3rem" }}>
-                Start with a conversation. Let's look at the options that traditional systems don't mention.
+                The first step is just a conversation. Let's find out what's possible for your teenager — and your family.
               </p>
               <Link to="/book-session" style={{ textDecoration: "none" }}>
                 <button
@@ -450,12 +477,9 @@ export default function Home() {
                   onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ffffff")}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.surface)}
                 >
-                  Book an initial coaching session
+                  Book a Session
                 </button>
               </Link>
-              <p style={{ marginTop: "2rem", fontSize: "0.875rem", fontFamily: "Plus Jakarta Sans, sans-serif", opacity: 0.8, textTransform: "uppercase", letterSpacing: "0.1em" }}>
-                Limited availability for Summer 2024
-              </p>
             </div>
           </div>
         </div>

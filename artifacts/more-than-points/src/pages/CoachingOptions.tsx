@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -14,18 +15,71 @@ const colors = {
   surfaceContainerLowest: "#ffffff",
   surfaceContainer: "#f1eee7",
   surfaceContainerHigh: "#ebe8e1",
+  surfaceContainerHighest: "#e5e2db",
   onSurface: "#1c1c18",
   onSurfaceVariant: "#434842",
   secondaryContainer: "#d5e0f7",
   onSecondaryContainer: "#586376",
   primaryContainer: "#8fa892",
+  primaryFixed: "#cfe9d1",
   tertiaryContainer: "#c19c56",
   tertiaryFixed: "#ffdea5",
   tertiaryFixedDim: "#e9c176",
-  onTertiaryFixedDim: "#e9c176",
 };
 
+const options = [
+  {
+    icon: "psychology",
+    title: "Teen Coaching",
+    desc: "One-to-one sessions for teenagers aged 16–19. A confidential space to talk through pressure, explore strengths, and figure out what comes next — on their terms.",
+    who: "For teens who feel lost, overwhelmed, or simply unsure about the future.",
+    cta: "Book Teen Coaching",
+    to: "/book-session",
+    featured: false,
+  },
+  {
+    icon: "family_history",
+    title: "Parent Support",
+    desc: "Coaching for parents who want to understand their teenager better and show up without adding pressure. Practical guidance on how to listen, communicate, and let go of the things you can't control.",
+    who: "For parents who feel helpless or like they're always getting it wrong.",
+    cta: "Book Parent Support",
+    to: "/book-session",
+    featured: false,
+  },
+  {
+    icon: "map",
+    title: "Next-Step Planning",
+    desc: "A focused session (or series) dedicated to mapping out what comes after school. CAO choices, PLC options, apprenticeships, gap years — we look at everything and build a plan that actually makes sense.",
+    who: "For teens and parents who need clarity on post-secondary options.",
+    cta: "Book Next-Step Planning",
+    to: "/book-session",
+    featured: true,
+  },
+  {
+    icon: "self_improvement",
+    title: "Confidence & Motivation",
+    desc: "For young people who have lost their drive — or never felt they had it. This coaching strand focuses on rebuilding self-belief from the ground up, using real strengths, not empty encouragement.",
+    who: "For teens who describe themselves as lazy, unmotivated, or not good enough.",
+    cta: "Book Confidence Coaching",
+    to: "/book-session",
+    featured: false,
+  },
+  {
+    icon: "sync_saved_locally",
+    title: "Follow-Up Sessions",
+    desc: "Already done some coaching and want to check back in? Follow-up sessions are available to revisit goals, update plans, and stay supported as life moves forward.",
+    who: "For past clients who want to continue the journey.",
+    cta: "Book a Follow-Up",
+    to: "/book-session",
+    featured: false,
+  },
+];
+
 export default function CoachingOptions() {
+  useEffect(() => {
+    document.title = "Coaching Options | More Than Points";
+  }, []);
+
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />
@@ -33,6 +87,23 @@ export default function CoachingOptions() {
       <main style={{ paddingTop: "8rem", paddingBottom: "5rem", padding: "8rem 1.5rem 5rem" }}>
         {/* Hero */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", textAlign: "center", marginBottom: "5rem" }}>
+          <span
+            style={{
+              display: "inline-block",
+              padding: "0.375rem 1rem",
+              borderRadius: "9999px",
+              backgroundColor: colors.secondaryContainer,
+              color: colors.onSecondaryContainer,
+              fontFamily: "Plus Jakarta Sans, sans-serif",
+              fontSize: "0.75rem",
+              fontWeight: 700,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              marginBottom: "1.5rem",
+            }}
+          >
+            What's Available
+          </span>
           <h1
             style={{
               fontFamily: "Plus Jakarta Sans, sans-serif",
@@ -44,123 +115,56 @@ export default function CoachingOptions() {
               lineHeight: 1.1,
             }}
           >
-            Tailored Coaching for <br />
-            <span style={{ color: colors.secondary, fontStyle: "italic" }}>Every Journey.</span>
+            Coaching options built<br />
+            <span style={{ color: colors.secondary, fontStyle: "italic" }}>for your situation.</span>
           </h1>
-          <p style={{ maxWidth: "36rem", margin: "0 auto", color: colors.onSurfaceVariant, fontSize: "1.125rem", lineHeight: 1.6 }}>
-            Whether you need a quick clarity check or a deeper transformation, our grounded approach provides the space
-            to grow.
+          <p style={{ maxWidth: "40rem", margin: "0 auto", color: colors.onSurfaceVariant, fontSize: "1.125rem", lineHeight: 1.6 }}>
+            No two families are the same. These five options cover the most common starting points — and if yours is
+            different, just get in touch.
           </p>
         </section>
 
-        {/* Pricing Cards */}
+        {/* Options Grid */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", marginBottom: "8rem" }}>
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "2rem", alignItems: "stretch" }}>
-            {/* Single Session */}
-            <div
-              style={{
-                backgroundColor: colors.surfaceContainerLow,
-                padding: "clamp(2.5rem, 5vw, 3.5rem)",
-                borderRadius: "1.5rem",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                transition: "transform 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-4px)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-            >
-              <div>
-                <div
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "3rem",
-                    height: "3rem",
-                    backgroundColor: `${colors.primaryContainer}33`,
-                    color: colors.primary,
-                    borderRadius: "0.75rem",
-                    marginBottom: "1.5rem",
-                  }}
-                >
-                  <span className="material-symbols-outlined">energy_savings_leaf</span>
-                </div>
-                <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "0.5rem" }}>
-                  Single Clarity Session
-                </h2>
-                <p style={{ color: colors.onSurfaceVariant, marginBottom: "2rem", fontSize: "1.125rem" }}>
-                  Ideal for tackling a specific challenge or gaining immediate perspective.
-                </p>
-                <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "2.5rem" }}>
-                  <span style={{ fontSize: "2.5rem", fontWeight: 700, color: colors.primary, fontFamily: "Plus Jakarta Sans, sans-serif" }}>€85</span>
-                  <span style={{ color: colors.onSurfaceVariant, fontSize: "0.875rem", fontWeight: 500 }}>/ 60-minute session</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "1.5rem" }}>
+            {options.map(({ icon, title, desc, who, cta, to, featured }) => (
+              <div
+                key={title}
+                style={{
+                  backgroundColor: featured ? colors.onSurface : colors.surfaceContainerLow,
+                  color: featured ? colors.surfaceContainerLowest : colors.onSurface,
+                  padding: "2.5rem",
+                  borderRadius: "1.5rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  boxShadow: featured ? "0 25px 50px rgba(28,28,24,0.18)" : "none",
+                  position: "relative",
+                  overflow: "hidden",
+                  transition: "transform 0.2s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-4px)")}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+              >
+                {featured && (
+                  <div style={{ position: "absolute", top: 0, right: 0, padding: "1rem" }}>
+                    <span
+                      style={{
+                        backgroundColor: colors.tertiary,
+                        color: colors.onTertiary,
+                        fontSize: "0.625rem",
+                        fontWeight: 700,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.2em",
+                        padding: "0.25rem 0.75rem",
+                        borderRadius: "9999px",
+                      }}
+                    >
+                      Most Popular
+                    </span>
+                  </div>
+                )}
                 <div>
-                  <p style={{ fontWeight: 700, color: colors.secondary, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "1.25rem" }}>
-                    What's included
-                  </p>
-                  <ul style={{ display: "flex", flexDirection: "column", gap: "1.25rem", listStyle: "none" }}>
-                    {[
-                      "Immediate clarity on one core issue",
-                      "Personalised confidence audit",
-                      "Actionable next steps report",
-                    ].map((item) => (
-                      <li key={item} style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                        <span className="material-symbols-outlined" style={{ color: colors.tertiary }}>check_circle</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div style={{ marginTop: "3rem" }}>
-                <Link to="/book-session" style={{ textDecoration: "none" }}>
-                  <button
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      textAlign: "center",
-                      backgroundColor: colors.primary,
-                      color: colors.onPrimary,
-                      padding: "1rem",
-                      borderRadius: "9999px",
-                      fontWeight: 700,
-                      fontSize: "1.125rem",
-                      border: "none",
-                      cursor: "pointer",
-                      transition: "opacity 0.2s",
-                    }}
-                    onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.92")}
-                    onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
-                  >
-                    Book Now
-                  </button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Growth Journey Package */}
-            <div
-              style={{
-                backgroundColor: colors.onSurface,
-                color: colors.surfaceContainerLowest,
-                padding: "clamp(2.5rem, 5vw, 3.5rem)",
-                borderRadius: "1.5rem",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                position: "relative",
-                overflow: "hidden",
-                boxShadow: "0 25px 50px rgba(28,28,24,0.18)",
-                transition: "transform 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-4px)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-            >
-              <div style={{ position: "absolute", top: "-2.5rem", right: "-2.5rem", width: "10rem", height: "10rem", backgroundColor: `${colors.tertiary}1A`, borderRadius: "9999px", filter: "blur(3rem)" }} />
-              <div style={{ position: "relative", zIndex: 1 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1.5rem" }}>
                   <div
                     style={{
                       display: "inline-flex",
@@ -168,103 +172,76 @@ export default function CoachingOptions() {
                       justifyContent: "center",
                       width: "3rem",
                       height: "3rem",
-                      backgroundColor: `${colors.tertiary}33`,
-                      color: colors.tertiaryFixedDim,
+                      backgroundColor: featured ? `${colors.tertiary}33` : `${colors.primaryContainer}33`,
+                      color: featured ? colors.tertiaryFixedDim : colors.primary,
                       borderRadius: "0.75rem",
+                      marginBottom: "1.5rem",
                     }}
                   >
-                    <span className="material-symbols-outlined">auto_awesome</span>
+                    <span className="material-symbols-outlined">{icon}</span>
                   </div>
-                  <span
+                  <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.75rem" }}>
+                    {title}
+                  </h2>
+                  <p style={{ color: featured ? `${colors.surfaceContainerLowest}B3` : colors.onSurfaceVariant, marginBottom: "1.5rem", lineHeight: 1.7 }}>
+                    {desc}
+                  </p>
+                  <div
                     style={{
-                      backgroundColor: colors.tertiary,
-                      color: colors.onTertiary,
-                      fontSize: "0.625rem",
-                      fontWeight: 700,
-                      textTransform: "uppercase",
-                      letterSpacing: "0.2em",
-                      padding: "0.25rem 0.75rem",
-                      borderRadius: "9999px",
+                      backgroundColor: featured ? "rgba(255,255,255,0.07)" : colors.surfaceContainer,
+                      padding: "0.875rem 1rem",
+                      borderRadius: "0.5rem",
+                      marginBottom: "2rem",
                     }}
                   >
-                    Most Transformative
-                  </span>
+                    <p style={{ fontSize: "0.8125rem", color: featured ? `${colors.surfaceContainerLowest}80` : colors.secondary, fontStyle: "italic", lineHeight: 1.5 }}>
+                      {who}
+                    </p>
+                  </div>
                 </div>
-                <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "0.5rem" }}>
-                  Growth Journey Package
-                </h2>
-                <p style={{ color: `${colors.surfaceContainerLowest}B3`, marginBottom: "2rem", fontSize: "1.125rem" }}>
-                  Sustained support to build lasting habits and navigating long-term transitions.
-                </p>
-                <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "2.5rem" }}>
-                  <span style={{ fontSize: "2.5rem", fontWeight: 700, color: colors.tertiaryFixedDim, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                    4–6 Sessions
-                  </span>
-                  <span style={{ color: `${colors.surfaceContainerLowest}80`, fontSize: "0.875rem", fontWeight: 500 }}>Custom tailored schedule</span>
-                </div>
-                <div>
-                  <p style={{ fontWeight: 700, color: colors.tertiaryFixedDim, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "1.25rem" }}>
-                    The Transformation
-                  </p>
-                  <ul style={{ display: "flex", flexDirection: "column", gap: "1.25rem", listStyle: "none" }}>
-                    {[
-                      { icon: "explore", text: "Clear direction & long-term vision" },
-                      { icon: "shield_with_heart", text: "Deeply rooted self-confidence" },
-                      { icon: "insights", text: "Strategic next steps for every phase" },
-                      { icon: "support", text: "Unlimited email/messaging support" },
-                    ].map(({ icon, text }) => (
-                      <li key={text} style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                        <span className="material-symbols-outlined" style={{ color: colors.tertiaryFixedDim }}>{icon}</span>
-                        <span style={{ color: colors.surfaceContainerLowest }}>{text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div style={{ marginTop: "3rem", position: "relative", zIndex: 1 }}>
-                <Link to="/book-session" style={{ textDecoration: "none" }}>
+                <Link to={to} style={{ textDecoration: "none" }}>
                   <button
                     style={{
                       display: "block",
                       width: "100%",
                       textAlign: "center",
-                      backgroundColor: colors.tertiary,
-                      color: colors.onTertiary,
+                      backgroundColor: featured ? colors.tertiary : colors.primary,
+                      color: colors.onPrimary,
                       padding: "1rem",
                       borderRadius: "9999px",
                       fontWeight: 700,
-                      fontSize: "1.125rem",
+                      fontSize: "1rem",
                       border: "none",
                       cursor: "pointer",
-                      transition: "background-color 0.2s",
+                      transition: "opacity 0.2s",
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.tertiaryContainer)}
-                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.tertiary)}
+                    onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.92")}
+                    onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                   >
-                    Book Consultation
+                    {cta}
                   </button>
                 </Link>
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* Feature Grid */}
-        <section style={{ maxWidth: "64rem", margin: "0 auto", textAlign: "center", marginBottom: "10rem" }}>
+        {/* Feature Promise */}
+        <section style={{ maxWidth: "64rem", margin: "0 auto", textAlign: "center", marginBottom: "8rem" }}>
           <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, color: colors.secondary, marginBottom: "3rem" }}>
-            The More Than Points Promise
+            Every session includes
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: "1rem" }}>
             {[
-              { icon: "visibility", label: "Clarity", bg: colors.surfaceContainer },
-              { icon: "verified_user", label: "Confidence", bg: colors.surfaceContainerHigh },
-              { icon: "north_east", label: "Direction", bg: colors.surfaceContainer },
-              { icon: "step_into", label: "Next Steps", bg: colors.surfaceContainerHigh },
-            ].map(({ icon, label, bg }) => (
+              { icon: "visibility", label: "Clarity" },
+              { icon: "verified_user", label: "Confidence" },
+              { icon: "north_east", label: "Direction" },
+              { icon: "step_into", label: "Next Steps" },
+            ].map(({ icon, label }) => (
               <div
                 key={label}
                 style={{
-                  backgroundColor: bg,
+                  backgroundColor: colors.surfaceContainerLow,
                   padding: "2rem",
                   borderRadius: "1rem",
                   display: "flex",
@@ -281,7 +258,7 @@ export default function CoachingOptions() {
           </div>
         </section>
 
-        {/* Trust Section */}
+        {/* Not Sure Which Section */}
         <section style={{ maxWidth: "80rem", margin: "0 auto" }}>
           <div
             style={{
@@ -297,11 +274,12 @@ export default function CoachingOptions() {
           >
             <div style={{ flex: 1 }}>
               <h4 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: colors.primary, marginBottom: "1.5rem" }}>
-                Not sure which path to take?
+                Not sure which option fits?
               </h4>
               <p style={{ color: colors.onSurfaceVariant, fontSize: "1.125rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-                Coaching is a personal journey. If you're undecided between a single session and a package, let's have a
-                15-minute exploratory chat to see what fits your current needs best.
+                That's completely normal — most families aren't sure where to start. A quick introductory call can help
+                us figure out what kind of support makes the most sense for your teenager right now. There's no
+                commitment, and no pressure.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
                 <Link to="/contact" style={{ textDecoration: "none" }}>
@@ -322,8 +300,44 @@ export default function CoachingOptions() {
                     onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
                     onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                   >
-                    Schedule Intro Call
+                    Get in Touch
                     <span className="material-symbols-outlined" style={{ fontSize: "1.25rem" }}>call</span>
+                  </button>
+                </Link>
+                <Link to="/for-parents" style={{ textDecoration: "none" }}>
+                  <button
+                    style={{
+                      backgroundColor: colors.surfaceContainerHigh,
+                      color: colors.onSurface,
+                      padding: "1rem 2rem",
+                      borderRadius: "9999px",
+                      fontWeight: 700,
+                      border: "none",
+                      cursor: "pointer",
+                      transition: "background-color 0.2s",
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHighest)}
+                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHigh)}
+                  >
+                    Info for Parents
+                  </button>
+                </Link>
+                <Link to="/for-teens" style={{ textDecoration: "none" }}>
+                  <button
+                    style={{
+                      backgroundColor: colors.surfaceContainerHigh,
+                      color: colors.onSurface,
+                      padding: "1rem 2rem",
+                      borderRadius: "9999px",
+                      fontWeight: 700,
+                      border: "none",
+                      cursor: "pointer",
+                      transition: "background-color 0.2s",
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHighest)}
+                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = colors.surfaceContainerHigh)}
+                  >
+                    Info for Teens
                   </button>
                 </Link>
               </div>

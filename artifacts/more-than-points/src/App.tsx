@@ -4,7 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Home from "@/pages/Home";
 import HowItWorks from "@/pages/HowItWorks";
 import CoachingOptions from "@/pages/CoachingOptions";
+import ForParents from "@/pages/ForParents";
+import ForTeens from "@/pages/ForTeens";
 import About from "@/pages/About";
+import FAQ from "@/pages/FAQ";
+import Testimonials from "@/pages/Testimonials";
 import BookSession from "@/pages/BookSession";
 import Contact from "@/pages/Contact";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
@@ -65,8 +69,20 @@ function Router() {
           <Route path="/coaching-options">
             <AnimatedPage><CoachingOptions /></AnimatedPage>
           </Route>
+          <Route path="/for-parents">
+            <AnimatedPage><ForParents /></AnimatedPage>
+          </Route>
+          <Route path="/for-teens">
+            <AnimatedPage><ForTeens /></AnimatedPage>
+          </Route>
           <Route path="/about">
             <AnimatedPage><About /></AnimatedPage>
+          </Route>
+          <Route path="/faq">
+            <AnimatedPage><FAQ /></AnimatedPage>
+          </Route>
+          <Route path="/testimonials">
+            <AnimatedPage><Testimonials /></AnimatedPage>
           </Route>
           <Route path="/book-session">
             <AnimatedPage><BookSession /></AnimatedPage>

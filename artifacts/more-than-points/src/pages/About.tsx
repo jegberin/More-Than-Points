@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -28,6 +29,10 @@ const colors = {
 };
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About | More Than Points";
+  }, []);
+
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />
@@ -65,12 +70,18 @@ export default function About() {
                   lineHeight: 1.1,
                 }}
               >
-                A calm voice amid{" "}
-                <span style={{ color: colors.primary, fontStyle: "italic" }}>Leaving Cert</span> pressure.
+                A steady hand in a{" "}
+                <span style={{ color: colors.primary, fontStyle: "italic" }}>high-pressure</span> time.
               </h1>
-              <p style={{ fontSize: "1.25rem", color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "38rem", fontFamily: "Inter, sans-serif" }}>
-                With over 25 years in adult learning and further education, Angela provides the steady hand parents and
-                students need to navigate the high-stakes journey of the modern education system.
+              <p style={{ fontSize: "1.25rem", color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "38rem", fontFamily: "Inter, sans-serif", marginBottom: "1.5rem" }}>
+                With over 25 years working in adult education and further learning in Ireland, Angela has spent her career
+                in rooms where the traditional system wasn't working for people. She built More Than Points because she
+                knew there had to be a better way to support teenagers and families through the chaos of the Leaving Cert
+                years.
+              </p>
+              <p style={{ fontSize: "1.125rem", color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "38rem", fontFamily: "Inter, sans-serif" }}>
+                Her approach is grounded, practical, and deeply human. She doesn't tell families what to do. She helps
+                them figure out what they actually want — and then helps them build a path towards it.
               </p>
             </div>
 
@@ -98,10 +109,9 @@ export default function About() {
           </div>
         </section>
 
-        {/* Story Bento Grid */}
+        {/* Why This Work Matters */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
           <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "1.5rem", marginBottom: "2rem" }}>
-            {/* Large Story Card */}
             <div
               className="md:col-span-2"
               style={{
@@ -115,25 +125,24 @@ export default function About() {
               <div style={{ position: "relative", zIndex: 1 }}>
                 <span className="material-symbols-outlined" style={{ color: colors.primary, fontSize: "2.5rem", marginBottom: "1.5rem", display: "block" }}>auto_stories</span>
                 <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1.5rem" }}>
-                  Twenty-Five Years of Guidance
+                  Why This Work Matters
                 </h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: "1rem", color: colors.onSurfaceVariant, lineHeight: 1.7, fontSize: "1.125rem" }}>
                   <p>
-                    Angela's career has been dedicated to the evolution of the learner. From the halls of further
-                    education to the intimate spaces of one-on-one coaching, she has witnessed the shifting landscape of
-                    Irish education.
+                    The Leaving Cert was designed for a world that no longer exists. It measures a narrow band of ability
+                    and declares everyone outside that band as less than. Angela has spent 25 years watching what that
+                    does to young people — and to the families who love them.
                   </p>
                   <p>
-                    She understands that "More Than Points" isn't just a name—it's a philosophy. It's about recognising
-                    the human being behind the exam number and ensuring that the path to a career is paved with
-                    resilience, not just results.
+                    She started More Than Points because she believes every teenager deserves someone in their corner who
+                    isn't invested in the system's version of success. Someone who sees the whole person, not just the
+                    projected points.
                   </p>
                 </div>
               </div>
               <div style={{ position: "absolute", top: 0, right: 0, width: "16rem", height: "16rem", backgroundColor: `${colors.primary}0D`, borderRadius: "9999px", transform: "translate(50%, -50%)" }} />
             </div>
 
-            {/* Expertise Card */}
             <div
               style={{
                 backgroundColor: colors.primary,
@@ -148,27 +157,26 @@ export default function About() {
               <div>
                 <span className="material-symbols-outlined" style={{ color: `${colors.onPrimary}99`, fontSize: "2.5rem", marginBottom: "1.5rem", display: "block" }}>workspace_premium</span>
                 <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, marginBottom: "1rem" }}>
-                  Educational Authority
+                  Areas of Focus
                 </h3>
                 <p style={{ opacity: 0.9, lineHeight: 1.7 }}>
-                  Expertise rooted in decades of navigating the complexities of adult learning and vocational training
-                  pathways.
+                  25 years of experience across further education, curriculum design, adult learning, and one-to-one
+                  coaching.
                 </p>
               </div>
               <div style={{ marginTop: "2rem", paddingTop: "2rem", borderTop: `1px solid ${colors.onPrimary}1A` }}>
-                <p style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "0.875rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>
-                  Focus Areas
-                </p>
-                <ul style={{ marginTop: "1rem", display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem", opacity: 0.8, listStyle: "none" }}>
-                  <li>• Leaving Cert Strategy</li>
-                  <li>• Adult Education Pathways</li>
-                  <li>• Parental Support Systems</li>
+                <ul style={{ marginTop: "0.5rem", display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem", opacity: 0.85, listStyle: "none" }}>
+                  <li>• Leaving Cert navigation</li>
+                  <li>• Alternative pathway planning</li>
+                  <li>• Parent coaching &amp; communication</li>
+                  <li>• Confidence &amp; motivation</li>
+                  <li>• Further education pathways</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Philosophy Section */}
+          {/* The Approach */}
           <div className="grid grid-cols-1 md:grid-cols-12" style={{ gap: "3rem", alignItems: "center", padding: "5rem 0" }}>
             <div className="md:col-span-5 order-2 md:order-1">
               <div style={{ position: "relative" }}>
@@ -206,16 +214,17 @@ export default function About() {
 
             <div className="md:col-span-7 order-1 md:order-2">
               <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: colors.secondary, marginBottom: "1.5rem", lineHeight: 1.2 }}>
-                Grounded in the Reality of Growth.
+                The Approach
               </h2>
               <p style={{ fontSize: "1.25rem", color: colors.onSurfaceVariant, lineHeight: 1.7, marginBottom: "2rem", fontStyle: "italic" }}>
                 "The pressure of the points system often masks the potential of the person. My role is to peel back that
-                pressure and rediscover the path that actually fits the student."
+                pressure and find the path that actually fits — not the one that looks best on paper."
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 {[
-                  { icon: "spa", title: "The Calm Approach", desc: "Coaching that reduces anxiety and replaces it with actionable clarity." },
-                  { icon: "groups", title: "Human Connection", desc: "A mentor who listens first and advises second, ensuring every session is bespoke." },
+                  { icon: "spa", title: "Non-judgmental and calm", desc: "No pressure, no performance goals. Just honest conversation in a space where teenagers — and parents — can say what they're actually feeling." },
+                  { icon: "groups", title: "Person-led, not system-led", desc: "The young person's strengths, values, and instincts lead the way. Angela's job is to help them hear themselves more clearly." },
+                  { icon: "lightbulb", title: "Practically focused", desc: "Every session ends with something actionable — whether that's a question to sit with, a conversation to have, or a concrete next step to take." },
                 ].map(({ icon, title, desc }) => (
                   <div key={title} style={{ display: "flex", gap: "1rem" }}>
                     <div
@@ -243,21 +252,21 @@ export default function About() {
           </div>
         </section>
 
-        {/* Experience Timeline */}
+        {/* Who I Work Best With */}
         <section style={{ backgroundColor: colors.surfaceContainerLow, padding: "6rem 0" }}>
           <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "4rem" }}>
               <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, marginBottom: "1rem" }}>
-                A Journey of Expertise
+                Who I work best with
               </h2>
               <div style={{ width: "6rem", height: "0.25rem", backgroundColor: colors.tertiary, margin: "0 auto", borderRadius: "9999px" }} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4" style={{ gap: "1rem", alignItems: "center" }}>
               {[
                 {
-                  tag: "The Foundation",
-                  title: "Further Education",
-                  desc: "Leading curriculum design for adult learners across Ireland.",
+                  tag: "Teens",
+                  title: "Feeling Lost",
+                  desc: "Young people who have disconnected from school but haven't lost their spark — they just can't see where to put it.",
                   bg: colors.surfaceContainerLowest,
                   textColor: colors.onSurface,
                   tagColor: colors.tertiary,
@@ -266,9 +275,9 @@ export default function About() {
                   mt: 0,
                 },
                 {
-                  tag: "The Expansion",
-                  title: "Policy & Impact",
-                  desc: "Influencing educational standards at a national level for over a decade.",
+                  tag: "Teens",
+                  title: "High Achievers Under Pressure",
+                  desc: "Students who are performing well but quietly crumbling — driven by fear rather than purpose.",
                   bg: colors.primary,
                   textColor: colors.onPrimary,
                   tagColor: colors.primaryFixed,
@@ -277,9 +286,9 @@ export default function About() {
                   mt: "3rem",
                 },
                 {
-                  tag: "The Pivot",
-                  title: "Coaching Practice",
-                  desc: "Specialising in high-performance coaching for families in transition.",
+                  tag: "Parents",
+                  title: "Worried and Unsure",
+                  desc: "Parents who love their child deeply but feel out of their depth — and know that pushing harder isn't working.",
                   bg: colors.surfaceContainerLowest,
                   textColor: colors.onSurface,
                   tagColor: colors.tertiary,
@@ -288,9 +297,9 @@ export default function About() {
                   mt: 0,
                 },
                 {
-                  tag: "Today",
-                  title: "More Than Points",
-                  desc: "Dedicated support for the modern Leaving Cert journey.",
+                  tag: "Families",
+                  title: "At a Crossroads",
+                  desc: "Families who feel stuck between what the system expects and what would actually be right for their teenager.",
                   bg: colors.secondary,
                   textColor: colors.onSecondary,
                   tagColor: colors.secondaryFixed,
@@ -337,11 +346,11 @@ export default function About() {
             }}
           >
             <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 800, marginBottom: "1.5rem", lineHeight: 1.2 }}>
-              Ready to find your calm?
+              Ready to start the conversation?
             </h2>
             <p style={{ fontSize: "1.125rem", color: colors.onSurfaceVariant, marginBottom: "2.5rem", maxWidth: "32rem", margin: "0 auto 2.5rem" }}>
-              Whether you're a parent feeling the weight or a student looking for a clear direction, let's have a
-              conversation about the path forward.
+              Whether you're a parent looking for answers or a teenager tired of feeling like the system doesn't have a
+              place for you — let's find a way forward together.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
               <Link to="/book-session" style={{ textDecoration: "none" }}>
@@ -361,7 +370,7 @@ export default function About() {
                   onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 10px 30px rgba(77,100,81,0.3)")}
                   onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
                 >
-                  Book a Strategy Call
+                  Book a Session
                 </button>
               </Link>
               <Link to="/coaching-options" style={{ textDecoration: "none" }}>

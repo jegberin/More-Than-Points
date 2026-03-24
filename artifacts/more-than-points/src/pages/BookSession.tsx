@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -61,6 +61,10 @@ const SESSION_LABELS: Record<string, string> = {
 };
 
 export default function BookSession() {
+  useEffect(() => {
+    document.title = "Book a Session | More Than Points";
+  }, []);
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -164,7 +168,7 @@ export default function BookSession() {
                   fontFamily: "Plus Jakarta Sans, sans-serif",
                 }}
               >
-                Scheduling
+                Book a Session
               </span>
               <h1
                 style={{
@@ -176,13 +180,17 @@ export default function BookSession() {
                   lineHeight: 1.1,
                 }}
               >
-                Take the first step towards a clearer path.
+                The first step is just a conversation.
               </h1>
               <p style={{ fontSize: "1.125rem", color: colors.secondary, lineHeight: 1.7, maxWidth: "28rem" }}>
-                Our coaching sessions are designed to be a sanctuary for growth. Secure your time below and begin the
-                journey to grounded success.
+                Booking a session doesn't mean you have everything figured out — it means you're ready to start. Fill in
+                the form below and Angela will be in touch within 24 hours to confirm the details.
               </p>
-              <div style={{ display: "flex", alignItems: "center", gap: "1rem", paddingTop: "1rem" }}>
+              <p style={{ fontSize: "1rem", color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "28rem" }}>
+                Sessions are online via video call, available to families anywhere in Ireland. There's no pressure, no
+                commitment beyond what you choose — just a grounded, honest conversation about what comes next.
+              </p>
+              <div style={{ display: "flex", alignItems: "center", gap: "1rem", paddingTop: "0.5rem" }}>
                 <div style={{ display: "flex" }}>
                   {[colors.surfaceContainer, colors.surfaceContainerHigh].map((bg, i) => (
                     <div
@@ -199,7 +207,7 @@ export default function BookSession() {
                   ))}
                 </div>
                 <p style={{ fontSize: "0.875rem", fontWeight: 500, color: colors.onSurfaceVariant }}>
-                  Trusted by many families
+                  Trusted by families across Ireland
                 </p>
               </div>
             </div>

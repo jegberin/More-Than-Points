@@ -7,7 +7,10 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "How It Works", to: "/how-it-works" },
   { label: "Coaching Options", to: "/coaching-options" },
+  { label: "For Parents", to: "/for-parents" },
+  { label: "For Teens", to: "/for-teens" },
   { label: "About", to: "/about" },
+  { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -29,7 +32,7 @@ export default function Nav() {
           />
         </Link>
 
-        <div className="hidden md:flex items-center" style={{ gap: "2rem" }}>
+        <div className="hidden md:flex items-center" style={{ gap: "1.5rem" }}>
           {navLinks.map(({ label, to }) => {
             const isActive = location === to;
             return (
@@ -38,7 +41,7 @@ export default function Nav() {
                   style={{
                     fontFamily: "Plus Jakarta Sans, sans-serif",
                     fontWeight: isActive ? 600 : 500,
-                    fontSize: "0.875rem",
+                    fontSize: "0.8125rem",
                     letterSpacing: "-0.01em",
                     color: isActive ? "#4d6451" : "#545f72",
                     borderBottom: isActive ? "2px solid #4d6451" : "2px solid transparent",

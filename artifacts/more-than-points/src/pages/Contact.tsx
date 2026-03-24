@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -25,6 +25,10 @@ const colors = {
 const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie";
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Contact | More Than Points";
+  }, []);
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -117,7 +121,7 @@ export default function Contact() {
                     fontFamily: "Plus Jakarta Sans, sans-serif",
                   }}
                 >
-                  Start the Conversation
+                  Get in Touch
                 </span>
                 <h1
                   style={{
@@ -129,10 +133,14 @@ export default function Contact() {
                     letterSpacing: "-0.025em",
                   }}
                 >
-                  Let's find the way forward, together.
+                  Not sure where to start? Just say hello.
                 </h1>
                 <p style={{ color: colors.secondary, fontSize: "1.125rem", lineHeight: 1.7, maxWidth: "28rem" }}>
-                  Whether you're looking for support for your teen or guidance as a parent, I'm here to listen.
+                  You don't need to have everything figured out before getting in touch. Whether you're a parent with
+                  questions, a teenager unsure what coaching involves, or a family at a crossroads — I'm here to listen.
+                </p>
+                <p style={{ color: colors.secondary, fontSize: "1rem", lineHeight: 1.7, maxWidth: "28rem" }}>
+                  Send a message using the form and Angela will reply within 24 hours to start the conversation.
                 </p>
               </div>
 
