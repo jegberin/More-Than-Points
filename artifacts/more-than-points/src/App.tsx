@@ -19,6 +19,10 @@ import CookieBanner from "@/components/CookieBanner";
 
 declare function gtag(...args: unknown[]): void;
 
+export type AppProps = {
+  ssrPath?: string;
+};
+
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
@@ -108,7 +112,7 @@ function Router() {
   );
 }
 
-function App() {
+function App({ ssrPath }: AppProps = {}) {
   useEffect(() => {
     const stored = localStorage.getItem("cookieConsent");
     if (stored === "accepted" && typeof gtag !== "undefined") {
@@ -116,10 +120,12 @@ function App() {
     }
   }, []);
 
+  const base = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
+
   return (
-    <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+    <WouterRouter base={base} ssrPath={ssrPath}>
       <Router />
-      <CookieBanner />
+      {!ssrPath && <CookieBanner />}
     </WouterRouter>
   );
 }
