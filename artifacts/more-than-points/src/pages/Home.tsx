@@ -421,7 +421,6 @@ export default function Home() {
               <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
                 {[
                   { icon: "history_edu", title: "Over 25 years in education", desc: "With deep roots in further education and adult learning, I understand exactly where the Irish education system falls short for so many young people." },
-                  { icon: "alt_route", title: "Alternatives, not just CAO", desc: "College is one option — not the only one. Together we explore apprenticeships, PLCs, gap years, portfolio careers, and the paths schools rarely mention." },
                   { icon: "favorite", title: "Grounded, non-judgmental support", desc: "No pressure, no performance. Just a calm, steady presence helping your family find clarity in the midst of one of the most stressful periods of life." },
                 ].map(({ icon, title, desc }) => (
                   <div key={title} style={{ display: "flex", gap: "1.5rem" }}>
@@ -445,6 +444,36 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+
+                {/* Alternatives card — with linked copy */}
+                <div style={{ display: "flex", gap: "1.5rem" }}>
+                  <div
+                    style={{
+                      flexShrink: 0,
+                      width: "3rem",
+                      height: "3rem",
+                      borderRadius: "9999px",
+                      backgroundColor: colors.surfaceContainerHigh,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <span className="material-symbols-outlined" style={{ color: colors.primary }}>alt_route</span>
+                  </div>
+                  <div>
+                    <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.25rem", fontWeight: 700, marginBottom: "0.5rem" }}>
+                      Alternatives, not just CAO
+                    </h3>
+                    <p style={{ color: colors.secondary, lineHeight: 1.7 }}>
+                      College is one option — not the only one. Together we explore{" "}
+                      <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>apprenticeships</Link>,{" "}
+                      <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>PLCs</Link>,{" "}
+                      <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>gap years</Link>,
+                      portfolio careers, and the paths schools rarely mention.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
