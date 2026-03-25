@@ -41,109 +41,6 @@ const SESSION_LABELS: Record<string, string> = {
 
 const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie";
 
-const FAQ_ITEMS = [
-  {
-    q: "What happens after I submit the form?",
-    a: "Angela will be in touch within 24 hours to confirm your session, agree a time that suits you, and send a secure payment link if applicable.",
-  },
-  {
-    q: "Where do sessions take place?",
-    a: "All sessions are online via video call, so families anywhere in Ireland can access coaching without travel.",
-  },
-  {
-    q: "Is there a minimum number of sessions?",
-    a: "No. You can start with a single session or a free intro call. There's no obligation to commit to a package until you're confident it's right for you.",
-  },
-  {
-    q: "Can a parent attend a teen's session?",
-    a: "This is something Angela discusses with each family individually. Depending on the goals, sessions may be one-to-one with the teenager, or may include a parent — the format is always agreed in advance.",
-  },
-  {
-    q: "What if I need to reschedule?",
-    a: "Sessions can be rescheduled with at least 24 hours' notice, at no additional charge.",
-  },
-];
-
-function BookingFAQ({ colors }: { colors: Record<string, string> }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  return (
-    <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 6rem" }}>
-      <h2
-        style={{
-          fontFamily: "Plus Jakarta Sans, sans-serif",
-          fontSize: "clamp(1.5rem, 3vw, 2rem)",
-          fontWeight: 700,
-          color: colors.primary,
-          marginBottom: "2rem",
-          textAlign: "center",
-        }}
-      >
-        Common Questions
-      </h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", maxWidth: "52rem", margin: "0 auto" }}>
-        {FAQ_ITEMS.map(({ q, a }, index) => {
-          const isOpen = openIndex === index;
-          return (
-            <div
-              key={q}
-              style={{
-                backgroundColor: colors.surfaceContainerLow,
-                borderRadius: "0.75rem",
-                overflow: "hidden",
-              }}
-            >
-              <button
-                onClick={() => setOpenIndex(isOpen ? null : index)}
-                aria-expanded={isOpen}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: "1rem",
-                  padding: "1.25rem 1.5rem",
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                  textAlign: "left",
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "Plus Jakarta Sans, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "1rem",
-                    color: colors.onSurface,
-                    margin: 0,
-                  }}
-                >
-                  {q}
-                </h3>
-                <span
-                  className="material-symbols-outlined"
-                  style={{
-                    color: colors.primary,
-                    flexShrink: 0,
-                    transition: "transform 0.2s",
-                    transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-                  }}
-                >
-                  expand_more
-                </span>
-              </button>
-              {isOpen && (
-                <div style={{ padding: "0 1.5rem 1.25rem" }}>
-                  <p style={{ color: colors.onSurfaceVariant, fontSize: "0.9375rem", lineHeight: 1.7, margin: 0 }}>{a}</p>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
 
 export default function BookSession() {
   useEffect(() => {
@@ -530,8 +427,6 @@ export default function BookSession() {
           </div>
         </section>
 
-        {/* FAQ Accordion */}
-        <BookingFAQ colors={colors} />
       </main>
 
       <Footer />
