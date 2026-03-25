@@ -22,23 +22,23 @@ const routes = [
   {
     path: "/",
     file: "index.html",
-    title: "More Than Points | Coaching for Teens and Parents in Ireland",
+    title: "Educational Coaching for Teens & Parents Ireland | More Than Points",
     description:
-      "Calm, practical coaching for Irish teens and parents dealing with school pressure, confidence, Leaving Cert stress, and uncertainty about what comes next.",
+      "Expert educational coaching for teens (16-19) and parents in Ireland. Find alternative pathways, rebuild confidence, and navigate life beyond the Leaving Cert.",
   },
   {
     path: "/how-it-works",
     file: "how-it-works.html",
-    title: "How It Works | More Than Points",
+    title: "How Our Teen Coaching Process Works | More Than Points",
     description:
-      "Learn what happens before, during, and after a coaching session with More Than Points.",
+      "Discover our 5-step coaching framework for Irish teenagers. We move beyond standard school guidance to build confidence, uncover strengths, and plan real pathways.",
   },
   {
     path: "/coaching-options",
     file: "coaching-options.html",
     title: "Coaching Options | More Than Points",
     description:
-      "Explore coaching options for teens, parents, confidence, motivation, and next-step planning.",
+      "Explore tailored coaching options for Irish teens and parents. From Next-Step Planning to Confidence building, find the right educational support for your family.",
   },
   {
     path: "/for-parents",
@@ -57,9 +57,9 @@ const routes = [
   {
     path: "/about",
     file: "about.html",
-    title: "About | More Than Points",
+    title: "About Angela | Teen Education & Career Coach Ireland | More Than Points",
     description:
-      "Learn more about the thinking behind More Than Points and the coaching approach.",
+      "With 25 years of experience in Irish adult education, Angela provides practical, person-led coaching for teenagers and families navigating the Leaving Cert chaos.",
   },
   {
     path: "/faq",
@@ -78,16 +78,16 @@ const routes = [
   {
     path: "/book-session",
     file: "book-session.html",
-    title: "Book a Session | More Than Points",
+    title: "Book a Coaching Session | Secure Online Booking | More Than Points",
     description:
-      "Book a coaching session with More Than Points for practical, supportive guidance.",
+      "Book a secure online coaching session. Choose from a free intro call, a single clarity session, or a growth package. No pressure, just honest conversation.",
   },
   {
     path: "/contact",
     file: "contact.html",
-    title: "Contact | More Than Points",
+    title: "Contact Us | Questions & Inquiries | More Than Points",
     description:
-      "Get in touch with More Than Points to ask a question or arrange support.",
+      "Get in touch with More Than Points. Send a confidential message, ask questions about our coaching, and receive a reply within 24 hours.",
   },
   {
     path: "/privacy-policy",

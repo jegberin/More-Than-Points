@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -26,7 +27,7 @@ const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie"
 
 export default function Contact() {
   useEffect(() => {
-    document.title = "Contact | More Than Points";
+    document.title = "Contact Us | Questions & Inquiries | More Than Points";
   }, []);
 
   const [submitted, setSubmitted] = useState(false);
@@ -36,12 +37,28 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
+  const validateField = (name: string, value: string): string => {
+    if (name === "name" && !value.trim()) return "Name is required";
+    if (name === "email") {
+      if (!value.trim()) return "Email is required";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return "Invalid email address";
+    }
+    if (name === "message" && !value.trim()) return "Please write a message";
+    return "";
+  };
+
+  const handleChange = (name: string, value: string) => {
+    setForm((prev) => ({ ...prev, [name]: value }));
+    const fieldError = validateField(name, value);
+    setErrors((prev) => ({ ...prev, [name]: fieldError }));
+  };
+
   const validate = () => {
     const errs: Record<string, string> = {};
-    if (!form.name.trim()) errs.name = "Name is required";
-    if (!form.email.trim()) errs.email = "Email is required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Invalid email address";
-    if (!form.message.trim()) errs.message = "Please write a message";
+    for (const [key, val] of Object.entries(form)) {
+      const err = validateField(key, val);
+      if (err) errs[key] = err;
+    }
     return errs;
   };
 
@@ -133,8 +150,19 @@ export default function Contact() {
                     letterSpacing: "-0.025em",
                   }}
                 >
-                  Not sure where to start? Just say hello.
+                  Get in Touch
                 </h1>
+                <p
+                  style={{
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontSize: "1.375rem",
+                    fontWeight: 600,
+                    color: colors.secondary,
+                    lineHeight: 1.35,
+                  }}
+                >
+                  Not sure where to start? Just say hello.
+                </p>
                 <p style={{ color: colors.secondary, fontSize: "1.125rem", lineHeight: 1.7, maxWidth: "28rem" }}>
                   You don't need to have everything figured out before getting in touch. Whether you're a parent with
                   questions, a teenager unsure what coaching involves, or a family at a crossroads — I'm here to listen.
@@ -182,32 +210,6 @@ export default function Contact() {
                   </div>
                 ))}
               </div>
-
-              <div style={{ display: "flex", alignItems: "center", gap: "1rem", paddingTop: "1rem" }}>
-                <div style={{ display: "flex" }}>
-                  {[
-                    "https://lh3.googleusercontent.com/aida-public/AB6AXuBtFdN7aPhvnE1K--vxKdKxn1BBTY0cvtBDjdKsXiYFlsC9ZpofEwWIkiMqeDRcD8fmlr0bHZ3nyi5C_66_9jByKxmQhfEjDMID0q7Sg57ojheSlB5beiak_gVO3b79vDxsAogqNP2Ia5S0qgbQDAK9mF6LL7Dc7HH8aAXSMfFwReBNKEUYYvVoWDu917R1tvmvkcOfPg50Ys7KmaJFL-LlZ_mNgMrSZY_OTA0fshE_on--TrBlUsI-xC5yK4l0JU4ynZxXYd4PNhw",
-                    "https://lh3.googleusercontent.com/aida-public/AB6AXuBzRiEjjjcObFywXCLvhql5lmLi8B01WAB6yjc36G_usnAiuhTFzGryROmXIMS3NOu0zUG4K0NA8F1r6AzAnLFrSCt0DTG_57VgIC5bI8_7s3-mNfSgNCm6MBgTcl6bozUjkF-Z23T9gPIxeWpa6uuq3n0S5S-vDyJBOKdGOMOC5oQ-lyIgSKawCGOAb0kMbrzkRzI3yyFltZ1ewWK4k1twdqyPvE20wZxzQwv_XfXGuNQFl88JEbDgHMTIkbcl5cA0Cl-QHbkobSA",
-                  ].map((src, i) => (
-                    <img
-                      key={i}
-                      src={src}
-                      alt={i === 0 ? "Coach" : "Student"}
-                      style={{
-                        width: "2.5rem",
-                        height: "2.5rem",
-                        borderRadius: "9999px",
-                        border: `2px solid ${colors.surface}`,
-                        objectFit: "cover",
-                        marginLeft: i > 0 ? "-0.75rem" : 0,
-                      }}
-                    />
-                  ))}
-                </div>
-                <p style={{ fontSize: "0.875rem", fontWeight: 500, color: colors.secondary, fontStyle: "italic" }}>
-                  "Helping families rediscover their spark."
-                </p>
-              </div>
             </div>
 
             {/* Form Column */}
@@ -237,9 +239,9 @@ export default function Contact() {
                     >
                       <span className="material-symbols-outlined" style={{ color: colors.primary, fontSize: "2.5rem", fontVariationSettings: "'FILL' 1" }}>check_circle</span>
                     </div>
-                    <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem", color: colors.primary }}>
+                    <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem", color: colors.primary }}>
                       Message Sent!
-                    </h3>
+                    </h2>
                     <p style={{ color: colors.onSurfaceVariant, maxWidth: "24rem", lineHeight: 1.7, marginBottom: "2rem" }}>
                       Thank you for reaching out, {form.name}. Angela will reply within 24 hours to start the conversation.
                     </p>
@@ -270,18 +272,18 @@ export default function Contact() {
                       </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }} noValidate>
                       <input type="text" name="_honey" value={honey} onChange={(e) => setHoney(e.target.value)} style={{ display: "none" }} aria-hidden="true" tabIndex={-1} autoComplete="off" />
                       <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1.5rem" }}>
                         <div>
                           <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", padding: "0 0.25rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                            Full Name
+                            Full Name *
                           </label>
                           <input
                             type="text"
                             placeholder="Alex Murphy"
                             value={form.name}
-                            onChange={(e) => setForm({ ...form, name: e.target.value })}
+                            onChange={(e) => handleChange("name", e.target.value)}
                             style={inputStyle(!!errors.name)}
                             onFocus={(e) => { e.target.style.boxShadow = `0 0 0 2px ${colors.primary}33`; e.target.style.backgroundColor = "#fff"; }}
                             onBlur={(e) => { e.target.style.boxShadow = "none"; e.target.style.backgroundColor = colors.surfaceContainerLow; }}
@@ -290,13 +292,13 @@ export default function Contact() {
                         </div>
                         <div>
                           <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", padding: "0 0.25rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                            Email Address
+                            Email Address *
                           </label>
                           <input
                             type="email"
                             placeholder="alex@example.com"
                             value={form.email}
-                            onChange={(e) => setForm({ ...form, email: e.target.value })}
+                            onChange={(e) => handleChange("email", e.target.value)}
                             style={inputStyle(!!errors.email)}
                             onFocus={(e) => { e.target.style.boxShadow = `0 0 0 2px ${colors.primary}33`; e.target.style.backgroundColor = "#fff"; }}
                             onBlur={(e) => { e.target.style.boxShadow = "none"; e.target.style.backgroundColor = colors.surfaceContainerLow; }}
@@ -307,13 +309,13 @@ export default function Contact() {
 
                       <div>
                         <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", padding: "0 0.25rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                          How can I help?
+                          How can I help? *
                         </label>
                         <textarea
                           rows={5}
                           placeholder="Tell me a bit about what's on your mind..."
                           value={form.message}
-                          onChange={(e) => setForm({ ...form, message: e.target.value })}
+                          onChange={(e) => handleChange("message", e.target.value)}
                           style={{ ...inputStyle(!!errors.message), resize: "vertical" }}
                           onFocus={(e) => { e.target.style.boxShadow = `0 0 0 2px ${colors.primary}33`; e.target.style.backgroundColor = "#fff"; }}
                           onBlur={(e) => { e.target.style.boxShadow = "none"; e.target.style.backgroundColor = colors.surfaceContainerLow; }}
@@ -357,7 +359,7 @@ export default function Contact() {
                       </div>
                     </form>
 
-                    <div style={{ marginTop: "2rem", display: "flex", justifyContent: "center", gap: "2rem" }}>
+                    <div style={{ marginTop: "2rem", display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap" }}>
                       {[
                         { icon: "verified_user", text: "100% Confidential" },
                         { icon: "schedule", text: "Reply within 24h" },
@@ -368,6 +370,14 @@ export default function Contact() {
                         </div>
                       ))}
                     </div>
+
+                    {/* Route to booking page */}
+                    <p style={{ textAlign: "center", marginTop: "1.5rem", fontSize: "0.9375rem", color: colors.onSurfaceVariant, lineHeight: 1.6 }}>
+                      Ready to book?{" "}
+                      <Link to="/book-session" style={{ color: colors.primary, fontWeight: 600, textDecoration: "underline" }}>
+                        Go straight to the booking form →
+                      </Link>
+                    </p>
                   </>
                 )}
               </div>

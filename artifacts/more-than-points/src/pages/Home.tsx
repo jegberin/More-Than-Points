@@ -27,7 +27,7 @@ const colors = {
 
 export default function Home() {
   useEffect(() => {
-    document.title = "More Than Points | Coaching for Teens and Parents in Ireland";
+    document.title = "Educational Coaching for Teens & Parents Ireland | More Than Points";
   }, []);
 
   return (
@@ -39,23 +39,43 @@ export default function Home() {
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div style={{ gridColumn: "span 7" }}>
-              <span
-                style={{
-                  display: "inline-block",
-                  padding: "0.25rem 0.75rem",
-                  borderRadius: "9999px",
-                  backgroundColor: colors.secondaryContainer,
-                  color: colors.onSecondaryContainer,
-                  fontFamily: "Plus Jakarta Sans, sans-serif",
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  marginBottom: "1.5rem",
-                }}
-              >
-                Teen &amp; Parent Coaching · Ireland
-              </span>
+              {/* Above-the-fold trust element */}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
+                <span
+                  style={{
+                    display: "inline-block",
+                    padding: "0.25rem 0.75rem",
+                    borderRadius: "9999px",
+                    backgroundColor: colors.secondaryContainer,
+                    color: colors.onSecondaryContainer,
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Teen &amp; Parent Coaching · Ireland
+                </span>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.375rem",
+                    padding: "0.25rem 0.75rem",
+                    borderRadius: "9999px",
+                    backgroundColor: `${colors.tertiary}18`,
+                    color: colors.tertiary,
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: "0.875rem" }}>verified</span>
+                  Over 25 years in education
+                </span>
+              </div>
               <h1
                 style={{
                   fontFamily: "Plus Jakarta Sans, sans-serif",
@@ -67,6 +87,7 @@ export default function Home() {
                   marginBottom: "2rem",
                 }}
               >
+                <span className="visually-hidden">Teen Educational Coaching Ireland: </span>
                 There is{" "}
                 <span style={{ color: colors.primary, fontStyle: "italic" }}>life beyond the points</span>. Let's find it together.
               </h1>
@@ -194,10 +215,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "1.5rem" }}>
+          {/* Two-column grid for teens and parents */}
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1.5rem", marginBottom: "1.5rem" }}>
             {/* Teens Card */}
             <div
-              className="md:col-span-2"
               style={{
                 backgroundColor: colors.surfaceContainerLowest,
                 padding: "2.5rem",
@@ -213,7 +234,7 @@ export default function Home() {
                 <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, marginBottom: "1rem" }}>
                   Teenagers aged 16–19
                 </h3>
-                <p style={{ color: colors.secondary, lineHeight: 1.7, fontSize: "1.125rem", maxWidth: "28rem" }}>
+                <p style={{ color: colors.secondary, lineHeight: 1.7, fontSize: "1.125rem" }}>
                   Coaching for teens who feel lost, overwhelmed, or like the system doesn't quite fit them. A
                   confidential space to explore who they are and what they actually want from life.
                 </p>
@@ -223,9 +244,6 @@ export default function Home() {
                   marginTop: "2rem",
                   paddingTop: "2rem",
                   borderTop: `1px solid ${colors.outlineVariant}30`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
                 }}
               >
                 <Link to="/for-teens" style={{ textDecoration: "none" }}>
@@ -269,29 +287,28 @@ export default function Home() {
                 <span className="material-symbols-outlined" style={{ fontSize: "6rem" }}>favorite</span>
               </div>
             </div>
+          </div>
 
-            {/* Quote Card */}
-            <div
-              className="md:col-span-3"
-              style={{
-                backgroundColor: "#f1eee7",
-                padding: "2.5rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "2rem",
-                borderLeft: `8px solid ${colors.primary}`,
-                borderTopLeftRadius: "2rem",
-                borderBottomRightRadius: "2rem",
-                borderTopRightRadius: "0.75rem",
-                borderBottomLeftRadius: "0.75rem",
-              }}
-            >
-              <div>
-                <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, fontStyle: "italic", marginBottom: "1rem" }}>
-                  "My teen was drowning in points; now they're swimming in possibilities."
-                </h3>
-                <p style={{ color: colors.onSurfaceVariant, fontWeight: 500 }}>— A relieved parent</p>
-              </div>
+          {/* Quote Card */}
+          <div
+            style={{
+              backgroundColor: "#f1eee7",
+              padding: "2.5rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "2rem",
+              borderLeft: `8px solid ${colors.primary}`,
+              borderTopLeftRadius: "2rem",
+              borderBottomRightRadius: "2rem",
+              borderTopRightRadius: "0.75rem",
+              borderBottomLeftRadius: "0.75rem",
+            }}
+          >
+            <div>
+              <p style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, fontStyle: "italic", marginBottom: "1rem" }}>
+                "My teen was drowning in points; now they're swimming in possibilities."
+              </p>
+              <p style={{ color: colors.onSurfaceVariant, fontWeight: 500 }}>— A relieved parent</p>
             </div>
           </div>
         </div>
@@ -305,7 +322,10 @@ export default function Home() {
           </h2>
           <p style={{ color: colors.secondary, fontSize: "1.125rem", lineHeight: 1.7, maxWidth: "36rem", margin: "0 auto 2rem" }}>
             Explore the coaching options available and find the right fit — from a single clarity session to a full
-            growth package.
+            growth package. Together we look at{" "}
+            <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>apprenticeships</Link>,{" "}
+            <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>PLCs</Link>, and{" "}
+            <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>gap years</Link> as real, valid paths.
           </p>
           <Link to="/coaching-options" style={{ textDecoration: "none" }}>
             <button
@@ -416,7 +436,7 @@ export default function Home() {
                       <span className="material-symbols-outlined" style={{ color: colors.primary }}>{icon}</span>
                     </div>
                     <div>
-                      <h4 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.25rem", fontWeight: 700, marginBottom: "0.5rem" }}>{title}</h4>
+                      <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.25rem", fontWeight: 700, marginBottom: "0.5rem" }}>{title}</h3>
                       <p style={{ color: colors.secondary, lineHeight: 1.7 }}>{desc}</p>
                     </div>
                   </div>

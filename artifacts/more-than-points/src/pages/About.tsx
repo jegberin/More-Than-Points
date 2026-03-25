@@ -30,7 +30,7 @@ const colors = {
 
 export default function About() {
   useEffect(() => {
-    document.title = "About | More Than Points";
+    document.title = "About Angela | Teen Education & Career Coach Ireland | More Than Points";
   }, []);
 
   return (
@@ -40,6 +40,9 @@ export default function About() {
       <main style={{ paddingTop: "8rem" }}>
         {/* Hero */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 6rem" }}>
+          {/* SEO-only H1 */}
+          <h1 className="visually-hidden">Meet Angela: Teen Educational Coach</h1>
+
           <div className="grid grid-cols-1 lg:grid-cols-12" style={{ gap: "3rem", alignItems: "center" }}>
             <div style={{ gridColumn: "span 7" }}>
               <span
@@ -59,7 +62,8 @@ export default function About() {
               >
                 Meet Angela
               </span>
-              <h1
+              {/* Visible hero text — not an H1, styled as hero typography */}
+              <p
                 style={{
                   fontFamily: "Plus Jakarta Sans, sans-serif",
                   fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
@@ -72,7 +76,7 @@ export default function About() {
               >
                 A steady hand in a{" "}
                 <span style={{ color: colors.primary, fontStyle: "italic" }}>high-pressure</span> time.
-              </h1>
+              </p>
               <p style={{ fontSize: "1.25rem", color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "38rem", fontFamily: "Inter, sans-serif", marginBottom: "1.5rem" }}>
                 With over 25 years working in adult education and further learning in Ireland, Angela has spent her career
                 in rooms where the traditional system wasn't working for people. She built More Than Points because she
@@ -81,7 +85,10 @@ export default function About() {
               </p>
               <p style={{ fontSize: "1.125rem", color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "38rem", fontFamily: "Inter, sans-serif" }}>
                 Her approach is grounded, practical, and deeply human. She doesn't tell families what to do. She helps
-                them figure out what they actually want — and then helps them build a path towards it.
+                them figure out what they actually want — and then helps them build a path towards it. From{" "}
+                <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>Leaving Cert navigation</Link> to{" "}
+                <Link to="/coaching-options" style={{ color: colors.primary, textDecoration: "underline" }}>alternative pathway planning</Link>,
+                the work is always person-led.
               </p>
             </div>
 
@@ -165,7 +172,7 @@ export default function About() {
                 </p>
               </div>
               <div style={{ marginTop: "2rem", paddingTop: "2rem", borderTop: `1px solid ${colors.onPrimary}1A` }}>
-                <ul style={{ marginTop: "0.5rem", display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem", opacity: 0.85, listStyle: "none" }}>
+                <ul style={{ marginTop: "0.5rem", display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem", opacity: 0.85, listStyle: "none", padding: 0 }}>
                   <li>• Leaving Cert navigation</li>
                   <li>• Alternative pathway planning</li>
                   <li>• Parent coaching &amp; communication</li>
@@ -176,83 +183,57 @@ export default function About() {
             </div>
           </div>
 
-          {/* The Approach */}
-          <div className="grid grid-cols-1 md:grid-cols-12" style={{ gap: "3rem", alignItems: "center", padding: "5rem 0" }}>
-            <div className="md:col-span-5 order-2 md:order-1">
-              <div style={{ position: "relative" }}>
+          {/* The Approach — three-column row with icons */}
+          <div style={{ padding: "5rem 0" }}>
+            <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: colors.secondary, marginBottom: "1rem", lineHeight: 1.2 }}>
+              The Approach
+            </h2>
+            <p style={{ fontSize: "1.25rem", color: colors.onSurfaceVariant, lineHeight: 1.7, marginBottom: "2.5rem", fontStyle: "italic", maxWidth: "42rem" }}>
+              "The pressure of the points system often masks the potential of the person. My role is to peel back that
+              pressure and find the path that actually fits — not the one that looks best on paper."
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "1.5rem" }}>
+              {[
+                { icon: "spa", title: "Non-judgmental and calm", desc: "No pressure, no performance goals. Just honest conversation in a space where teenagers — and parents — can say what they're actually feeling." },
+                { icon: "groups", title: "Person-led, not system-led", desc: "The young person's strengths, values, and instincts lead the way. Angela's job is to help them hear themselves more clearly." },
+                { icon: "lightbulb", title: "Practically focused", desc: "Every session ends with something actionable — whether that's a question to sit with, a conversation to have, or a concrete next step to take." },
+              ].map(({ icon, title, desc }) => (
                 <div
+                  key={title}
                   style={{
-                    aspectRatio: "1",
-                    backgroundColor: colors.surfaceContainerHighest,
-                    borderRadius: "9999px",
-                    overflow: "hidden",
-                    boxShadow: "0 32px 64px -12px rgba(28,28,24,0.08)",
+                    backgroundColor: colors.surfaceContainerLow,
+                    padding: "2rem",
+                    borderRadius: "1rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
                   }}
                 >
-                  <img
-                    alt="A misty morning in the Irish countryside"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCY66McndCaV_qYCgsff1cM7c4RlqXq4dzZXafEGK-7eCcPXZgG9ypDFQ-OaKHFyaVW2tiiCxYGJVuaUlp45MStgNdM9at2_2zB4_HaTDOGJadGrZjF82rywvG-ZJ2JKA-Oe4RD5mUL58gbI5KGYwGi5URFeG-zDiiqpThQQ7L-JINe_30aLB7NJ2R-XiCotTXHe7Rgbsa1zDOZAxOGyORG2miEg0bYSfrHXgtRtd29uNzPiHI6De8Zcya___O68ab0PLMvwFULJw"
-                    style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(20%) sepia(10%)" }}
-                  />
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "-1rem",
-                    right: "-1rem",
-                    backgroundColor: colors.tertiary,
-                    padding: "1.5rem",
-                    borderRadius: "9999px",
-                    color: colors.onTertiary,
-                    boxShadow: "0 32px 64px -12px rgba(28,28,24,0.08)",
-                  }}
-                >
-                  <span className="material-symbols-outlined" style={{ fontSize: "1.875rem" }}>psychology_alt</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="md:col-span-7 order-1 md:order-2">
-              <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: colors.secondary, marginBottom: "1.5rem", lineHeight: 1.2 }}>
-                The Approach
-              </h2>
-              <p style={{ fontSize: "1.25rem", color: colors.onSurfaceVariant, lineHeight: 1.7, marginBottom: "2rem", fontStyle: "italic" }}>
-                "The pressure of the points system often masks the potential of the person. My role is to peel back that
-                pressure and find the path that actually fits — not the one that looks best on paper."
-              </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-                {[
-                  { icon: "spa", title: "Non-judgmental and calm", desc: "No pressure, no performance goals. Just honest conversation in a space where teenagers — and parents — can say what they're actually feeling." },
-                  { icon: "groups", title: "Person-led, not system-led", desc: "The young person's strengths, values, and instincts lead the way. Angela's job is to help them hear themselves more clearly." },
-                  { icon: "lightbulb", title: "Practically focused", desc: "Every session ends with something actionable — whether that's a question to sit with, a conversation to have, or a concrete next step to take." },
-                ].map(({ icon, title, desc }) => (
-                  <div key={title} style={{ display: "flex", gap: "1rem" }}>
-                    <div
-                      style={{
-                        width: "3rem",
-                        height: "3rem",
-                        flexShrink: 0,
-                        borderRadius: "9999px",
-                        backgroundColor: colors.surfaceContainer,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <span className="material-symbols-outlined" style={{ color: colors.primary }}>{icon}</span>
-                    </div>
-                    <div>
-                      <h4 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, marginBottom: "0.25rem" }}>{title}</h4>
-                      <p style={{ color: colors.onSurfaceVariant }}>{desc}</p>
-                    </div>
+                  <div
+                    style={{
+                      width: "3rem",
+                      height: "3rem",
+                      flexShrink: 0,
+                      borderRadius: "9999px",
+                      backgroundColor: colors.surfaceContainer,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <span className="material-symbols-outlined" style={{ color: colors.primary }}>{icon}</span>
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, marginBottom: "0.5rem", fontSize: "1.125rem" }}>{title}</h3>
+                    <p style={{ color: colors.onSurfaceVariant, lineHeight: 1.7, fontSize: "0.9375rem" }}>{desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Who I Work Best With */}
+        {/* Who I Work Best With — 2x2 grid */}
         <section style={{ backgroundColor: colors.surfaceContainerLow, padding: "6rem 0" }}>
           <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "4rem" }}>
@@ -261,7 +242,7 @@ export default function About() {
               </h2>
               <div style={{ width: "6rem", height: "0.25rem", backgroundColor: colors.tertiary, margin: "0 auto", borderRadius: "9999px" }} />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4" style={{ gap: "1rem", alignItems: "center" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1.5rem" }}>
               {[
                 {
                   tag: "Teens",
@@ -271,8 +252,6 @@ export default function About() {
                   textColor: colors.onSurface,
                   tagColor: colors.tertiary,
                   descColor: colors.onSurfaceVariant,
-                  radius: "2.5rem",
-                  mt: 0,
                 },
                 {
                   tag: "Teens",
@@ -282,52 +261,44 @@ export default function About() {
                   textColor: colors.onPrimary,
                   tagColor: colors.primaryFixed,
                   descColor: `${colors.onPrimary}CC`,
-                  radius: "3rem",
-                  mt: "3rem",
                 },
                 {
                   tag: "Parents",
                   title: "Worried and Unsure",
                   desc: "Parents who love their child deeply but feel out of their depth — and know that pushing harder isn't working.",
-                  bg: colors.surfaceContainerLowest,
-                  textColor: colors.onSurface,
-                  tagColor: colors.tertiary,
-                  descColor: colors.onSurfaceVariant,
-                  radius: "2.5rem",
-                  mt: 0,
+                  bg: colors.secondary,
+                  textColor: colors.onSecondary,
+                  tagColor: colors.secondaryFixed,
+                  descColor: `${colors.onSecondary}CC`,
                 },
                 {
                   tag: "Families",
                   title: "At a Crossroads",
                   desc: "Families who feel stuck between what the system expects and what would actually be right for their teenager.",
-                  bg: colors.secondary,
-                  textColor: colors.onSecondary,
-                  tagColor: colors.secondaryFixed,
-                  descColor: `${colors.onSecondary}CC`,
-                  radius: "3.75rem",
-                  mt: "2rem",
+                  bg: colors.surfaceContainerLowest,
+                  textColor: colors.onSurface,
+                  tagColor: colors.tertiary,
+                  descColor: colors.onSurfaceVariant,
                 },
-              ].map(({ tag, title, desc, bg, textColor, tagColor, descColor, radius, mt }) => (
+              ].map(({ tag, title, desc, bg, textColor, tagColor, descColor }) => (
                 <div
                   key={title}
                   style={{
-                    padding: "2rem",
+                    padding: "2.5rem",
                     backgroundColor: bg,
                     color: textColor,
-                    borderRadius: radius,
-                    textAlign: "center",
+                    borderRadius: "1.5rem",
                     boxShadow: "0 32px 64px -12px rgba(28,28,24,0.08)",
-                    marginTop: mt,
                     transition: "transform 0.3s",
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-0.5rem)")}
                   onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
                 >
-                  <span style={{ fontSize: "0.75rem", fontWeight: 700, fontFamily: "Plus Jakarta Sans, sans-serif", textTransform: "uppercase", letterSpacing: "0.1em", color: tagColor, display: "block", marginBottom: "1rem" }}>
+                  <span style={{ fontSize: "0.75rem", fontWeight: 700, fontFamily: "Plus Jakarta Sans, sans-serif", textTransform: "uppercase", letterSpacing: "0.1em", color: tagColor, display: "block", marginBottom: "0.75rem" }}>
                     {tag}
                   </span>
-                  <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, fontSize: "1.25rem", marginBottom: "0.5rem" }}>{title}</h3>
-                  <p style={{ fontSize: "0.875rem", color: descColor }}>{desc}</p>
+                  <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, fontSize: "1.375rem", marginBottom: "0.75rem" }}>{title}</h3>
+                  <p style={{ fontSize: "0.9375rem", color: descColor, lineHeight: 1.7 }}>{desc}</p>
                 </div>
               ))}
             </div>

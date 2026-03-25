@@ -31,6 +31,7 @@ const options = [
   {
     icon: "psychology",
     title: "Teen Coaching",
+    audience: "For teens",
     desc: "One-to-one sessions for teenagers aged 16–19. A confidential space to talk through pressure, explore strengths, and figure out what comes next — on their terms.",
     who: "For teens who feel lost, overwhelmed, or simply unsure about the future.",
     cta: "Book Teen Coaching",
@@ -40,6 +41,7 @@ const options = [
   {
     icon: "family_history",
     title: "Parent Support",
+    audience: "For parents",
     desc: "Coaching for parents who want to understand their teenager better and show up without adding pressure. Practical guidance on how to listen, communicate, and let go of the things you can't control.",
     who: "For parents who feel helpless or like they're always getting it wrong.",
     cta: "Book Parent Support",
@@ -49,6 +51,7 @@ const options = [
   {
     icon: "map",
     title: "Next-Step Planning",
+    audience: "For teens & parents",
     desc: "A focused session (or series) dedicated to mapping out what comes after school. CAO choices, PLC options, apprenticeships, gap years — we look at everything and build a plan that actually makes sense.",
     who: "For teens and parents who need clarity on post-secondary options.",
     cta: "Book Next-Step Planning",
@@ -58,6 +61,7 @@ const options = [
   {
     icon: "self_improvement",
     title: "Confidence & Motivation",
+    audience: "For teens",
     desc: "For young people who have lost their drive — or never felt they had it. This coaching strand focuses on rebuilding self-belief from the ground up, using real strengths, not empty encouragement.",
     who: "For teens who describe themselves as lazy, unmotivated, or not good enough.",
     cta: "Book Confidence Coaching",
@@ -67,6 +71,7 @@ const options = [
   {
     icon: "sync_saved_locally",
     title: "Follow-Up Sessions",
+    audience: "For past clients",
     desc: "Already done some coaching and want to check back in? Follow-up sessions are available to revisit goals, update plans, and stay supported as life moves forward.",
     who: "For past clients who want to continue the journey.",
     cta: "Book a Follow-Up",
@@ -86,7 +91,7 @@ export default function CoachingOptions() {
 
       <main style={{ paddingTop: "8rem", paddingBottom: "5rem", padding: "8rem 1.5rem 5rem" }}>
         {/* Hero */}
-        <section style={{ maxWidth: "80rem", margin: "0 auto", textAlign: "center", marginBottom: "5rem" }}>
+        <section style={{ maxWidth: "80rem", margin: "0 auto", textAlign: "center", marginBottom: "2rem" }}>
           <span
             style={{
               display: "inline-block",
@@ -115,7 +120,7 @@ export default function CoachingOptions() {
               lineHeight: 1.1,
             }}
           >
-            Coaching options built<br />
+            Coaching options built{" "}
             <span style={{ color: colors.secondary, fontStyle: "italic" }}>for your situation.</span>
           </h1>
           <p style={{ maxWidth: "40rem", margin: "0 auto", color: colors.onSurfaceVariant, fontSize: "1.125rem", lineHeight: 1.6 }}>
@@ -124,10 +129,55 @@ export default function CoachingOptions() {
           </p>
         </section>
 
+        {/* Intro call highlight box */}
+        <section style={{ maxWidth: "80rem", margin: "0 auto", marginBottom: "4rem" }}>
+          <div
+            style={{
+              backgroundColor: `${colors.primary}0D`,
+              borderRadius: "1rem",
+              padding: "1.75rem 2rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "1.25rem",
+              flexWrap: "wrap",
+            }}
+          >
+            <span className="material-symbols-outlined" style={{ color: colors.primary, fontSize: "2rem", flexShrink: 0 }}>call</span>
+            <div style={{ flex: 1, minWidth: "16rem" }}>
+              <p style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primary, fontSize: "1.125rem", marginBottom: "0.25rem" }}>
+                Not sure where to start? Try a free 15-minute introductory call.
+              </p>
+              <p style={{ color: colors.onSurfaceVariant, fontSize: "0.9375rem" }}>
+                A quick introductory call with no commitment and no pressure — we figure out together what kind of support makes the most sense for your family.
+              </p>
+            </div>
+            <Link to="/book-session" style={{ textDecoration: "none", flexShrink: 0 }}>
+              <button
+                style={{
+                  backgroundColor: colors.primary,
+                  color: colors.onPrimary,
+                  padding: "0.75rem 1.5rem",
+                  borderRadius: "9999px",
+                  fontWeight: 700,
+                  border: "none",
+                  cursor: "pointer",
+                  fontFamily: "Plus Jakarta Sans, sans-serif",
+                  fontSize: "0.9375rem",
+                  transition: "opacity 0.2s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+              >
+                Book Free Intro Call
+              </button>
+            </Link>
+          </div>
+        </section>
+
         {/* Options Grid */}
-        <section style={{ maxWidth: "80rem", margin: "0 auto", marginBottom: "8rem" }}>
+        <section style={{ maxWidth: "80rem", margin: "0 auto", marginBottom: "5rem" }}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "1.5rem" }}>
-            {options.map(({ icon, title, desc, who, cta, to, featured }) => (
+            {options.map(({ icon, title, audience, desc, who, cta, to, featured }) => (
               <div
                 key={title}
                 style={{
@@ -175,11 +225,25 @@ export default function CoachingOptions() {
                       backgroundColor: featured ? `${colors.tertiary}33` : `${colors.primaryContainer}33`,
                       color: featured ? colors.tertiaryFixedDim : colors.primary,
                       borderRadius: "0.75rem",
-                      marginBottom: "1.5rem",
+                      marginBottom: "1rem",
                     }}
                   >
                     <span className="material-symbols-outlined">{icon}</span>
                   </div>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      fontSize: "0.6875rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      color: featured ? colors.tertiaryFixedDim : colors.secondary,
+                      marginBottom: "0.5rem",
+                      fontFamily: "Plus Jakarta Sans, sans-serif",
+                    }}
+                  >
+                    {audience}
+                  </span>
                   <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.75rem" }}>
                     {title}
                   </h2>
@@ -226,35 +290,41 @@ export default function CoachingOptions() {
           </div>
         </section>
 
-        {/* Feature Promise */}
-        <section style={{ maxWidth: "64rem", margin: "0 auto", textAlign: "center", marginBottom: "8rem" }}>
-          <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, color: colors.secondary, marginBottom: "3rem" }}>
-            Every session includes
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: "1rem" }}>
-            {[
-              { icon: "visibility", label: "Clarity" },
-              { icon: "verified_user", label: "Confidence" },
-              { icon: "north_east", label: "Direction" },
-              { icon: "step_into", label: "Next Steps" },
-            ].map(({ icon, label }) => (
-              <div
-                key={label}
-                style={{
-                  backgroundColor: colors.surfaceContainerLow,
-                  padding: "2rem",
-                  borderRadius: "1rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: "2.5rem", color: colors.primary, marginBottom: "1rem" }}>{icon}</span>
-                <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 600, color: colors.primary }}>{label}</span>
-              </div>
-            ))}
+        {/* Every session includes — full-width banner */}
+        <section style={{ maxWidth: "80rem", margin: "0 auto", marginBottom: "8rem" }}>
+          <div
+            style={{
+              backgroundColor: colors.surfaceContainerLow,
+              borderRadius: "1.5rem",
+              padding: "3rem 2rem",
+              textAlign: "center",
+            }}
+          >
+            <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, color: colors.secondary, marginBottom: "2rem" }}>
+              Every session includes:
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: "1.5rem" }}>
+              {[
+                { icon: "visibility", label: "Clarity" },
+                { icon: "verified_user", label: "Confidence" },
+                { icon: "north_east", label: "Direction" },
+                { icon: "step_into", label: "Next Steps" },
+              ].map(({ icon, label }) => (
+                <div
+                  key={label}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.75rem",
+                    padding: "1rem",
+                  }}
+                >
+                  <span className="material-symbols-outlined" style={{ color: colors.primary }}>check_circle</span>
+                  <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 600, color: colors.primary }}>{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -273,9 +343,9 @@ export default function CoachingOptions() {
             className="md:flex-row"
           >
             <div style={{ flex: 1 }}>
-              <h4 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: colors.primary, marginBottom: "1.5rem" }}>
+              <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: colors.primary, marginBottom: "1.5rem" }}>
                 Not sure which option fits?
-              </h4>
+              </h2>
               <p style={{ color: colors.onSurfaceVariant, fontSize: "1.125rem", lineHeight: 1.7, marginBottom: "2rem" }}>
                 That's completely normal — most families aren't sure where to start. A quick introductory call can help
                 us figure out what kind of support makes the most sense for your teenager right now. There's no

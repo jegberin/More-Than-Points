@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />
-      <main style={{ paddingTop: "8rem", paddingBottom: "5rem" }}>
+      <main id="top" style={{ paddingTop: "8rem", paddingBottom: "5rem" }}>
         <div style={{ maxWidth: "52rem", margin: "0 auto", padding: "0 1.5rem" }}>
           <div style={{ marginBottom: "3rem" }}>
             <span
@@ -203,6 +203,12 @@ export default function PrivacyPolicy() {
               Email: <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a>
             </p>
           </Section>
+
+          <div style={{ paddingTop: "1rem", textAlign: "right" }}>
+            <a href="#top" style={{ color: colors.primary, fontSize: "0.875rem", fontWeight: 600, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.25rem" }}>
+              ↑ Back to top
+            </a>
+          </div>
         </div>
       </main>
       <Footer />
