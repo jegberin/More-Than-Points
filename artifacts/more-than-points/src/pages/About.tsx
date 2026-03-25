@@ -177,8 +177,8 @@ export default function About() {
               </div>
               <div style={{ marginTop: "2rem", paddingTop: "2rem", borderTop: `1px solid ${colors.onPrimary}1A` }}>
                 <ul style={{ marginTop: "0.5rem", display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem", opacity: 0.85, listStyle: "none", padding: 0 }}>
-                  <li>• Leaving Cert navigation</li>
-                  <li>• Alternative pathway planning</li>
+                  <li>• <Link to="/coaching-options" style={{ color: colors.primaryFixed, textDecoration: "underline" }}>Leaving Cert navigation</Link></li>
+                  <li>• <Link to="/coaching-options" style={{ color: colors.primaryFixed, textDecoration: "underline" }}>Alternative pathway planning</Link></li>
                   <li>• Parent coaching &amp; communication</li>
                   <li>• Confidence &amp; motivation</li>
                   <li>• Further education pathways</li>

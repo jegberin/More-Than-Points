@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -73,7 +74,10 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "FAQ | More Than Points";
+    setPageMeta(
+      "FAQ | More Than Points",
+      "Answers to common questions about educational coaching, sessions, confidentiality, pricing, and how to support your teenager through the Leaving Cert years."
+    );
 
     const script = document.createElement("script");
     script.type = "application/ld+json";

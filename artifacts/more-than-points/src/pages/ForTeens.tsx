@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -26,7 +27,10 @@ const colors = {
 
 export default function ForTeens() {
   useEffect(() => {
-    document.title = "For Teens | More Than Points";
+    setPageMeta(
+      "For Teens | More Than Points",
+      "Supportive coaching for teens aged 16–19 who feel stressed, stuck, unmotivated, or unsure about what comes next after school in Ireland."
+    );
   }, []);
 
   return (

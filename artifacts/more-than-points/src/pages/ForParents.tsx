@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -27,7 +28,10 @@ const colors = {
 
 export default function ForParents() {
   useEffect(() => {
-    document.title = "For Parents | More Than Points";
+    setPageMeta(
+      "For Parents | More Than Points",
+      "Support for parents of teenagers facing school pressure, uncertainty, and next-step decisions. Learn how coaching can help your family move forward."
+    );
   }, []);
 
   return (

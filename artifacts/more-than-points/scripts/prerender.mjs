@@ -45,14 +45,14 @@ const routes = [
     file: "for-parents.html",
     title: "For Parents | More Than Points",
     description:
-      "Support for parents of teenagers facing school pressure, uncertainty, and next-step decisions.",
+      "Support for parents of teenagers facing school pressure, uncertainty, and next-step decisions. Learn how coaching can help your family move forward.",
   },
   {
     path: "/for-teens",
     file: "for-teens.html",
     title: "For Teens | More Than Points",
     description:
-      "Supportive coaching for teens who feel stressed, stuck, unmotivated, or unsure about what comes next.",
+      "Supportive coaching for teens aged 16–19 who feel stressed, stuck, unmotivated, or unsure about what comes next after school in Ireland.",
   },
   {
     path: "/about",
@@ -66,14 +66,14 @@ const routes = [
     file: "faq.html",
     title: "FAQ | More Than Points",
     description:
-      "Answers to common questions about coaching, sessions, confidentiality, and support.",
+      "Answers to common questions about educational coaching, sessions, confidentiality, pricing, and how to support your teenager through the Leaving Cert years.",
   },
   {
     path: "/testimonials",
     file: "testimonials.html",
     title: "Testimonials | More Than Points",
     description:
-      "Read what parents and young people say about working with More Than Points.",
+      "Read what parents and young people say about working with More Than Points. Real experiences from Irish families navigating school pressure and next steps.",
   },
   {
     path: "/book-session",

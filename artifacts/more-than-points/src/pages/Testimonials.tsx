@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -70,7 +71,10 @@ const testimonials = [
 
 export default function Testimonials() {
   useEffect(() => {
-    document.title = "Testimonials | More Than Points";
+    setPageMeta(
+      "Testimonials | More Than Points",
+      "Read what parents and young people say about working with More Than Points. Real experiences from Irish families navigating school pressure and next steps."
+    );
   }, []);
 
   return (
