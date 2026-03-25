@@ -1,0 +1,105 @@
+You are updating the existing website.
+You are not redesigning the business, not inventing new offers, not changing the tone, and not adding features that are not explicitly listed below.
+The business supports Irish teens aged 16 to 19 and their parents, especially where school pressure, Leaving Cert anxiety, disengagement, or non-traditional pathways are involved.
+The site tone must remain calm, compassionate, practical, non-judgemental, and empowering.
+Preserve the existing page set: Home, How It Works, Coaching Options, About, Book a Session, Contact, Privacy Policy, Terms of Service, and Cookie Policy.
+Do not add blogs, testimonials, newsletters, chat widgets, popups, social feeds, or any extra sales funnels unless they already exist and are only being cleaned up as part of the audited fixes.
+Do not replace the current emotional messaging where it is strong; only improve structure, semantics, SEO, accessibility, clarity, and conversion flow.
+The main business goal is to create a safe, pressure-free starting point that helps parents and teens feel heard, rebuild confidence, and move toward realistic alternatives such as apprenticeships, QQI or PLC routes, traineeships, and practical next steps.
+Phase 1: Audit the existing codebase before editing anything.
+Check all templates, routes, layouts, shared components, page files, and metadata handling.
+Identify where titles, meta descriptions, heading tags, global navigation, footer links, and forms are defined.
+Confirm whether there is a shared layout or per-page head configuration.
+Confirm whether the site uses reusable sections for hero blocks, service blocks, legal pages, and forms.
+Do not start visual redesign work during this phase.
+Checkpoint for Phase 1: Stop and verify that you understand where each page is generated and where global SEO or layout logic lives before making changes.
+Phase 2: Apply global rules across the whole site.
+Every public page must have one and only one <h1>.
+Every public page must have a unique <title> and a unique <meta name="description">, because the audit found missing or weak metadata across the site.
+Keep semantic heading order clean with <h2> and <h3> nested logically under the single H1.
+Preserve the strongest trust signal across the site by surfacing Angela’s 25 plus years of experience in adult education and further learning in Ireland where specified below.
+Improve internal linking where the copy already mentions alternative pathways, Leaving Cert navigation, apprenticeships, PLCs, or gap years.
+Do not insert generic marketing copy, urgency tactics, fake scarcity, exaggerated claims, or clinical therapy language.
+Do not leave any placeholder content, lorem ipsum, template remnants, empty accordions, duplicate headings, or broken routes visible in the final UI.
+Checkpoint for Phase 2: Stop and verify that the site-wide structure is cleaner without changing the brand voice or adding off-brief features.
+Phase 3: Fix the homepage at /.
+Add this exact page title: Educational Coaching for Teens & Parents Ireland | More Than Points. 
+Add this exact meta description: Expert educational coaching for teens (16-19) and parents in Ireland. Find alternative pathways, rebuild confidence, and navigate life beyond the Leaving Cert.
+Keep the visible hero line “There is life beyond the points. Let’s find it together.” because the audit identified it as strong copy.
+Wrap that hero line in this structure: <h1><span class="visually-hidden">Teen Educational Coaching Ireland: </span>There is life beyond the points. Let’s find it together.</h1>.
+Locate the “Who I work with” section and convert the “Teenagers aged 16–19” and “Parents & Families” content into a two-column CSS grid.
+Add an above-the-fold trust element featuring “Over 25 years in education” so that authority is visible immediately rather than buried in body text.
+In the text about alternatives to the CAO route, link “apprenticeships”, “PLCs”, and “gap years” to /coaching-options.
+Do not rewrite the homepage into a more corporate or sales-heavy style.
+Checkpoint for Phase 3: Confirm the homepage now has valid metadata, one H1, clearer visual separation, stronger trust signaling, and cleaner internal linking.
+Phase 4: Fix /how-it-works.
+Add this exact page title: How Our Teen Coaching Process Works | More Than Points. 
+Add this exact meta description: Discover our 5-step coaching framework for Irish teenagers. We move beyond standard school guidance to build confidence, uncover strengths, and plan real pathways.
+Change the primary heading to this exact H1: <h1>How Our Coaching Process Works: A Grounded Path to Clarity</h1>.
+Find the five-step process content and render it as an ordered list timeline using something like <ol class="process-timeline">.
+Make each stage visually distinct so users can scan the process instead of reading it as one long text block.
+Find the comparison between “School Guidance Counsellor” and “Angela’s Coaching Approach” and convert it into a responsive side-by-side comparison.
+Put the contrasts directly opposite each other, especially points-driven versus strengths-led and time-limited versus relational and sustained.
+Checkpoint for Phase 4: Confirm the page reduces ambiguity, presents the process clearly, and visually contrasts standard school guidance with Angela’s approach.
+Phase 5: Fix /coaching-options.
+Immediately correct the typo in the H1 from “builtfor” to “built for”.
+Add this exact meta description: Explore tailored coaching options for Irish teens and parents. From Next-Step Planning to Confidence building, find the right educational support for your family.
+Locate the “quick introductory call with no commitment, and no pressure” content and move it into a prominent highlight box directly below the H1.
+Convert the five service sections into a responsive service-card grid.
+Each service card must include the title, a concise summary, the target audience such as teen or parent, and the specific CTA already associated with that service.
+Remove the repeated “Clarity, Confidence, Direction, and Next Steps” line from each individual service area.
+Replace that repetition with one full-width banner below the grid that says “Every session includes:” followed by those four pillars with simple checkmark styling.
+Do not change service names, invent package variants, or add pricing that is not already present in the existing site.
+Checkpoint for Phase 5: Confirm the page now reduces choice paralysis, highlights the low-friction intro call, and removes repetitive clutter.
+Phase 6: Fix /about.
+Add this exact page title: About Angela | Teen Education & Career Coach Ireland | More Than Points. 
+Add this exact meta description: With 25 years of experience in Irish adult education, Angela provides practical, person-led coaching for teenagers and families navigating the Leaving Cert chaos.
+Preserve the visible copy “Meet Angela - A steady hand in a high-pressure time.” because the audit identifies the page narrative as one of the strongest on the site.
+Add this SEO-only heading structure: <h1 class="visually-hidden">Meet Angela: Teen Educational Coach</h1>.
+Render the visible hero text separately as a styled non-H1 element, for example a paragraph or div with hero typography.
+Convert the “Who I work best with” content into a 2 by 2 grid so users can self-identify quickly across the four audience types.
+Convert “The Approach” principles into a three-column row with simple icon support for non-judgemental and calm, person-led not system-led, and practically focused.
+Add internal links from phrases such as “Leaving Cert navigation” and “alternative pathway planning” to /coaching-options.
+Keep the page warm, grounded, and authority-led rather than polished into generic consultant copy.
+Checkpoint for Phase 6: Confirm the page preserves trust and empathy while improving scanability, semantics, and internal linking.
+Phase 7: Fix /book-session as the highest-priority conversion page.
+Delete every visible element containing the text “ABOUT THE BOOK”, “ABOUT THE MUSEUM”, or “BUY NOW”.
+These are template leakage artifacts and must be fully removed from the live DOM, not merely hidden behind spacing or left in inaccessible containers.
+Locate the placeholder FAQ section and hide it completely until real content exists.
+Do not leave empty accordions, empty headings, or placeholder questions behind.
+Add this exact page title: Book a Coaching Session | Secure Online Booking | More Than Points. 
+Add this exact meta description: Book a secure online coaching session. Choose from a free intro call, a single clarity session, or a growth package. No pressure, just honest conversation.
+Restructure the page into a two-column desktop layout.
+The left column must present the value proposition, session options, the €85 pricing reference, secure payment reassurance, and the 24-hour rescheduling reassurance.
+The right column must contain the booking form.
+Audit the form fields so email uses type="email" and phone uses type="tel".
+Keep the booking flow simple and reassuring, because the business requires both direct payment and automated booking support.
+Checkpoint for Phase 7: Confirm the page no longer contains template leakage, no longer exposes placeholder FAQ content, and now supports a clean, trustworthy booking flow.
+Phase 8: Fix /contact.
+Keep <h1>Get in Touch</h1> as the only H1 on the page.
+Demote “Not sure where to start? Just say hello.” to an <h2> or a styled paragraph.
+Add this exact page title: Contact Us | Questions & Inquiries | More Than Points. 
+Add this exact meta description: Get in touch with More Than Points. Send a confidential message, ask questions about our coaching, and receive a reply within 24 hours.
+Add immediate inline validation for required fields, especially email, so the error appears beside the field without a full page reload.
+Beneath the form, add a sentence that guides ready-to-book users to /book-session in a natural, low-pressure way.
+Preserve the reassurance around confidentiality and 24-hour response time.
+Checkpoint for Phase 8: Confirm the page has one H1, working inline validation, clear metadata, and a smooth route to the booking page.
+Phase 9: Fix legal infrastructure at /privacy-policy, /terms-of-service, and /cookie-policy.
+First, test the /cookie-policy route because the audit found that it was inaccessible.
+If the route is broken or returning 404, create or restore the page so it resolves successfully.
+Add a global cookie consent mechanism that blocks non-essential tracking until the user gives explicit consent.
+Add basic meta descriptions to the legal pages.
+Improve long-page navigation by adding either a table of contents or a clear “Back to Top” mechanism on the legal pages.
+Do not invent legal claims beyond the existing policy framework, but do ensure the legal infrastructure is accessible and usable.
+Checkpoint for Phase 9: Confirm that all three legal routes resolve, the cookie consent mechanism exists, and the long legal pages are easier to navigate.
+Phase 10: Final QA and acceptance review.
+Check every public page for a unique title, unique meta description, exactly one H1, logical heading order, valid internal links, and responsive layout behavior.
+Check that no template junk, placeholder sections, broken links, duplicate headings, or empty UI shells remain.
+Check that the tone still feels calm, compassionate, practical, and trust-building rather than corporate or pushy.
+Check that pages meant to convert now reduce friction instead of adding it, especially the homepage, coaching options page, booking page, and contact page.
+Do not mark the task complete until all high-priority issues from the audit have been addressed.
+Final checkpoint: Stop and verify that the technical quality now matches the strength of the existing copy and business positioning.
+Required output after implementation: provide a structured changelog.
+For each edited page, list: what was changed, what code structure was changed, what SEO elements were added or fixed, what UX issues were resolved, and whether any human content is still needed.
+Also list any items you intentionally did not change because they were outside the scope of this brief.
+Do not give a vague summary; give a page-by-page implementation report.
