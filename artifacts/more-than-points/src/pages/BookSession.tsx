@@ -43,24 +43,20 @@ const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie"
 
 const FAQ_ITEMS = [
   {
-    q: "What happens after I submit the form?",
-    a: "Angela will be in touch within 24 hours to confirm your session, agree a time that suits you, and send a secure payment link if applicable.",
+    q: "How do payments work?",
+    a: "After Angela confirms your booking by email, she will send you a secure payment link. We accept all major credit and debit cards.",
   },
   {
-    q: "Where do sessions take place?",
-    a: "All sessions are online via video call, so families anywhere in Ireland can access coaching without travel.",
+    q: "What is your cancellation policy?",
+    a: "Sessions can be cancelled or rescheduled free of charge up to 24 hours in advance. Late cancellations may incur a small processing fee.",
   },
   {
-    q: "Is there a minimum number of sessions?",
-    a: "No. You can start with a single session or a free intro call. There's no obligation to commit to a package until you're confident it's right for you.",
+    q: "What should I expect from the first session?",
+    a: "Our initial call is about discovery. We focus on understanding your current challenges, setting clear objectives, and outlining a tailored roadmap for your journey.",
   },
   {
-    q: "Can a parent attend a teen's session?",
-    a: "This is something Angela discusses with each family individually. Depending on the goals, sessions may be one-to-one with the teenager, or may include a parent — the format is always agreed in advance.",
-  },
-  {
-    q: "What if I need to reschedule?",
-    a: "Sessions can be rescheduled with at least 24 hours' notice, at no additional charge.",
+    q: "Is my information private?",
+    a: "Absolutely. Confidentiality is the cornerstone of our coaching relationship. All sessions are private and conducted in a secure virtual environment.",
   },
 ];
 
