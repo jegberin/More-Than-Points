@@ -94,20 +94,21 @@ const routes = [
     file: "privacy-policy.html",
     title: "Privacy Policy | More Than Points",
     description:
-      "How More Than Points collects, uses, and protects your personal data.",
+      "How More Than Points collects, uses, and protects your personal data under Irish and EU GDPR law.",
   },
   {
     path: "/terms-of-service",
     file: "terms-of-service.html",
     title: "Terms of Service | More Than Points",
-    description: "Service terms for More Than Points coaching sessions.",
+    description:
+      "Terms and conditions governing More Than Points coaching sessions, payments, cancellations, and your rights under Irish consumer law.",
   },
   {
     path: "/cookie-policy",
     file: "cookie-policy.html",
     title: "Cookie Policy | More Than Points",
     description:
-      "How More Than Points uses cookies and similar technologies.",
+      "How More Than Points uses cookies and similar technologies to improve your browsing experience, with full consent controls.",
   },
 ];
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -27,7 +28,10 @@ const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie"
 
 export default function Contact() {
   useEffect(() => {
-    document.title = "Contact Us | Questions & Inquiries | More Than Points";
+    setPageMeta(
+      "Contact Us | Questions & Inquiries | More Than Points",
+      "Get in touch with More Than Points. Send a confidential message, ask questions about our coaching, and receive a reply within 24 hours."
+    );
   }, []);
 
   const [submitted, setSubmitted] = useState(false);
@@ -152,7 +156,7 @@ export default function Contact() {
                 >
                   Get in Touch
                 </h1>
-                <p
+                <h2
                   style={{
                     fontFamily: "Plus Jakarta Sans, sans-serif",
                     fontSize: "1.375rem",
@@ -162,7 +166,7 @@ export default function Contact() {
                   }}
                 >
                   Not sure where to start? Just say hello.
-                </p>
+                </h2>
                 <p style={{ color: colors.secondary, fontSize: "1.125rem", lineHeight: 1.7, maxWidth: "28rem" }}>
                   You don't need to have everything figured out before getting in touch. Whether you're a parent with
                   questions, a teenager unsure what coaching involves, or a family at a crossroads — I'm here to listen.

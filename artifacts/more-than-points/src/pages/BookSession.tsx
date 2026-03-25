@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -42,7 +43,10 @@ const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie"
 
 export default function BookSession() {
   useEffect(() => {
-    document.title = "Book a Coaching Session | Secure Online Booking | More Than Points";
+    setPageMeta(
+      "Book a Coaching Session | Secure Online Booking | More Than Points",
+      "Book a secure online coaching session. Choose from a free intro call, a single clarity session, or a growth package. No pressure, just honest conversation."
+    );
   }, []);
 
   const [submitted, setSubmitted] = useState(false);
@@ -419,6 +423,68 @@ export default function BookSession() {
                 )}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 6rem" }}>
+          <h2
+            style={{
+              fontFamily: "Plus Jakarta Sans, sans-serif",
+              fontSize: "clamp(1.5rem, 3vw, 2rem)",
+              fontWeight: 700,
+              color: colors.primary,
+              marginBottom: "2rem",
+              textAlign: "center",
+            }}
+          >
+            Common Questions
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "52rem", margin: "0 auto" }}>
+            {[
+              {
+                q: "What happens after I submit the form?",
+                a: "Angela will be in touch within 24 hours to confirm your session, agree a time that suits you, and send a secure payment link if applicable.",
+              },
+              {
+                q: "Where do sessions take place?",
+                a: "All sessions are online via video call, so families anywhere in Ireland can access coaching without travel.",
+              },
+              {
+                q: "Is there a minimum number of sessions?",
+                a: "No. You can start with a single session or a free intro call. There's no obligation to commit to a package until you're confident it's right for you.",
+              },
+              {
+                q: "Can a parent attend a teen's session?",
+                a: "This is something Angela discusses with each family individually. Depending on the goals, sessions may be one-to-one with the teenager, or may include a parent — the format is always agreed in advance.",
+              },
+              {
+                q: "What if I need to reschedule?",
+                a: "Sessions can be rescheduled with at least 24 hours' notice, at no additional charge.",
+              },
+            ].map(({ q, a }) => (
+              <div
+                key={q}
+                style={{
+                  backgroundColor: colors.surfaceContainerLow,
+                  borderRadius: "0.75rem",
+                  padding: "1.5rem",
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontWeight: 700,
+                    fontSize: "1rem",
+                    color: colors.onSurface,
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  {q}
+                </h3>
+                <p style={{ color: colors.onSurfaceVariant, fontSize: "0.9375rem", lineHeight: 1.7 }}>{a}</p>
+              </div>
+            ))}
           </div>
         </section>
       </main>

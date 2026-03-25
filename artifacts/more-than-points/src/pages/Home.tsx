@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -27,7 +28,10 @@ const colors = {
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Educational Coaching for Teens & Parents Ireland | More Than Points";
+    setPageMeta(
+      "Educational Coaching for Teens & Parents Ireland | More Than Points",
+      "Expert educational coaching for teens (16-19) and parents in Ireland. Find alternative pathways, rebuild confidence, and navigate life beyond the Leaving Cert."
+    );
   }, []);
 
   return (

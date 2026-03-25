@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -44,6 +46,13 @@ function SubSection({ title, children }: { title: string; children: React.ReactN
 }
 
 export default function CookiePolicy() {
+  useEffect(() => {
+    setPageMeta(
+      "Cookie Policy | More Than Points",
+      "How More Than Points uses cookies and similar technologies to improve your browsing experience, with full consent controls."
+    );
+  }, []);
+
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />

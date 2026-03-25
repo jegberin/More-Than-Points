@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -33,6 +35,13 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 export default function TermsOfService() {
+  useEffect(() => {
+    setPageMeta(
+      "Terms of Service | More Than Points",
+      "Terms and conditions governing More Than Points coaching sessions, payments, cancellations, and your rights under Irish consumer law."
+    );
+  }, []);
+
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -82,7 +83,10 @@ const options = [
 
 export default function CoachingOptions() {
   useEffect(() => {
-    document.title = "Coaching Options | More Than Points";
+    setPageMeta(
+      "Coaching Options | More Than Points",
+      "Explore tailored coaching options for Irish teens and parents. From Next-Step Planning to Confidence building, find the right educational support for your family."
+    );
   }, []);
 
   return (

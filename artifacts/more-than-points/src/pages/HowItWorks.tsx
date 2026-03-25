@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -33,7 +34,10 @@ const colors = {
 
 export default function HowItWorks() {
   useEffect(() => {
-    document.title = "How Our Teen Coaching Process Works | More Than Points";
+    setPageMeta(
+      "How Our Teen Coaching Process Works | More Than Points",
+      "Discover our 5-step coaching framework for Irish teenagers. We move beyond standard school guidance to build confidence, uncover strengths, and plan real pathways."
+    );
   }, []);
 
   return (

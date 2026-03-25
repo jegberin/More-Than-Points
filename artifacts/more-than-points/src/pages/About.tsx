@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -30,7 +31,10 @@ const colors = {
 
 export default function About() {
   useEffect(() => {
-    document.title = "About Angela | Teen Education & Career Coach Ireland | More Than Points";
+    setPageMeta(
+      "About Angela | Teen Education & Career Coach Ireland | More Than Points",
+      "With 25 years of experience in Irish adult education, Angela provides practical, person-led coaching for teenagers and families navigating the Leaving Cert chaos."
+    );
   }, []);
 
   return (

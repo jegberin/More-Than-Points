@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { setPageMeta } from "@/lib/pageMeta";
 
 const colors = {
   primary: "#4d6451",
@@ -33,6 +35,13 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 export default function PrivacyPolicy() {
+  useEffect(() => {
+    setPageMeta(
+      "Privacy Policy | More Than Points",
+      "How More Than Points collects, uses, and protects your personal data under Irish and EU GDPR law."
+    );
+  }, []);
+
   return (
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />
