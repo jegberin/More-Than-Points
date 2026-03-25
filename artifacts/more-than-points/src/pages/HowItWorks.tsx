@@ -32,6 +32,69 @@ const colors = {
   outlineVariant: "#c3c8c0",
 };
 
+const steps = [
+  {
+    num: "01",
+    icon: "hearing",
+    title: "Getting to Know You",
+    desc: "The first session is about listening. We explore what's going on right now — the pressures, the worries, the things that aren't being said at home or in school. There's no agenda. Just space to speak honestly.",
+    tagline: "No agenda. Just a real conversation.",
+    bg: colors.surfaceContainerLow,
+    textColor: colors.onSurface,
+    numColor: colors.primaryContainer,
+    tagColor: colors.primary,
+    tagBg: colors.primaryFixed,
+  },
+  {
+    num: "02",
+    icon: "search",
+    title: "Uncovering Strengths",
+    desc: "We move beneath the surface to identify what the young person is genuinely good at — skills and qualities that exam grades don't reflect. This is where self-awareness begins to shift.",
+    tagline: "Beneath the surface, where real strengths live.",
+    bg: colors.secondary,
+    textColor: "#ffffff",
+    numColor: colors.secondaryFixedDim,
+    tagColor: colors.secondaryFixed,
+    tagBg: `${colors.secondaryFixed}33`,
+  },
+  {
+    num: "03",
+    icon: "explore",
+    title: "Exploring Pathways",
+    desc: "College, apprenticeships, PLCs, gap years, creative industries, entrepreneurship — we map out real options without the pressure of having to choose right now.",
+    tagline: "Real options, no pressure to choose yet.",
+    bg: colors.tertiaryContainer,
+    textColor: colors.onTertiaryContainer,
+    numColor: colors.tertiary,
+    tagColor: colors.onTertiaryContainer,
+    tagBg: `${colors.tertiary}1A`,
+  },
+  {
+    num: "04",
+    icon: "self_improvement",
+    title: "Rebuilding Confidence",
+    desc: "For many teens, the system has quietly eroded their belief in themselves. We work to undo that — not with empty affirmations, but by reconnecting them with evidence of who they genuinely are and what they're capable of.",
+    tagline: "Real evidence. Real belief.",
+    bg: colors.surfaceContainerHighest,
+    textColor: colors.onSurface,
+    numColor: colors.primary,
+    tagColor: colors.primary,
+    tagBg: colors.surfaceContainer,
+  },
+  {
+    num: "05",
+    icon: "task_alt",
+    title: "Making a Plan",
+    desc: "Coaching ends with clarity, not just conversation. Together we build a practical, realistic plan for what comes next — whether that's CAO choices, a PLC application, or a completely different direction altogether. Follow-up sessions are available to stay on track as life unfolds.",
+    tagline: "A real plan. Real steps.",
+    bg: colors.primary,
+    textColor: colors.onPrimary,
+    numColor: colors.primaryFixed,
+    tagColor: colors.primaryFixed,
+    tagBg: `${colors.primaryFixed}33`,
+  },
+];
+
 export default function HowItWorks() {
   useEffect(() => {
     setPageMeta(
@@ -85,185 +148,68 @@ export default function HowItWorks() {
           </p>
         </section>
 
-        {/* 5-Step Framework as ordered list timeline */}
+        {/* 5-Step Process — one <li> per step */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 5rem" }}>
-          <ol className="process-timeline" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            <li>
-              <div className="grid grid-cols-1 md:grid-cols-12" style={{ gap: "1.5rem", marginBottom: "1.5rem" }}>
-                {/* Step 1 */}
+          <ol className="process-timeline" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            {steps.map(({ num, icon, title, desc, tagline, bg, textColor, numColor, tagColor, tagBg }) => (
+              <li key={num}>
                 <div
-                  className="md:col-span-7"
                   style={{
-                    backgroundColor: colors.surfaceContainerLow,
+                    backgroundColor: bg,
+                    color: textColor,
                     padding: "clamp(2rem, 5vw, 3rem)",
-                    borderRadius: "0.75rem",
+                    borderRadius: "1.25rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
                     position: "relative",
+                    overflow: "hidden",
                   }}
                 >
-                  <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primaryContainer, opacity: 0.4, marginBottom: "1rem", display: "block" }}>01</span>
-                  <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Getting to Know You</h2>
-                  <p style={{ color: colors.onSurfaceVariant, lineHeight: 1.7, maxWidth: "28rem" }}>
-                    The first session is about listening. We explore what's going on right now — the pressures, the worries,
-                    the things that aren't being said at home or in school. There's no agenda. Just space to speak honestly.
-                  </p>
-                  <div style={{ marginTop: "2rem", display: "flex", alignItems: "center", gap: "1rem" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
                     <span
-                      className="material-symbols-outlined"
-                      style={{ color: colors.primary, backgroundColor: colors.primaryFixed, padding: "0.75rem", borderRadius: "9999px" }}
-                    >
-                      hearing
-                    </span>
-                    <span style={{ fontSize: "0.875rem", fontWeight: 600, color: colors.primary }}>No agenda. Just a real conversation.</span>
-                  </div>
-                </div>
-
-                {/* Step 2 */}
-                <div
-                  className="md:col-span-5"
-                  style={{
-                    backgroundColor: colors.secondary,
-                    color: "#ffffff",
-                    padding: "clamp(2rem, 5vw, 3rem)",
-                    borderRadius: "0.75rem",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <div>
-                    <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.secondaryFixedDim, opacity: 0.4, marginBottom: "1rem", display: "block" }}>02</span>
-                    <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Uncovering Strengths</h2>
-                    <p style={{ color: colors.secondaryFixed, lineHeight: 1.6 }}>
-                      We move beneath the surface to identify what the young person is genuinely good at — skills and
-                      qualities that exam grades don't reflect. This is where self-awareness begins to shift.
-                    </p>
-                  </div>
-                  <div style={{ marginTop: "2rem" }}>
-                    <span className="material-symbols-outlined" style={{ fontSize: "2.5rem" }}>search</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div className="grid grid-cols-1 md:grid-cols-12" style={{ gap: "1.5rem", marginBottom: "1.5rem" }}>
-                {/* Step 3 */}
-                <div
-                  className="md:col-span-4"
-                  style={{
-                    backgroundColor: colors.tertiaryContainer,
-                    color: colors.onTertiaryContainer,
-                    padding: "clamp(2rem, 5vw, 3rem)",
-                    borderRadius: "0.75rem",
-                  }}
-                >
-                  <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.tertiary, opacity: 0.4, marginBottom: "1rem", display: "block" }}>03</span>
-                  <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Exploring Pathways</h2>
-                  <p style={{ lineHeight: 1.6, marginBottom: "2rem" }}>
-                    College, apprenticeships, PLCs, gap years, creative industries, entrepreneurship — we map out real
-                    options without the pressure of having to choose right now.
-                  </p>
-                  <div
-                    style={{
-                      height: "8rem",
-                      borderRadius: "0.5rem",
-                      backgroundColor: `${colors.tertiary}1A`,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      border: `2px dashed ${colors.tertiary}33`,
-                    }}
-                  >
-                    <span className="material-symbols-outlined" style={{ fontSize: "2.5rem" }}>explore</span>
-                  </div>
-                </div>
-
-                {/* Step 4 */}
-                <div
-                  className="md:col-span-8"
-                  style={{
-                    backgroundColor: colors.surfaceContainerHighest,
-                    padding: "clamp(2rem, 5vw, 3rem)",
-                    borderRadius: "0.75rem",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "2rem",
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <div style={{ flex: 1 }}>
-                    <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primary, opacity: 0.4, marginBottom: "1rem", display: "block" }}>04</span>
-                    <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.875rem", fontWeight: 700, marginBottom: "1rem" }}>Rebuilding Confidence</h2>
-                    <p style={{ color: colors.onSurfaceVariant, lineHeight: 1.6 }}>
-                      For many teens, the system has quietly eroded their belief in themselves. We work to undo that — not
-                      with empty affirmations, but by reconnecting them with evidence of who they genuinely are and what
-                      they're capable of.
-                    </p>
-                  </div>
-                  <div
-                    style={{
-                      backgroundColor: "#fff",
-                      padding: "1.5rem",
-                      borderRadius: "0.5rem",
-                      boxShadow: "0 2px 8px rgba(28,28,24,0.06)",
-                      width: "100%",
-                      maxWidth: "20rem",
-                    }}
-                  >
-                    {[75, 50, 100].map((w, i) => (
-                      <div key={i} style={{ height: "0.5rem", backgroundColor: colors.surfaceContainer, borderRadius: "9999px", overflow: "hidden", marginBottom: i < 2 ? "1rem" : 0 }}>
-                        <div style={{ height: "100%", backgroundColor: colors.primary, width: `${w}%`, borderRadius: "9999px" }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              {/* Step 5 */}
-              <div
-                style={{
-                  backgroundColor: colors.primary,
-                  padding: "clamp(2rem, 6vw, 4rem)",
-                  borderRadius: "0.75rem",
-                  color: colors.onPrimary,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "2rem",
-                  alignItems: "flex-start",
-                }}
-              >
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full">
-                  <div style={{ maxWidth: "36rem" }}>
-                    <span style={{ fontSize: "2.5rem", fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, color: colors.primaryFixed, opacity: 0.4, marginBottom: "1rem", display: "block" }}>05</span>
-                    <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "2.25rem", fontWeight: 700, marginBottom: "1rem" }}>Making a Plan</h2>
-                    <p style={{ color: colors.primaryFixed, fontSize: "1.125rem", lineHeight: 1.6 }}>
-                      Coaching ends with clarity, not just conversation. Together we build a practical, realistic plan for
-                      what comes next — whether that's CAO choices, a PLC application, or a completely different direction
-                      altogether. Follow-up sessions are available to stay on track as life unfolds.
-                    </p>
-                  </div>
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
-                    <div
                       style={{
-                        width: "5rem",
-                        height: "5rem",
-                        backgroundColor: colors.primaryContainer,
-                        borderRadius: "9999px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#273d2c",
+                        fontSize: "2.5rem",
+                        fontFamily: "Plus Jakarta Sans, sans-serif",
+                        fontWeight: 700,
+                        color: numColor,
+                        opacity: 0.4,
+                        lineHeight: 1,
                       }}
                     >
-                      <span className="material-symbols-outlined" style={{ fontSize: "2.5rem" }}>task_alt</span>
-                    </div>
-                    <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700 }}>A real plan. Real steps.</span>
+                      {num}
+                    </span>
+                    <span className="material-symbols-outlined" style={{ fontSize: "2rem", opacity: 0.6 }}>{icon}</span>
+                  </div>
+                  <h2
+                    style={{
+                      fontFamily: "Plus Jakarta Sans, sans-serif",
+                      fontSize: "clamp(1.5rem, 3vw, 1.875rem)",
+                      fontWeight: 700,
+                      margin: 0,
+                    }}
+                  >
+                    {title}
+                  </h2>
+                  <p style={{ lineHeight: 1.7, opacity: 0.9, maxWidth: "52rem", margin: 0 }}>{desc}</p>
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      backgroundColor: tagBg,
+                      padding: "0.5rem 1rem",
+                      borderRadius: "9999px",
+                      alignSelf: "flex-start",
+                      marginTop: "0.5rem",
+                    }}
+                  >
+                    <span className="material-symbols-outlined" style={{ color: tagColor, fontSize: "1rem" }}>check_circle</span>
+                    <span style={{ fontSize: "0.875rem", fontWeight: 600, color: tagColor }}>{tagline}</span>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            ))}
           </ol>
         </section>
 
@@ -280,7 +226,6 @@ export default function HowItWorks() {
             </div>
 
             <div className="grid md:grid-cols-2" style={{ gap: "3rem", alignItems: "stretch" }}>
-              {/* Traditional */}
               <div
                 style={{
                   backgroundColor: colors.surface,
@@ -312,7 +257,6 @@ export default function HowItWorks() {
                 </ul>
               </div>
 
-              {/* Angela's Process */}
               <div
                 style={{
                   backgroundColor: "#ffffff",
