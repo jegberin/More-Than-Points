@@ -179,9 +179,9 @@ export default function About() {
                 <ul style={{ marginTop: "0.5rem", display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem", opacity: 0.85, listStyle: "none", padding: 0 }}>
                   <li>• <Link to="/coaching-options" style={{ color: colors.primaryFixed, textDecoration: "underline" }}>Leaving Cert navigation</Link></li>
                   <li>• <Link to="/coaching-options" style={{ color: colors.primaryFixed, textDecoration: "underline" }}>Alternative pathway planning</Link></li>
-                  <li>• Parent coaching &amp; communication</li>
-                  <li>• Confidence &amp; motivation</li>
-                  <li>• Further education pathways</li>
+                  <li>• <Link to="/coaching-options" style={{ color: colors.primaryFixed, textDecoration: "underline" }}>Parent coaching &amp; communication</Link></li>
+                  <li>• <Link to="/coaching-options" style={{ color: colors.primaryFixed, textDecoration: "underline" }}>Confidence &amp; motivation</Link></li>
+                  <li>• <Link to="/coaching-options" style={{ color: colors.primaryFixed, textDecoration: "underline" }}>Further education pathways</Link></li>
                 </ul>
               </div>
             </div>
