@@ -197,4 +197,13 @@
     word-wrap: normal;
     direction: ltr;
   }
+
+  @keyframes page-enter {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+
+  .page-enter {
+    animation: page-enter 0.28s ease-in-out both;
+  }
 }
