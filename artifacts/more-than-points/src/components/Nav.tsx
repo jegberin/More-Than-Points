@@ -28,7 +28,7 @@ export default function Nav() {
           <img
             src={logo}
             alt="More Than Points"
-            style={{ height: "80px", width: "auto", display: "block" }}
+            style={{ height: "60px", width: "auto", display: "block" }}
           />
         </Link>
 
