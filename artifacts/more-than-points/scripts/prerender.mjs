@@ -112,6 +112,7 @@ const routes = [
 ];
 
 let successCount = 0;
+const errors = [];
 
 for (const { path, file, title, description } of routes) {
   try {
@@ -136,21 +137,21 @@ for (const { path, file, title, description } of routes) {
     successCount++;
   } catch (err) {
     console.error(`  ✗ ${file}: ${err.message}`);
-    // Fall back to plain shell so the page still works via client-side rendering
-    const shellHtml = template
-      .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
-      .replace(
-        /<meta name="description"[^>]*>/,
-        `<meta name="description" content="${description}" />`
-      );
-    writeFileSync(join(docsDir, file), shellHtml, "utf-8");
-    console.log(`    → written as shell fallback`);
+    errors.push({ file, error: err });
   }
 }
 
 // 404.html: SPA shell without pre-rendered content — handles truly unknown URLs
 writeFileSync(join(docsDir, "404.html"), template, "utf-8");
 console.log(`  ✓ 404.html (SPA fallback)`);
+
+if (errors.length > 0) {
+  console.error(`\n❌ Pre-rendering failed: ${errors.length} page(s) did not render.`);
+  for (const { file, error } of errors) {
+    console.error(`   ${file}: ${error.message}`);
+  }
+  process.exit(1);
+}
 
 console.log(
   `\n✅ Pre-rendering complete: ${successCount}/${routes.length} pages fully rendered.`
