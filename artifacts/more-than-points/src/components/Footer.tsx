@@ -68,7 +68,7 @@ export default function Footer() {
           <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.75rem", color: "#8a8a8a", marginTop: "0.25rem" }}>
             Website design by{" "}
             <a
-              href="https://digital.crettyard.com"
+              href="https://digital.crettyard.ie"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -80,7 +80,7 @@ export default function Footer() {
               onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#8a8a8a")}
             >
-              digital.crettyard.com
+              digital.crettyard.ie
             </a>
           </p>
         </div>
