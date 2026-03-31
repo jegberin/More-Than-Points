@@ -77,7 +77,7 @@ const options = [
     icon: "sync_saved_locally",
     title: "Follow-Up Sessions",
     audience: "For past clients",
-    pricing: "",
+    pricing: "€85 per session",
     desc: "Already done some coaching and want to check back in? Follow-up sessions are available to revisit goals, update plans, and stay supported as life moves forward.",
     who: "For past clients who want to continue the journey.",
     cta: "Get in Touch",
