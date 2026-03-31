@@ -94,7 +94,7 @@ export default function BookSession() {
     <div style={{ backgroundColor: colors.surface, color: colors.onSurface, fontFamily: "Inter, sans-serif" }}>
       <Nav />
 
-      <main style={{ paddingTop: "8rem", paddingBottom: "5rem" }}>
+      <main style={{ paddingTop: "8rem", paddingBottom: "2rem" }}>
 
         {/* Hero */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 4rem", textAlign: "center" }}>
@@ -306,7 +306,7 @@ export default function BookSession() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 6rem" }}>
+        <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 3rem" }}>
           <h2
             style={{
               fontFamily: "Plus Jakarta Sans, sans-serif",
