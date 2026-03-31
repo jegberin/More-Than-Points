@@ -20,6 +20,10 @@ const legalLinks = [
   { label: "Cookie Policy", to: "/cookie-policy" },
 ];
 
+const colOneLinks = quickLinks.slice(0, 3);
+const colTwoLinks = quickLinks.slice(3, 6);
+const colThreeLinks = quickLinks.slice(6, 9);
+
 const linkStyle: React.CSSProperties = {
   color: "#545f72",
   fontFamily: "Inter, sans-serif",
@@ -28,9 +32,15 @@ const linkStyle: React.CSSProperties = {
   transition: "color 0.2s",
 };
 
-const colOneLinks = quickLinks.slice(0, 3);
-const colTwoLinks = quickLinks.slice(3, 6);
-const colThreeLinks = quickLinks.slice(6, 9);
+const sectionLabel: React.CSSProperties = {
+  fontFamily: "Plus Jakarta Sans, sans-serif",
+  fontWeight: 700,
+  fontSize: "0.6875rem",
+  textTransform: "uppercase",
+  letterSpacing: "0.1em",
+  color: "#4d6451",
+  marginBottom: "1rem",
+};
 
 export default function Footer() {
   return (
@@ -43,14 +53,8 @@ export default function Footer() {
       }}
     >
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "auto 1fr auto",
-          gap: "3rem",
-          maxWidth: "80rem",
-          margin: "0 auto",
-          alignItems: "start",
-        }}
+        style={{ maxWidth: "80rem", margin: "0 auto" }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12"
       >
         {/* Brand / Logo */}
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
@@ -61,7 +65,7 @@ export default function Footer() {
               style={{ height: "66px", width: "auto" }}
             />
           </Link>
-          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.8125rem", lineHeight: "1.6", color: "#545f72", maxWidth: "18rem" }}>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.8125rem", lineHeight: 1.6, color: "#545f72", maxWidth: "18rem" }}>
             © 2026 More Than Points. All rights reserved.<br />
             Grounded Coaching for the Modern Journey.
           </p>
@@ -71,12 +75,7 @@ export default function Footer() {
               href="https://digital.crettyard.ie"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                color: "#8a8a8a",
-                textDecoration: "underline",
-                textUnderlineOffset: "3px",
-                transition: "color 0.2s",
-              }}
+              style={{ color: "#8a8a8a", textDecoration: "underline", textUnderlineOffset: "3px", transition: "color 0.2s" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#8a8a8a")}
             >
@@ -85,22 +84,13 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Quick Links — 3 columns */}
+        {/* Quick Links — 3 sub-columns */}
         <div>
-          <p
-            style={{
-              fontFamily: "Plus Jakarta Sans, sans-serif",
-              fontWeight: 700,
-              fontSize: "0.6875rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#4d6451",
-              marginBottom: "1rem",
-            }}
+          <p style={sectionLabel}>Quick Links</p>
+          <div
+            style={{ display: "grid", gap: "0.5rem 2rem" }}
+            className="grid-cols-3"
           >
-            Quick Links
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, auto)", gap: "0.5rem 2.5rem", justifyContent: "start" }}>
             {[colOneLinks, colTwoLinks, colThreeLinks].map((col, ci) => (
               <ul key={ci} style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                 {col.map(({ label, to }) => (
@@ -120,21 +110,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Legal — right-aligned, small, no underline */}
-        <div style={{ textAlign: "right" }}>
-          <p
-            style={{
-              fontFamily: "Plus Jakarta Sans, sans-serif",
-              fontWeight: 700,
-              fontSize: "0.6875rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#4d6451",
-              marginBottom: "1rem",
-            }}
-          >
-            Legal
-          </p>
+        {/* Legal */}
+        <div className="md:text-right">
+          <p style={sectionLabel}>Legal</p>
           <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
             {legalLinks.map(({ label, to }) => (
               <li key={label}>
