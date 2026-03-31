@@ -188,54 +188,6 @@ export default function BookSession() {
           </ol>
         </section>
 
-        {/* Pricing overview */}
-        <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 5rem" }}>
-          <div
-            style={{
-              backgroundColor: colors.surfaceContainerLow,
-              borderRadius: "1.5rem",
-              padding: "2.5rem",
-            }}
-          >
-            <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, fontSize: "1.375rem", color: colors.primary, marginBottom: "1.75rem" }}>
-              Session Pricing
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1.25rem" }}>
-              {[
-                { icon: "call", label: "Free 15-Min Intro Call", price: "Free", note: "No commitment. Book below." },
-                { icon: "psychology", label: "Teen Coaching", price: "€255 – €510", note: "3 to 6 sessions" },
-                { icon: "self_improvement", label: "Confidence & Motivation", price: "€255 – €510", note: "3 to 6 sessions" },
-                { icon: "family_history", label: "Parent Support", price: "€255 – €510", note: "3 to 6 sessions" },
-                { icon: "map", label: "Next-Step Planning", price: "€340 – €680", note: "4 to 8 sessions" },
-                { icon: "sync_saved_locally", label: "Follow-Up Sessions", price: "On request", note: "For past clients" },
-              ].map(({ icon, label, price, note }) => (
-                <div
-                  key={label}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "1rem",
-                    backgroundColor: colors.surfaceContainerLowest,
-                    borderRadius: "0.875rem",
-                    padding: "1.125rem 1.25rem",
-                  }}
-                >
-                  <span className="material-symbols-outlined" style={{ color: colors.primary, fontSize: "1.25rem", flexShrink: 0 }}>{icon}</span>
-                  <div style={{ flex: 1 }}>
-                    <p style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 600, fontSize: "0.9375rem", color: colors.onSurface, margin: 0 }}>{label}</p>
-                    <p style={{ fontSize: "0.8125rem", color: colors.onSurfaceVariant, margin: 0 }}>{note}</p>
-                  </div>
-                  <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, fontSize: "0.9375rem", color: colors.primary, flexShrink: 0, textAlign: "right" }}>{price}</span>
-                </div>
-              ))}
-            </div>
-            <p style={{ marginTop: "1.5rem", fontSize: "0.875rem", color: colors.onSurfaceVariant, lineHeight: 1.65 }}>
-              Exact package size and price are proposed by Angela after your free intro call, based on your family's specific needs.
-              Payment is made securely via PayPal or Revolut.
-            </p>
-          </div>
-        </section>
-
         {/* Google Calendar embed — full width */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 6rem" }}>
           <div
@@ -301,6 +253,54 @@ export default function BookSession() {
               <Link to="/contact" style={{ color: colors.primary, textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 600 }}>
                 Contact Angela →
               </Link>
+            </p>
+          </div>
+        </section>
+
+        {/* Pricing overview */}
+        <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 5rem" }}>
+          <div
+            style={{
+              backgroundColor: colors.surfaceContainerLow,
+              borderRadius: "1.5rem",
+              padding: "2.5rem",
+            }}
+          >
+            <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, fontSize: "1.375rem", color: colors.primary, marginBottom: "1.75rem" }}>
+              Session Pricing
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1.25rem" }}>
+              {[
+                { icon: "call", label: "Free 15-Min Intro Call", price: "Free", note: "No commitment. Book above." },
+                { icon: "psychology", label: "Teen Coaching", price: "€255 – €510", note: "3 to 6 sessions" },
+                { icon: "self_improvement", label: "Confidence & Motivation", price: "€255 – €510", note: "3 to 6 sessions" },
+                { icon: "family_history", label: "Parent Support", price: "€255 – €510", note: "3 to 6 sessions" },
+                { icon: "map", label: "Next-Step Planning", price: "€340 – €680", note: "4 to 8 sessions" },
+                { icon: "sync_saved_locally", label: "Follow-Up Sessions", price: "€85", note: "For past clients" },
+              ].map(({ icon, label, price, note }) => (
+                <div
+                  key={label}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    backgroundColor: colors.surfaceContainerLowest,
+                    borderRadius: "0.875rem",
+                    padding: "1.125rem 1.25rem",
+                  }}
+                >
+                  <span className="material-symbols-outlined" style={{ color: colors.primary, fontSize: "1.25rem", flexShrink: 0 }}>{icon}</span>
+                  <div style={{ flex: 1 }}>
+                    <p style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 600, fontSize: "0.9375rem", color: colors.onSurface, margin: 0 }}>{label}</p>
+                    <p style={{ fontSize: "0.8125rem", color: colors.onSurfaceVariant, margin: 0 }}>{note}</p>
+                  </div>
+                  <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, fontSize: "0.9375rem", color: colors.primary, flexShrink: 0, textAlign: "right" }}>{price}</span>
+                </div>
+              ))}
+            </div>
+            <p style={{ marginTop: "1.5rem", fontSize: "0.875rem", color: colors.onSurfaceVariant, lineHeight: 1.65 }}>
+              Exact package size and price are proposed by Angela after your free intro call, based on your family's specific needs.
+              Payment is made securely via PayPal or Revolut.
             </p>
           </div>
         </section>
