@@ -111,13 +111,16 @@ export default function TermsOfService() {
           </Section>
 
           <Section title="4. Coaching services">
-            <p style={{ marginBottom: "0.5rem" }}>More Than Points provides one-to-one educational coaching sessions and programmes for teens aged 16–19 in Ireland. Services include:</p>
+            <p style={{ marginBottom: "0.5rem" }}>More Than Points provides one-to-one educational coaching sessions and bespoke programmes for teens aged 16–19 and their families in Ireland. Services include:</p>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-              <li>Single Clarity Sessions — focused one-off coaching conversations</li>
-              <li>Growth Journey Packages — sustained support across 4–6 sessions</li>
-              <li>Free 15-minute introductory calls</li>
+              <li>Free 15-minute introductory call — no commitment, no pressure</li>
+              <li>Teen Coaching — 3 to 6 sessions (€255–€510)</li>
+              <li>Confidence &amp; Motivation Coaching — 3 to 6 sessions (€255–€510)</li>
+              <li>Parent Support — 3 to 6 sessions (€255–€510)</li>
+              <li>Next-Step Planning — 4 to 8 sessions (€340–€680)</li>
+              <li>Follow-Up Sessions — available to past clients on request</li>
             </ul>
-            <p style={{ marginTop: "0.75rem" }}>All services are subject to availability and will be tailored to the individual client and their needs.</p>
+            <p style={{ marginTop: "0.75rem" }}>Session packages are proposed by Angela following the introductory call, based on the individual needs of the client. All services are subject to availability.</p>
           </Section>
 
           <Section title="5. Bookings">

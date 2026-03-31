@@ -75,8 +75,8 @@ const options = [
     audience: "For past clients",
     desc: "Already done some coaching and want to check back in? Follow-up sessions are available to revisit goals, update plans, and stay supported as life moves forward.",
     who: "For past clients who want to continue the journey.",
-    cta: "Book a Follow-Up",
-    to: "/book-session",
+    cta: "Get in Touch",
+    to: "/contact",
     featured: false,
   },
 ];

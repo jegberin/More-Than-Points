@@ -26,6 +26,16 @@ const colors = {
 
 const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie";
 
+const TOPICS = [
+  "General Question",
+  "Request Follow-Up Sessions",
+  "Teen Coaching",
+  "Parent Support",
+  "Next-Step Planning",
+  "Confidence & Motivation",
+  "Other",
+];
+
 export default function Contact() {
   useEffect(() => {
     setPageMeta(
@@ -38,7 +48,7 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [honey, setHoney] = useState("");
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", topic: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validateField = (name: string, value: string): string => {
@@ -59,8 +69,9 @@ export default function Contact() {
 
   const validate = () => {
     const errs: Record<string, string> = {};
-    for (const [key, val] of Object.entries(form)) {
-      const err = validateField(key, val);
+    const fields = ["name", "email", "message"] as const;
+    for (const key of fields) {
+      const err = validateField(key, form[key]);
       if (err) errs[key] = err;
     }
     return errs;
@@ -82,8 +93,9 @@ export default function Contact() {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          topic: form.topic || "Not specified",
           message: form.message,
-          _subject: "New contact from More Than Points website",
+          _subject: `New contact from More Than Points${form.topic ? ` — ${form.topic}` : ""}`,
           _honey: honey,
           _captcha: "false",
         }),
@@ -250,7 +262,7 @@ export default function Contact() {
                       Thank you for reaching out, {form.name}. Angela will reply within 24 hours to start the conversation.
                     </p>
                     <button
-                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", message: "" }); setErrors({}); }}
+                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", topic: "", message: "" }); setErrors({}); }}
                       style={{
                         backgroundColor: colors.surfaceContainerLow,
                         color: colors.secondary,
@@ -309,6 +321,32 @@ export default function Contact() {
                           />
                           {errors.email && <p style={{ color: colors.error, fontSize: "0.75rem", marginTop: "0.25rem" }}>{errors.email}</p>}
                         </div>
+                      </div>
+
+                      <div>
+                        <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", padding: "0 0.25rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
+                          Topic
+                        </label>
+                        <select
+                          value={form.topic}
+                          onChange={(e) => handleChange("topic", e.target.value)}
+                          style={{
+                            ...inputStyle(),
+                            appearance: "none",
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234d6451' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "right 1rem center",
+                            paddingRight: "2.5rem",
+                            cursor: "pointer",
+                          }}
+                          onFocus={(e) => { e.target.style.boxShadow = `0 0 0 2px ${colors.primary}33`; e.target.style.backgroundColor = "#fff"; }}
+                          onBlur={(e) => { e.target.style.boxShadow = "none"; e.target.style.backgroundColor = colors.surfaceContainerLow; }}
+                        >
+                          <option value="">Select a topic (optional)</option>
+                          {TOPICS.map((t) => (
+                            <option key={t} value={t}>{t}</option>
+                          ))}
+                        </select>
                       </div>
 
                       <div>
@@ -375,11 +413,10 @@ export default function Contact() {
                       ))}
                     </div>
 
-                    {/* Route to booking page */}
                     <p style={{ textAlign: "center", marginTop: "1.5rem", fontSize: "0.9375rem", color: colors.onSurfaceVariant, lineHeight: 1.6 }}>
                       Ready to book?{" "}
                       <Link to="/book-session" style={{ color: colors.primary, fontWeight: 600, textDecoration: "underline" }}>
-                        Go straight to the booking form →
+                        Go straight to the booking calendar →
                       </Link>
                     </p>
                   </>

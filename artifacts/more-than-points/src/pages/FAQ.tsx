@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "How do payments work?",
-    a: "After confirming your booking by email, Angela will send you a secure payment link. Payment is required before the session takes place. Sessions can be cancelled or rescheduled free of charge up to 24 hours in advance.",
+    a: "After confirming your coaching plan by email, Angela will send you a secure payment link via PayPal or Revolut. Payment is required before sessions begin. Sessions can be cancelled or rescheduled free of charge up to 24 hours in advance.",
   },
   {
     q: "What if my teenager is resistant to coaching?",

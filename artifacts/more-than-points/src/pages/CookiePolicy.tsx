@@ -134,7 +134,7 @@ export default function CookiePolicy() {
             <SubSection title="C. Functional cookies">
               <p style={{ marginBottom: "0.5rem" }}>These cookies help enable enhanced website features. They may include:</p>
               <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-                <li>Calendly (calendly.com) — used for session scheduling. May set cookies to manage booking flows</li>
+                <li>Google Calendar — used for session scheduling. May set cookies to manage booking flows</li>
                 <li>Embedded video content (e.g. YouTube)</li>
               </ul>
             </SubSection>
@@ -149,7 +149,7 @@ export default function CookiePolicy() {
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
               <li>Google Analytics</li>
               <li>Google reCAPTCHA</li>
-              <li>Calendly (calendly.com) — session scheduling tool. See <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>calendly.com/privacy</a> for their cookie and privacy policy</li>
+              <li>Google Calendar — session scheduling tool. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>policies.google.com/privacy</a> for Google's cookie and privacy policy</li>
               <li>YouTube embeds, where used</li>
             </ul>
           </Section>
