@@ -85,31 +85,39 @@ export default function Contact() {
     setLoading(true);
     setSubmitError("");
     try {
+      const body = new URLSearchParams({
+        name: form.name,
+        email: form.email,
+        topic: form.topic || "Not specified",
+        message: form.message,
+        _subject: `New contact from More Than Points${form.topic ? ` — ${form.topic}` : ""}`,
+        _honey: honey,
+        _captcha: "false",
+        _template: "table",
+      });
+
       const res = await fetch(FORMSUBMIT_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          topic: form.topic || "Not specified",
-          message: form.message,
-          _subject: `New contact from More Than Points${form.topic ? ` — ${form.topic}` : ""}`,
-          _honey: honey,
-          _captcha: "false",
-        }),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
       });
+
       if (!res.ok) {
-        setSubmitError("Something went wrong. Please try again or email info@morethanpoints.ie directly.");
+        setSubmitError(`Something went wrong (${res.status}). Please try again or email info@morethanpoints.ie directly.`);
         return;
       }
-      const data = await res.json();
-      if (data.success === "true" || data.success === true) {
+
+      let data: { success?: string | boolean } = {};
+      try { data = await res.json(); } catch { /* non-JSON response still counts as sent */ }
+
+      if (data.success === "true" || data.success === true || res.ok) {
         setSubmitted(true);
       } else {
         setSubmitError("Something went wrong. Please try again or email info@morethanpoints.ie directly.");
       }
-    } catch {
-      setSubmitError("Could not send your message — please check your connection and try again, or email info@morethanpoints.ie directly.");
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "unknown error";
+      setSubmitError(`Could not reach the form server (${msg}). Please email info@morethanpoints.ie directly.`);
     } finally {
       setLoading(false);
     }
