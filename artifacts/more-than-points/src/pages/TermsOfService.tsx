@@ -98,7 +98,7 @@ export default function TermsOfService() {
           <Section title="1. About us">
             <p>More Than Points is an educational coaching service based in Ireland, supporting teens aged 16–19 and their families in navigating post-primary education, subject and career choices, and the personal challenges of that journey.</p>
             <p style={{ marginTop: "0.75rem" }}>
-              <strong>Contact:</strong> <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a>
+              <strong>Contact:</strong> <a href="mailto:info@morethanpoints.ie" style={{ color: colors.primary }}>info@morethanpoints.ie</a>
             </p>
           </Section>
 
@@ -195,7 +195,7 @@ export default function TermsOfService() {
             <p>
               <strong>More Than Points</strong><br />
               Ireland<br />
-              Email: <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a>
+              Email: <a href="mailto:info@morethanpoints.ie" style={{ color: colors.primary }}>info@morethanpoints.ie</a>
             </p>
           </Section>
 

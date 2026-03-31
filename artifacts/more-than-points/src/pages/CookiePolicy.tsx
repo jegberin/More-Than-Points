@@ -110,7 +110,7 @@ export default function CookiePolicy() {
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
               <li><strong>Business name:</strong> More Than Points</li>
               <li><strong>Location:</strong> Ireland</li>
-              <li><strong>Email:</strong> <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a></li>
+              <li><strong>Email:</strong> <a href="mailto:info@morethanpoints.ie" style={{ color: colors.primary }}>info@morethanpoints.ie</a></li>
             </ul>
           </Section>
 
@@ -178,7 +178,7 @@ export default function CookiePolicy() {
               If you have any questions about this Cookie Policy, please contact:<br /><br />
               <strong>More Than Points</strong><br />
               Ireland<br />
-              Email: <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a>
+              Email: <a href="mailto:info@morethanpoints.ie" style={{ color: colors.primary }}>info@morethanpoints.ie</a>
             </p>
           </Section>
 

@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
               <li><strong>Business name:</strong> More Than Points</li>
               <li><strong>Business type:</strong> Educational coaching — sole trader</li>
               <li><strong>Location:</strong> Ireland</li>
-              <li><strong>Email:</strong> <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a></li>
+              <li><strong>Email:</strong> <a href="mailto:info@morethanpoints.ie" style={{ color: colors.primary }}>info@morethanpoints.ie</a></li>
             </ul>
             <p style={{ marginTop: "0.75rem" }}>
               For the purposes of data protection law, More Than Points is the data controller of the personal data described in this policy.
@@ -188,7 +188,7 @@ export default function PrivacyPolicy() {
               <li>Withdraw consent where processing is based on consent</li>
             </ul>
             <p style={{ marginTop: "0.75rem" }}>
-              To exercise any of these rights, please contact us at <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a>. You also have the right to make a complaint to the Data Protection Commission in Ireland.
+              To exercise any of these rights, please contact us at <a href="mailto:info@morethanpoints.ie" style={{ color: colors.primary }}>info@morethanpoints.ie</a>. You also have the right to make a complaint to the Data Protection Commission in Ireland.
             </p>
           </Section>
 
@@ -209,7 +209,7 @@ export default function PrivacyPolicy() {
             <p style={{ marginTop: "0.75rem" }}>
               <strong>More Than Points</strong><br />
               Ireland<br />
-              Email: <a href="mailto:hello@morethanpoints.ie" style={{ color: colors.primary }}>hello@morethanpoints.ie</a>
+              Email: <a href="mailto:info@morethanpoints.ie" style={{ color: colors.primary }}>info@morethanpoints.ie</a>
             </p>
           </Section>
 
