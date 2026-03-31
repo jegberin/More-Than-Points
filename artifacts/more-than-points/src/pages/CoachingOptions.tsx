@@ -33,6 +33,7 @@ const options = [
     icon: "psychology",
     title: "Teen Coaching",
     audience: "For teens",
+    pricing: "3–6 sessions · €255–€510",
     desc: "One-to-one sessions for teenagers aged 16–19. A confidential space to talk through pressure, explore strengths, and figure out what comes next — on their terms.",
     who: "For teens who feel lost, overwhelmed, or simply unsure about the future.",
     cta: "Book Teen Coaching",
@@ -43,6 +44,7 @@ const options = [
     icon: "family_history",
     title: "Parent Support",
     audience: "For parents",
+    pricing: "3–6 sessions · €255–€510",
     desc: "Coaching for parents who want to understand their teenager better and show up without adding pressure. Practical guidance on how to listen, communicate, and let go of the things you can't control.",
     who: "For parents who feel helpless or like they're always getting it wrong.",
     cta: "Book Parent Support",
@@ -53,6 +55,7 @@ const options = [
     icon: "map",
     title: "Next-Step Planning",
     audience: "For teens & parents",
+    pricing: "4–8 sessions · €340–€680",
     desc: "A focused session (or series) dedicated to mapping out what comes after school. CAO choices, PLC options, apprenticeships, gap years — we look at everything and build a plan that actually makes sense.",
     who: "For teens and parents who need clarity on post-secondary options.",
     cta: "Book Next-Step Planning",
@@ -63,6 +66,7 @@ const options = [
     icon: "self_improvement",
     title: "Confidence & Motivation",
     audience: "For teens",
+    pricing: "3–6 sessions · €255–€510",
     desc: "For young people who have lost their drive — or never felt they had it. This coaching strand focuses on rebuilding self-belief from the ground up, using real strengths, not empty encouragement.",
     who: "For teens who describe themselves as lazy, unmotivated, or not good enough.",
     cta: "Book Confidence Coaching",
@@ -73,6 +77,7 @@ const options = [
     icon: "sync_saved_locally",
     title: "Follow-Up Sessions",
     audience: "For past clients",
+    pricing: "On request",
     desc: "Already done some coaching and want to check back in? Follow-up sessions are available to revisit goals, update plans, and stay supported as life moves forward.",
     who: "For past clients who want to continue the journey.",
     cta: "Get in Touch",
@@ -181,7 +186,7 @@ export default function CoachingOptions() {
         {/* Options Grid */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", marginBottom: "5rem" }}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "1.5rem" }}>
-            {options.map(({ icon, title, audience, desc, who, cta, to, featured }) => (
+            {options.map(({ icon, title, audience, pricing, desc, who, cta, to, featured }) => (
               <div
                 key={title}
                 style={{
@@ -248,9 +253,26 @@ export default function CoachingOptions() {
                   >
                     {audience}
                   </span>
-                  <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.75rem" }}>
-                    {title}
-                  </h2>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem", marginBottom: "0.5rem", flexWrap: "wrap" }}>
+                    <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, margin: 0 }}>
+                      {title}
+                    </h2>
+                    <span
+                      style={{
+                        display: "inline-block",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        padding: "0.25rem 0.625rem",
+                        borderRadius: "9999px",
+                        backgroundColor: featured ? `${colors.tertiary}33` : `${colors.primary}18`,
+                        color: featured ? colors.tertiaryFixedDim : colors.primary,
+                        fontFamily: "Plus Jakarta Sans, sans-serif",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {pricing}
+                    </span>
+                  </div>
                   <p style={{ color: featured ? `${colors.surfaceContainerLowest}B3` : colors.onSurfaceVariant, marginBottom: "1.5rem", lineHeight: 1.7 }}>
                     {desc}
                   </p>

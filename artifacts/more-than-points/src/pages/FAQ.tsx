@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "How many sessions will we need?",
-    a: "This depends on what you're working through. A single session is ideal for tackling one specific challenge or gaining a clearer perspective. For deeper work — building confidence over time, exploring pathways in detail, or developing a longer-term plan — multiple sessions tend to give the best results. There are five coaching formats available to suit different needs. We can discuss what feels right during an initial chat.",
+    a: "This depends on what you're working through. Most coaching packages run for 3 to 6 sessions (€255–€510) for Teen Coaching, Confidence & Motivation, and Parent Support, or 4 to 8 sessions (€340–€680) for Next-Step Planning. Angela proposes a bespoke plan and quote after your free intro call — you're never locked into anything before you've had that conversation.",
   },
   {
     q: "What's the difference between coaching and therapy?",

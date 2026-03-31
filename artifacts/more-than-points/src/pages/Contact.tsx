@@ -29,11 +29,8 @@ const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie"
 const TOPICS = [
   "General Question",
   "Request Follow-Up Sessions",
-  "Teen Coaching",
-  "Parent Support",
-  "Next-Step Planning",
-  "Confidence & Motivation",
-  "Other",
+  "Question about pricing",
+  "Something else",
 ];
 
 export default function Contact() {
@@ -74,6 +71,7 @@ export default function Contact() {
       const err = validateField(key, form[key]);
       if (err) errs[key] = err;
     }
+    if (!form.topic) errs.topic = "Please select a topic";
     return errs;
   };
 
@@ -325,13 +323,13 @@ export default function Contact() {
 
                       <div>
                         <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: colors.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem", padding: "0 0.25rem", fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                          Topic
+                          Topic *
                         </label>
                         <select
                           value={form.topic}
                           onChange={(e) => handleChange("topic", e.target.value)}
                           style={{
-                            ...inputStyle(),
+                            ...inputStyle(!!errors.topic),
                             appearance: "none",
                             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234d6451' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
                             backgroundRepeat: "no-repeat",
@@ -342,11 +340,12 @@ export default function Contact() {
                           onFocus={(e) => { e.target.style.boxShadow = `0 0 0 2px ${colors.primary}33`; e.target.style.backgroundColor = "#fff"; }}
                           onBlur={(e) => { e.target.style.boxShadow = "none"; e.target.style.backgroundColor = colors.surfaceContainerLow; }}
                         >
-                          <option value="">Select a topic (optional)</option>
+                          <option value="">Select a topic</option>
                           {TOPICS.map((t) => (
                             <option key={t} value={t}>{t}</option>
                           ))}
                         </select>
+                        {errors.topic && <p style={{ color: colors.error, fontSize: "0.75rem", marginTop: "0.25rem" }}>{errors.topic}</p>}
                       </div>
 
                       <div>
@@ -416,7 +415,7 @@ export default function Contact() {
                     <p style={{ textAlign: "center", marginTop: "1.5rem", fontSize: "0.9375rem", color: colors.onSurfaceVariant, lineHeight: 1.6 }}>
                       Ready to book?{" "}
                       <Link to="/book-session" style={{ color: colors.primary, fontWeight: 600, textDecoration: "underline" }}>
-                        Go straight to the booking calendar →
+                        Book your free intro call →
                       </Link>
                     </p>
                   </>

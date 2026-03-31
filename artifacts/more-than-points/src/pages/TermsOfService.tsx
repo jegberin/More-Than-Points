@@ -146,10 +146,10 @@ export default function TermsOfService() {
           </Section>
 
           <Section title="9. Payments">
-            <p style={{ marginBottom: "0.5rem" }}>Session fees are as stated on the website at the time of booking. Unless otherwise agreed:</p>
+            <p style={{ marginBottom: "0.5rem" }}>Session fees are based on the bespoke coaching plan proposed by Angela after the initial introductory call. Unless otherwise agreed:</p>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-              <li>Payment is due before or at the time of the session</li>
-              <li>A payment link will be sent by email following booking confirmation</li>
+              <li>Payment is due before sessions begin</li>
+              <li>A secure payment link will be sent by email via PayPal or Revolut once the plan is agreed</li>
               <li>Late or unpaid sessions may result in future bookings being withheld</li>
             </ul>
           </Section>
