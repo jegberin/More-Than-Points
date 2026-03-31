@@ -157,8 +157,8 @@ export default function BookSession() {
                 style={{
                   backgroundColor: colors.surfaceContainerLowest,
                   borderRadius: "2rem",
-                  padding: "clamp(1.5rem, 4vw, 2.5rem)",
-                  boxShadow: "0 4px 12px rgba(28,28,24,0.06)",
+                  padding: "clamp(2rem, 5vw, 3rem)",
+                  boxShadow: "0 4px 12px rgba(28,28,24,0.04)",
                   overflow: "hidden",
                 }}
               >
