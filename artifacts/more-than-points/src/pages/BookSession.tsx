@@ -268,7 +268,7 @@ export default function BookSession() {
                   Book Your Free 15-Min Intro Call
                 </h2>
                 <p style={{ color: colors.secondary, fontSize: "0.9375rem", marginTop: "0.375rem" }}>
-                  Pick a time that suits you — no commitment required. Angela will confirm by email.
+                  Pick a time that suits you — no commitment required. You'll receive instant confirmation via Google Calendar.
                 </p>
               </div>
             </div>
@@ -284,7 +284,7 @@ export default function BookSession() {
 
             <div style={{ marginTop: "1.5rem", display: "flex", flexWrap: "wrap", gap: "1.5rem", justifyContent: "center" }}>
               {[
-                { icon: "bolt", text: "Instant booking confirmation" },
+                { icon: "bolt", text: "Instant confirmation via Google Calendar" },
                 { icon: "payments", text: "Secure payment via PayPal or Revolut" },
                 { icon: "event_available", text: "Reschedulable up to 24h in advance" },
                 { icon: "verified_user", text: "100% confidential" },
