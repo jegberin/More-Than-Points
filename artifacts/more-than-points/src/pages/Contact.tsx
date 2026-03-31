@@ -24,7 +24,7 @@ const colors = {
   outline: "#737972",
 };
 
-const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/hello@morethanpoints.ie";
+const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/info@morethanpoints.ie";
 
 const TOPICS = [
   "General Question",
@@ -99,17 +99,17 @@ export default function Contact() {
         }),
       });
       if (!res.ok) {
-        setSubmitError("Something went wrong. Please try again or email hello@morethanpoints.ie directly.");
+        setSubmitError("Something went wrong. Please try again or email info@morethanpoints.ie directly.");
         return;
       }
       const data = await res.json();
       if (data.success === "true" || data.success === true) {
         setSubmitted(true);
       } else {
-        setSubmitError("Something went wrong. Please try again or email hello@morethanpoints.ie directly.");
+        setSubmitError("Something went wrong. Please try again or email info@morethanpoints.ie directly.");
       }
     } catch {
-      setSubmitError("Could not send your message — please check your connection and try again, or email hello@morethanpoints.ie directly.");
+      setSubmitError("Could not send your message — please check your connection and try again, or email info@morethanpoints.ie directly.");
     } finally {
       setLoading(false);
     }
