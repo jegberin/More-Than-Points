@@ -59,20 +59,26 @@ const STEPS = [
   {
     step: "2",
     icon: "forum",
-    title: "Angela Proposes a Plan",
-    desc: "After the call Angela puts together a bespoke coaching plan and sends you a quote by email.",
+    title: "Agree on the Approach",
+    desc: "You and Angela decide together on the coaching focus and the number of sessions that feels right.",
   },
   {
     step: "3",
+    icon: "description",
+    title: "Bespoke Plan & Quote",
+    desc: "Angela proposes a personalised coaching plan and sends a quote by email — no hidden fees, no surprises.",
+  },
+  {
+    step: "4",
     icon: "payments",
     title: "Secure Payment",
     desc: "Pay easily via a secure PayPal or Revolut link. Payment is required before sessions begin.",
   },
   {
-    step: "4",
+    step: "5",
     icon: "video_call",
-    title: "60-Min Coaching Sessions",
-    desc: "Angela sends your personalised session link. Sessions run for 60 minutes, online, from anywhere in Ireland.",
+    title: "Your Personalised Sessions",
+    desc: "Angela sends your unique session link. Each 60-minute session runs online, accessible from anywhere in Ireland.",
   },
 ];
 
@@ -128,10 +134,10 @@ export default function BookSession() {
           </p>
         </section>
 
-        {/* How It Works — 4 steps */}
+        {/* How It Works — 5 steps */}
         <section style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 5rem" }}>
           <ol
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 process-timeline"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 process-timeline"
             style={{
               listStyle: "none",
               padding: 0,

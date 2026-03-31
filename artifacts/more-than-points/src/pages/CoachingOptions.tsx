@@ -77,7 +77,7 @@ const options = [
     icon: "sync_saved_locally",
     title: "Follow-Up Sessions",
     audience: "For past clients",
-    pricing: "On request",
+    pricing: "",
     desc: "Already done some coaching and want to check back in? Follow-up sessions are available to revisit goals, update plans, and stay supported as life moves forward.",
     who: "For past clients who want to continue the journey.",
     cta: "Get in Touch",
@@ -257,21 +257,23 @@ export default function CoachingOptions() {
                     <h2 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "1.5rem", fontWeight: 700, margin: 0 }}>
                       {title}
                     </h2>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        fontSize: "0.75rem",
-                        fontWeight: 700,
-                        padding: "0.25rem 0.625rem",
-                        borderRadius: "9999px",
-                        backgroundColor: featured ? `${colors.tertiary}33` : `${colors.primary}18`,
-                        color: featured ? colors.tertiaryFixedDim : colors.primary,
-                        fontFamily: "Plus Jakarta Sans, sans-serif",
-                        whiteSpace: "nowrap",
-                      }}
-                    >
-                      {pricing}
-                    </span>
+                    {pricing && (
+                      <span
+                        style={{
+                          display: "inline-block",
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          padding: "0.25rem 0.625rem",
+                          borderRadius: "9999px",
+                          backgroundColor: featured ? `${colors.tertiary}33` : `${colors.primary}18`,
+                          color: featured ? colors.tertiaryFixedDim : colors.primary,
+                          fontFamily: "Plus Jakarta Sans, sans-serif",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {pricing}
+                      </span>
+                    )}
                   </div>
                   <p style={{ color: featured ? `${colors.surfaceContainerLowest}B3` : colors.onSurfaceVariant, marginBottom: "1.5rem", lineHeight: 1.7 }}>
                     {desc}
