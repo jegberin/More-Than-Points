@@ -75,10 +75,16 @@ export default function Footer() {
               href="https://digital.crettyard.ie"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#8a8a8a", textDecoration: "underline", textUnderlineOffset: "3px", transition: "color 0.2s" }}
+              style={{ color: "#8a8a8a", textDecoration: "underline", textUnderlineOffset: "3px", transition: "color 0.2s", display: "inline-flex", alignItems: "center", gap: "0.3rem", verticalAlign: "middle" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#4d6451")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#8a8a8a")}
             >
+              <img
+                src="https://digital.crettyard.ie/favicon.png"
+                alt=""
+                aria-hidden="true"
+                style={{ width: "14px", height: "14px", borderRadius: "2px", display: "inline-block", flexShrink: 0 }}
+              />
               digital.crettyard.ie
             </a>
           </p>
