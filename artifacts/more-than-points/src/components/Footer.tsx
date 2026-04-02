@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 
-const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.png`;
+const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.webp`;
 const crettyardFavicon = `${import.meta.env.BASE_URL}favicon-crettyard.png`;
 
 const quickLinks = [
@@ -116,6 +116,9 @@ export default function Footer() {
               <img
                 src={logo}
                 alt="More Than Points"
+                width={178}
+                height={66}
+                loading="lazy"
                 style={{ height: "66px", width: "auto" }}
               />
             </Link>

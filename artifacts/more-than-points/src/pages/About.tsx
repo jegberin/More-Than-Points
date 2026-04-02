@@ -109,8 +109,12 @@ export default function About() {
                 }}
               >
                 <img
-                  alt="Angela, educational coach at More Than Points"
-                  src={`${import.meta.env.BASE_URL}angela.png`}
+                  alt="Angela Folan, educational coach at More Than Points"
+                  src={`${import.meta.env.BASE_URL}angela-folan-coach.webp`}
+                  width={900}
+                  height={1125}
+                  loading="lazy"
+                  decoding="async"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(77,100,81,0.2), transparent)" }} />

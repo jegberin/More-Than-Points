@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
 
-const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.png`;
+const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.webp`;
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -28,6 +28,9 @@ export default function Nav() {
           <img
             src={logo}
             alt="More Than Points"
+            width={162}
+            height={60}
+            fetchPriority="high"
             style={{ height: "60px", width: "auto", display: "block" }}
           />
         </Link>
