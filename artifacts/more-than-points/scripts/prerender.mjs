@@ -119,6 +119,8 @@ for (const { path, file, title, description } of routes) {
   try {
     const appHtml = render(path);
 
+    const canonicalHref = `https://morethanpoints.ie${path === "/" ? "/" : path}`;
+
     const html = template
       .replace(
         /<title>[^<]*<\/title>/,
@@ -127,6 +129,10 @@ for (const { path, file, title, description } of routes) {
       .replace(
         /<meta name="description"[^>]*>/,
         `<meta name="description" content="${description}" />`
+      )
+      .replace(
+        /<link rel="canonical"[^>]*>/,
+        `<link rel="canonical" href="${canonicalHref}" />`
       )
       .replace(
         '<div id="root"></div>',
