@@ -95,6 +95,7 @@ const routes = [
     title: "Privacy Policy | More Than Points",
     description:
       "How More Than Points collects, uses, and protects your personal data under Irish and EU GDPR law.",
+    noindex: true,
   },
   {
     path: "/terms-of-service",
@@ -102,6 +103,7 @@ const routes = [
     title: "Terms of Service | More Than Points",
     description:
       "Terms and conditions governing More Than Points coaching sessions, payments, cancellations, and your rights under Irish consumer law.",
+    noindex: true,
   },
   {
     path: "/cookie-policy",
@@ -109,19 +111,20 @@ const routes = [
     title: "Cookie Policy | More Than Points",
     description:
       "How More Than Points uses cookies and similar technologies to improve your browsing experience, with full consent controls.",
+    noindex: true,
   },
 ];
 
 let successCount = 0;
 const errors = [];
 
-for (const { path, file, title, description } of routes) {
+for (const { path, file, title, description, noindex } of routes) {
   try {
     const appHtml = render(path);
 
     const canonicalHref = `https://morethanpoints.ie${path === "/" ? "/" : path}`;
 
-    const html = template
+    let html = template
       .replace(
         /<title>[^<]*<\/title>/,
         `<title>${title}</title>`
@@ -138,6 +141,13 @@ for (const { path, file, title, description } of routes) {
         '<div id="root"></div>',
         `<div id="root">${appHtml}</div>`
       );
+
+    if (noindex) {
+      html = html.replace(
+        /<link rel="canonical"[^>]*>/,
+        `<meta name="robots" content="noindex, follow" />\n    <link rel="canonical" href="${canonicalHref}" />`
+      );
+    }
 
     writeFileSync(join(docsDir, file), html, "utf-8");
     console.log(`  ✓ ${file}`);
