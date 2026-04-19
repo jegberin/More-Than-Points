@@ -75,9 +75,9 @@
     }
   },
   "images": {
-    "logo": "http://digital.crettyard.ie/assets/crettyard-digital-logo-DjTs2S6D.png",
-    "favicon": "http://digital.crettyard.ie/favicon.png",
-    "ogImage": "https://digital.crettyard.ie/opengraph.jpg",
+    "logo": "https://crettyarddigital.ie/assets/crettyard-digital-logo-DjTs2S6D.png",
+    "favicon": "https://crettyarddigital.ie/favicon.png",
+    "ogImage": "https://crettyarddigital.ie/opengraph.jpg",
     "logoHref": "File saved at: attached_assets/logoHref.html",
     "logoAlt": "Crettyard Digital logo"
   },

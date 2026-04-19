@@ -129,7 +129,7 @@ export default function Footer() {
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.75rem", color: "#8a8a8a", marginTop: "0.25rem" }}>
               Website design by{" "}
               <a
-                href="https://digital.crettyard.ie"
+                href="https://crettyarddigital.ie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-credit-link"
@@ -140,7 +140,7 @@ export default function Footer() {
                   aria-hidden="true"
                   style={{ width: "14px", height: "14px", borderRadius: "2px", display: "inline-block", flexShrink: 0 }}
                 />
-                digital.crettyard.ie
+                crettyarddigital.ie
               </a>
             </p>
           </div>
