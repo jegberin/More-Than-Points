@@ -1,4 +1,6 @@
 import { Link } from "wouter";
+import SocialLinks from "@/components/SocialLinks";
+import { CONTACT } from "@/lib/contact";
 
 const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.webp`;
 const crettyardFavicon = `${import.meta.env.BASE_URL}favicon-crettyard.png`;
@@ -92,6 +94,37 @@ export default function Footer() {
           vertical-align: middle;
         }
         .footer-credit-link:hover { color: #4d6451; }
+        .footer-social-row {
+          display: flex;
+          gap: 0.625rem;
+          margin-top: 0.25rem;
+        }
+        .footer-social-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          border-radius: 9999px;
+          background-color: #e5e2db;
+          color: #4d6451;
+          transition: background-color 0.2s, color 0.2s;
+        }
+        .footer-social-link:hover {
+          background-color: #4d6451;
+          color: #ffffff;
+        }
+        .footer-phone-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-family: Inter, sans-serif;
+          font-size: 0.8125rem;
+          color: #545f72;
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .footer-phone-link:hover { color: #4d6451; }
         @media (min-width: 768px) {
           .footer-grid {
             grid-template-columns: auto 1fr auto;
@@ -126,6 +159,13 @@ export default function Footer() {
               © 2026 More Than Points. All rights reserved.<br />
               Grounded Coaching for the Modern Journey.
             </p>
+            <div className="footer-social-row">
+              <SocialLinks linkClassName="footer-social-link" iconSize={15} />
+            </div>
+            <a href={CONTACT.phoneHref} className="footer-phone-link">
+              <span className="material-symbols-outlined" aria-hidden="true" style={{ fontSize: "1rem" }}>call</span>
+              {CONTACT.phoneDisplay}
+            </a>
             <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.75rem", color: "#8a8a8a", marginTop: "0.25rem" }}>
               Website design by{" "}
               <a

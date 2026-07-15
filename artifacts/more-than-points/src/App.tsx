@@ -15,6 +15,7 @@ import TermsOfService from "@/pages/TermsOfService";
 import CookiePolicy from "@/pages/CookiePolicy";
 import NotFound from "@/pages/not-found";
 import CookieBanner from "@/components/CookieBanner";
+import OrganizationSchema from "@/components/OrganizationSchema";
 
 declare function gtag(...args: unknown[]): void;
 
@@ -69,6 +70,7 @@ function App({ ssrPath }: AppProps = {}) {
   return (
     <WouterRouter base={base} ssrPath={ssrPath}>
       <Router />
+      <OrganizationSchema />
       {!ssrPath && <CookieBanner />}
     </WouterRouter>
   );

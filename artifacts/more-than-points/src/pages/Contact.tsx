@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SocialLinks, { SOCIAL_ICONS } from "@/components/SocialLinks";
 import { setPageMeta } from "@/lib/pageMeta";
+import { CONTACT } from "@/lib/contact";
 
 const colors = {
   primary: "#4d6451",
@@ -25,6 +27,8 @@ const colors = {
 };
 
 const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/info@morethanpoints.ie";
+
+const WhatsAppIcon = SOCIAL_ICONS.whatsapp;
 
 const TOPICS = [
   "General Question",
@@ -231,6 +235,101 @@ export default function Contact() {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Direct contact */}
+              <div
+                style={{
+                  backgroundColor: colors.surfaceContainerLow,
+                  padding: "2rem",
+                  borderRadius: "0.75rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1.5rem",
+                }}
+              >
+                <style>{`
+                  .contact-social-link {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 9999px;
+                    background-color: ${colors.surfaceContainerHighest};
+                    color: ${colors.primary};
+                    transition: background-color 0.2s, color 0.2s;
+                  }
+                  .contact-social-link:hover {
+                    background-color: ${colors.primary};
+                    color: #ffffff;
+                  }
+                `}</style>
+                <h3 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700, fontSize: "1.125rem", color: colors.onSurface }}>
+                  Prefer to reach out directly?
+                </h3>
+
+                <a href={CONTACT.phoneHref} style={{ display: "flex", alignItems: "flex-start", gap: "1rem", textDecoration: "none" }}>
+                  <div
+                    style={{
+                      padding: "0.75rem",
+                      backgroundColor: colors.surfaceContainerHighest,
+                      borderRadius: "9999px",
+                      color: colors.primary,
+                      flexShrink: 0,
+                    }}
+                  >
+                    <span className="material-symbols-outlined">call</span>
+                  </div>
+                  <div>
+                    <h4 style={{ fontWeight: 700, color: colors.onSurface, marginBottom: "0.25rem" }}>Call or text</h4>
+                    <p style={{ fontSize: "0.875rem", color: colors.onSurfaceVariant }}>{CONTACT.phoneDisplay}</p>
+                  </div>
+                </a>
+
+                <a
+                  href={CONTACT.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with Angela on WhatsApp"
+                  style={{ display: "flex", alignItems: "flex-start", gap: "1rem", textDecoration: "none" }}
+                >
+                  <div
+                    style={{
+                      padding: "0.75rem",
+                      backgroundColor: colors.surfaceContainerHighest,
+                      borderRadius: "9999px",
+                      color: colors.primary,
+                      flexShrink: 0,
+                      display: "flex",
+                    }}
+                  >
+                    <WhatsAppIcon size={24} />
+                  </div>
+                  <div>
+                    <h4 style={{ fontWeight: 700, color: colors.onSurface, marginBottom: "0.25rem" }}>WhatsApp</h4>
+                    <p style={{ fontSize: "0.875rem", color: colors.onSurfaceVariant }}>Start a chat — quick and informal</p>
+                  </div>
+                </a>
+
+                <div>
+                  <p
+                    style={{
+                      fontSize: "0.75rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: colors.primary,
+                      fontFamily: "Plus Jakarta Sans, sans-serif",
+                      marginBottom: "0.75rem",
+                    }}
+                  >
+                    Follow along
+                  </p>
+                  <div style={{ display: "flex", gap: "0.625rem" }}>
+                    <SocialLinks ids={["facebook", "instagram", "linkedin"]} linkClassName="contact-social-link" iconSize={16} />
+                  </div>
+                </div>
               </div>
             </div>
 
