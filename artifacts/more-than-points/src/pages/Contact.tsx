@@ -49,6 +49,7 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [honey, setHoney] = useState("");
+  const [newsletterOptIn, setNewsletterOptIn] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", topic: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -88,6 +89,22 @@ export default function Contact() {
     }
     setLoading(true);
     setSubmitError("");
+
+    // Sync every enquiry to Mailchimp alongside (never instead of) the email below.
+    // Fire-and-forget: a Mailchimp outage must never block or fail the customer's submission.
+    void fetch("/api/mailchimp-contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        topic: form.topic,
+        message: form.message,
+        newsletterOptIn,
+        honey,
+      }),
+    }).catch((err) => console.error("Mailchimp sync failed", err));
+
     try {
       const body = new URLSearchParams({
         name: form.name,
@@ -367,7 +384,7 @@ export default function Contact() {
                       Thank you for reaching out, {form.name}. Angela will reply within 24 hours to start the conversation.
                     </p>
                     <button
-                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", topic: "", message: "" }); setErrors({}); }}
+                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", topic: "", message: "" }); setErrors({}); setNewsletterOptIn(false); }}
                       style={{
                         backgroundColor: colors.surfaceContainerLow,
                         color: colors.secondary,
@@ -470,6 +487,21 @@ export default function Contact() {
                         />
                         {errors.message && <p style={{ color: colors.error, fontSize: "0.75rem", marginTop: "0.25rem" }}>{errors.message}</p>}
                       </div>
+
+                      <label style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start", fontSize: "0.875rem", color: colors.onSurfaceVariant, cursor: "pointer" }}>
+                        <input
+                          type="checkbox"
+                          checked={newsletterOptIn}
+                          onChange={(e) => setNewsletterOptIn(e.target.checked)}
+                          style={{ marginTop: "0.2rem", flexShrink: 0 }}
+                        />
+                        <span>
+                          Yes, send me Angela's occasional newsletter. You can unsubscribe anytime — see our{" "}
+                          <Link to="/privacy-policy" style={{ color: colors.primary, textDecoration: "underline" }}>
+                            Privacy Policy
+                          </Link>.
+                        </span>
+                      </label>
 
                       {submitError && (
                         <p style={{ color: colors.error, fontSize: "0.875rem", textAlign: "center", lineHeight: 1.6 }}>

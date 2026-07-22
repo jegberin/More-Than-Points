@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
               Privacy Policy
             </h1>
             <p style={{ color: colors.secondary, fontSize: "0.9375rem" }}>
-              Effective date: 10/03/2026
+              Effective date: 22/07/2026
             </p>
           </div>
 
@@ -136,6 +136,8 @@ export default function PrivacyPolicy() {
               <li>Arrange and deliver coaching sessions</li>
               <li>Provide information about our coaching programmes</li>
               <li>Communicate with clients and prospective clients</li>
+              <li>Maintain a record of enquiries in our contact management platform (Mailchimp)</li>
+              <li>Send you newsletters and updates, where you have opted in to receive them</li>
               <li>Improve the website and user experience</li>
               <li>Comply with legal obligations</li>
             </ul>
@@ -163,13 +165,14 @@ export default function PrivacyPolicy() {
               <li>Website hosting providers</li>
               <li>Analytics providers</li>
               <li>Email service providers</li>
+              <li>Mailchimp — used to store a record of enquiries and, for those who opt in, to send newsletters. Mailchimp processes data in accordance with its own privacy policy at <a href="https://mailchimp.com/legal/privacy/" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>mailchimp.com/legal/privacy</a> (Mailchimp is a US-based provider — see International transfers below)</li>
               <li>Google Calendar — used for session scheduling. Google processes booking data in accordance with Google's privacy policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>policies.google.com/privacy</a></li>
             </ul>
             <p style={{ marginTop: "0.75rem" }}>We do not sell your personal data.</p>
           </Section>
 
           <Section title="8. International transfers">
-            <p>Some third-party providers may process data outside Ireland or the European Economic Area. Where this happens, we will take reasonable steps to ensure appropriate safeguards are in place as required by applicable law.</p>
+            <p>Some third-party providers may process data outside Ireland or the European Economic Area. Where this happens, we will take reasonable steps to ensure appropriate safeguards are in place as required by applicable law. For example, Mailchimp is based in the United States and processes data there under its own compliance safeguards.</p>
           </Section>
 
           <Section title="9. Data retention">
