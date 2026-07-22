@@ -4,6 +4,10 @@
   "compatibility_date": "2026-07-15",
   "compatibility_flags": ["nodejs_compat"],
   "main": "worker/index.ts",
+  "keep_vars": true,
+  "vars": {
+    "MAILCHIMP_AUDIENCE_ID": "31e98d96f4"
+  },
   "routes": [
     {
       "pattern": "morethanpoints.ie",

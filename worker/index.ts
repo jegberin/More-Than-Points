@@ -31,6 +31,15 @@ function splitName(full: string): { first: string; last: string } {
 }
 
 async function handleMailchimpContact(request: Request, env: Env): Promise<Response> {
+  if (!env.MAILCHIMP_API_KEY || !env.MAILCHIMP_AUDIENCE_ID) {
+    console.error(
+      "Mailchimp env not configured:",
+      `MAILCHIMP_API_KEY ${env.MAILCHIMP_API_KEY ? "present" : "MISSING"},`,
+      `MAILCHIMP_AUDIENCE_ID ${env.MAILCHIMP_AUDIENCE_ID ? "present" : "MISSING"}`,
+    );
+    return Response.json({ ok: false }, { status: 503 });
+  }
+
   let payload: MailchimpContactPayload | null;
   try {
     payload = await request.json();
