@@ -4,6 +4,13 @@
   "compatibility_date": "2026-07-15",
   "compatibility_flags": ["nodejs_compat"],
   "main": "worker/index.ts",
+  "routes": [
+    {
+      "pattern": "morethanpoints.ie",
+      "zone_name": "morethanpoints.ie",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": "./docs",
     "binding": "ASSETS",
