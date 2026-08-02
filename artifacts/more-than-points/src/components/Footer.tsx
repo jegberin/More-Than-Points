@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import SocialLinks from "@/components/SocialLinks";
 import { CONTACT } from "@/lib/contact";
+import { GUIDES, GUIDE_ORDER } from "@/lib/guides";
 
 const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.webp`;
 const crettyardFavicon = `${import.meta.env.BASE_URL}favicon-crettyard.png`;
@@ -16,6 +17,8 @@ const quickLinks = [
   { label: "Contact", to: "/contact" },
   { label: "Book a Session", to: "/book-session" },
 ];
+
+const resourceLinks = GUIDE_ORDER.map((id) => ({ label: GUIDES[id].shortLabel, to: GUIDES[id].to }));
 
 const legalLinks = [
   { label: "Privacy Policy", to: "/privacy-policy" },
@@ -127,7 +130,7 @@ export default function Footer() {
         .footer-phone-link:hover { color: #4d6451; }
         @media (min-width: 768px) {
           .footer-grid {
-            grid-template-columns: auto 1fr auto;
+            grid-template-columns: auto 1fr auto auto;
             gap: 3rem;
             align-items: start;
           }
@@ -199,6 +202,18 @@ export default function Footer() {
                 </ul>
               ))}
             </div>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <p className="footer-section-label">Resources</p>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              {resourceLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="footer-link">{label}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Legal */}

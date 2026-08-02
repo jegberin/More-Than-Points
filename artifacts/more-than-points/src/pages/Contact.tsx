@@ -26,7 +26,7 @@ const colors = {
   outline: "#737972",
 };
 
-const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/info@morethanpoints.ie";
+const CONTACT_ENDPOINT = "/api/contact";
 
 const WhatsAppIcon = SOCIAL_ICONS.whatsapp;
 
@@ -90,55 +90,32 @@ export default function Contact() {
     setLoading(true);
     setSubmitError("");
 
-    // Sync every enquiry to Mailchimp alongside (never instead of) the email below.
-    // Fire-and-forget: a Mailchimp outage must never block or fail the customer's submission.
-    void fetch("/api/mailchimp-contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: form.name,
-        email: form.email,
-        topic: form.topic,
-        message: form.message,
-        newsletterOptIn,
-        honey,
-      }),
-    }).catch((err) => console.error("Mailchimp sync failed", err));
-
+    // The Worker emails the enquiry to Angela and syncs it to Mailchimp. There is
+    // no fallback delivery channel, so a failure here must be shown, not swallowed.
     try {
-      const body = new URLSearchParams({
-        name: form.name,
-        email: form.email,
-        topic: form.topic || "Not specified",
-        message: form.message,
-        _subject: `New contact from More Than Points${form.topic ? ` — ${form.topic}` : ""}`,
-        _honey: honey,
-        _captcha: "false",
-        _template: "table",
-      });
-
-      const res = await fetch(FORMSUBMIT_ENDPOINT, {
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          topic: form.topic,
+          message: form.message,
+          newsletterOptIn,
+          honey,
+        }),
       });
 
-      if (!res.ok) {
-        setSubmitError(`Something went wrong (${res.status}). Please try again or email info@morethanpoints.ie directly.`);
-        return;
-      }
-
-      let data: { success?: string | boolean } = {};
-      try { data = await res.json(); } catch { /* non-JSON response still counts as sent */ }
-
-      if (data.success === "true" || data.success === true || res.ok) {
+      if (res.ok) {
         setSubmitted(true);
       } else {
-        setSubmitError("Something went wrong. Please try again or email info@morethanpoints.ie directly.");
+        setSubmitError(
+          `Something went wrong sending your message (${res.status}). Please try again, or email ${CONTACT.email} directly.`
+        );
       }
     } catch (err) {
       const msg = err instanceof Error ? err.message : "unknown error";
-      setSubmitError(`Could not reach the form server (${msg}). Please email info@morethanpoints.ie directly.`);
+      setSubmitError(`Could not reach the server (${msg}). Please email ${CONTACT.email} directly.`);
     } finally {
       setLoading(false);
     }

@@ -13,6 +13,9 @@ import Contact from "@/pages/Contact";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import CookiePolicy from "@/pages/CookiePolicy";
+import DiscoverYourLearningStyle from "@/pages/DiscoverYourLearningStyle";
+import LearningStyleQuiz from "@/pages/LearningStyleQuiz";
+import ParentsGuideBeyondThePoints from "@/pages/ParentsGuideBeyondThePoints";
 import NotFound from "@/pages/not-found";
 import CookieBanner from "@/components/CookieBanner";
 import OrganizationSchema from "@/components/OrganizationSchema";
@@ -48,6 +51,9 @@ function Router() {
         <Route path="/testimonials"><div className="page-enter"><Testimonials /></div></Route>
         <Route path="/book-session"><div className="page-enter"><BookSession /></div></Route>
         <Route path="/contact"><div className="page-enter"><Contact /></div></Route>
+        <Route path="/guides/discover-your-learning-style"><div className="page-enter"><DiscoverYourLearningStyle /></div></Route>
+        <Route path="/guides/learning-style-quiz"><div className="page-enter"><LearningStyleQuiz /></div></Route>
+        <Route path="/guides/parents-guide-beyond-the-points"><div className="page-enter"><ParentsGuideBeyondThePoints /></div></Route>
         <Route path="/privacy-policy"><div className="page-enter"><PrivacyPolicy /></div></Route>
         <Route path="/terms-of-service"><div className="page-enter"><TermsOfService /></div></Route>
         <Route path="/cookie-policy"><div className="page-enter"><CookiePolicy /></div></Route>

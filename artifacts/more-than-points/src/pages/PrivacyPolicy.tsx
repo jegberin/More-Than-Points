@@ -115,6 +115,7 @@ export default function PrivacyPolicy() {
               <li>Phone number</li>
               <li>Information about your teen (age, educational stage, areas of concern)</li>
               <li>Any information you include in a contact form or message</li>
+              <li>First name and email address, if you request one of our free guides or complete the learning style quiz</li>
               <li>Technical and usage data collected through cookies and similar technologies</li>
             </ul>
           </Section>
@@ -123,6 +124,7 @@ export default function PrivacyPolicy() {
             <p style={{ marginBottom: "0.5rem" }}>We collect data:</p>
             <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
               <li>When you complete and submit a contact or booking form on this website</li>
+              <li>When you request a free guide or complete the learning style quiz on this website</li>
               <li>When you contact us by email</li>
               <li>When you book a coaching session via email confirmation or through Google Calendar, our online session-scheduling tool</li>
               <li>Automatically through cookies and similar technologies</li>
@@ -137,6 +139,7 @@ export default function PrivacyPolicy() {
               <li>Provide information about our coaching programmes</li>
               <li>Communicate with clients and prospective clients</li>
               <li>Maintain a record of enquiries in our contact management platform (Mailchimp)</li>
+              <li>Deliver a guide or quiz results you have requested, and keep a record of that request</li>
               <li>Send you newsletters and updates, where you have opted in to receive them</li>
               <li>Improve the website and user experience</li>
               <li>Comply with legal obligations</li>
@@ -165,14 +168,15 @@ export default function PrivacyPolicy() {
               <li>Website hosting providers</li>
               <li>Analytics providers</li>
               <li>Email service providers</li>
-              <li>Mailchimp — used to store a record of enquiries and, for those who opt in, to send newsletters. Mailchimp processes data in accordance with its own privacy policy at <a href="https://mailchimp.com/legal/privacy/" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>mailchimp.com/legal/privacy</a> (Mailchimp is a US-based provider — see International transfers below)</li>
+              <li>Mailchimp — used to store a record of enquiries and guide or quiz requests, and, for those who opt in, to send newsletters. Mailchimp processes data in accordance with its own privacy policy at <a href="https://mailchimp.com/legal/privacy/" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>mailchimp.com/legal/privacy</a> (Mailchimp is a US-based provider — see International transfers below)</li>
+              <li>Resend — used to deliver the free guides you request by email. Resend processes data in accordance with its own privacy policy at <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>resend.com/legal/privacy-policy</a> (Resend is a US-based provider — see International transfers below)</li>
               <li>Google Calendar — used for session scheduling. Google processes booking data in accordance with Google's privacy policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary }}>policies.google.com/privacy</a></li>
             </ul>
             <p style={{ marginTop: "0.75rem" }}>We do not sell your personal data.</p>
           </Section>
 
           <Section title="8. International transfers">
-            <p>Some third-party providers may process data outside Ireland or the European Economic Area. Where this happens, we will take reasonable steps to ensure appropriate safeguards are in place as required by applicable law. For example, Mailchimp is based in the United States and processes data there under its own compliance safeguards.</p>
+            <p>Some third-party providers may process data outside Ireland or the European Economic Area. Where this happens, we will take reasonable steps to ensure appropriate safeguards are in place as required by applicable law. For example, Mailchimp and Resend are based in the United States and process data there under their own compliance safeguards.</p>
           </Section>
 
           <Section title="9. Data retention">

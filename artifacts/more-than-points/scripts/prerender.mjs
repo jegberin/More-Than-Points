@@ -6,7 +6,7 @@
  * GitHub Pages serves *.html files at clean URLs without the extension.
  */
 
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { fileURLToPath, pathToFileURL } from "url";
 import { dirname, join, resolve } from "path";
 
@@ -90,6 +90,27 @@ const routes = [
       "Get in touch with More Than Points. Send a confidential message, ask questions about our coaching, and receive a reply within 24 hours.",
   },
   {
+    path: "/guides/discover-your-learning-style",
+    file: "guides/discover-your-learning-style.html",
+    title: "Discover Your Learning Style: A Guide for Irish Students",
+    description:
+      "How do you learn best? A free guide for students and parents — how to spot your study preferences and the techniques that actually work for each.",
+  },
+  {
+    path: "/guides/learning-style-quiz",
+    file: "guides/learning-style-quiz.html",
+    title: "What's My Learning Style? Free Quiz for Students",
+    description:
+      "Find out how you learn best in 3 minutes. A free 12-question quiz for Irish students, with study strategies matched to your results.",
+  },
+  {
+    path: "/guides/parents-guide-beyond-the-points",
+    file: "guides/parents-guide-beyond-the-points.html",
+    title: "Beyond the Points: A Parent's Guide to Your Teen's Next Step",
+    description:
+      "Worried about what comes after the Leaving Cert? A free guide for Irish parents — the pathways available, and how to support your teenager without adding pressure.",
+  },
+  {
     path: "/privacy-policy",
     file: "privacy-policy.html",
     title: "Privacy Policy | More Than Points",
@@ -149,7 +170,9 @@ for (const { path, file, title, description, noindex } of routes) {
       );
     }
 
-    writeFileSync(join(docsDir, file), html, "utf-8");
+    const outPath = join(docsDir, file);
+    mkdirSync(dirname(outPath), { recursive: true });
+    writeFileSync(outPath, html, "utf-8");
     console.log(`  ✓ ${file}`);
     successCount++;
   } catch (err) {
