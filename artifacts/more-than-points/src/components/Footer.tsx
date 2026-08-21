@@ -18,7 +18,10 @@ const quickLinks = [
   { label: "Book a Session", to: "/book-session" },
 ];
 
-const resourceLinks = GUIDE_ORDER.map((id) => ({ label: GUIDES[id].shortLabel, to: GUIDES[id].to }));
+const resourceLinks = [
+  { label: "Articles", to: "/articles" },
+  ...GUIDE_ORDER.map((id) => ({ label: GUIDES[id].shortLabel, to: GUIDES[id].to })),
+];
 
 const legalLinks = [
   { label: "Privacy Policy", to: "/privacy-policy" },

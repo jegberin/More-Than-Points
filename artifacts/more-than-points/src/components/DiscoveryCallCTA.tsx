@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "wouter";
-import type { GuideSource } from "@/lib/guides";
+import type { ContentSource } from "@/lib/contentSource";
 
 declare function gtag(...args: unknown[]): void;
 
@@ -12,7 +12,7 @@ const colors = {
 
 type DiscoveryCallCTAProps = {
   heading: string;
-  source: GuideSource;
+  source: ContentSource;
   buttonLabel?: string;
   footnote?: string;
   children: ReactNode;

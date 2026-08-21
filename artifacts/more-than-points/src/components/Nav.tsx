@@ -4,7 +4,10 @@ import { GUIDES, GUIDE_ORDER } from "@/lib/guides";
 
 const logo = `${import.meta.env.BASE_URL}logo-morethanpoints.webp`;
 
-const guideLinks = GUIDE_ORDER.map((id) => ({ label: GUIDES[id].shortLabel, to: GUIDES[id].to }));
+const guideLinks = [
+  ...GUIDE_ORDER.map((id) => ({ label: GUIDES[id].shortLabel, to: GUIDES[id].to })),
+  { label: "Articles", to: "/articles" },
+];
 
 type NavLink = { label: string; to: string; children?: typeof guideLinks };
 
@@ -27,7 +30,7 @@ export default function Nav() {
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const resourcesRef = useRef<HTMLDivElement>(null);
 
-  const onGuidesRoute = location.startsWith("/guides/");
+  const onGuidesRoute = location.startsWith("/guides/") || location.startsWith("/articles");
 
   useEffect(() => {
     setMobileOpen(false);
