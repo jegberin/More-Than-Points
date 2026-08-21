@@ -2,7 +2,6 @@ import { Link } from "wouter";
 import { ArticleSection, ArticleSubsection, Standfirst } from "@/components/article/ArticleSection";
 import KeyDates from "@/components/article/KeyDates";
 import QuestionBlock from "@/components/article/QuestionBlock";
-import DiscoveryCallCTA from "@/components/DiscoveryCallCTA";
 import ArticleDisclaimer from "@/components/article/ArticleDisclaimer";
 
 export default function LeavingCertResults2026() {
@@ -306,22 +305,6 @@ export default function LeavingCertResults2026() {
           or they may discover an option they had not considered before.
         </p>
       </ArticleSection>
-
-      <DiscoveryCallCTA
-        heading="Worried about what comes next for your teenager?"
-        source="leaving-cert-results-2026"
-        footnote="A relaxed conversation about where things stand. No obligation to book anything further."
-      >
-        <p>
-          At More Than Points, I work with young people and their parents to look at their strengths, interests,
-          learning style and the options available, so they can make a decision that feels realistic and right for
-          them.
-        </p>
-        <p>
-          If you are worried about what comes next for your teenager and would like some guidance, please get in touch.
-          I would be happy to talk through the options with you and see how I may be able to help.
-        </p>
-      </DiscoveryCallCTA>
 
       <ArticleDisclaimer>
         This article provides general guidance. CAO dates and procedures should always be checked directly with the
